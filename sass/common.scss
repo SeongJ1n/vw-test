@@ -35,47 +35,41 @@
   &__item {
     display: inline-block;
     padding: 0px 20px;
-    margin-top: 18px;
+    margin-top: 20px;
 
     color: $gray-6;
 
-    font-size: 14px;
+    font-size: 13.5px;
   }
 }
+
+// Footer
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
 // Section
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .section {
-  padding: 80px 0;
-}
-.section--cover {
-  min-height: 500px;
-
-  background-color: $gray-1;
+  padding: 120px 0;
 
   &__title {
-    margin-top: 95px;
+    font-weight: 400;
+    line-height: 1.4em;
   }
 
-  &__subtitle {
-    margin-top: 15px;
+  &__explain {
+    margin-top: 20px;
 
     color: $gray-6;
   }
 }
 
-
 // Button
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.button-wrapper {
-  margin-top: 23px;
-}
-
 .button {
   display: inline-block;
-  padding: 12px 25px 13px;
+  padding: 13px 25px 14px;
 
   font-weight: 500;
   font-size: 14px;
@@ -91,7 +85,7 @@
 
 .button--filled {
   background-color: $primary;
-  color: $gray-0;
+  color: white;
 }
 
 .button--ghost {
