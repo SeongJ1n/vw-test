@@ -92,6 +92,21 @@
   }
 }
 
+// Section Delivery
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.section__delivery {
+  .section__text-wrapper {
+    margin-top: 85px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 300px;
+
+    background-color: $gray-2;
+  }
+}
+
 // Section Merit
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section__merit {

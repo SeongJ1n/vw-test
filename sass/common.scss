@@ -8,6 +8,8 @@
 @import 'pages/index';
 
 
+a { text-decoration: none; }
+
 // Navigation
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .nav {
@@ -45,7 +47,40 @@
 
 // Footer
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+.footer {
+  padding: 35px 0;
 
+  background-color: $gray-8;
+  color: $gray-3;
+
+  &_bold {
+    margin-right: 4px;
+
+    font-weight: 600;
+  }
+
+  &_content {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 2em;
+  }
+
+  &_list_title {
+    margin-bottom: 15px;
+  }
+
+  &_list {
+    font-size: 12px;
+  }
+
+  &_item {
+    margin-top: 8px;
+
+    color: $gray-3;
+
+    font-weight: 300;
+  }
+}
 
 // Section
 // ––––––––––––––––––––––––––––––––––––––––––––––––––

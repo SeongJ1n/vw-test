@@ -433,6 +433,10 @@ h4 {
   font-weight: 400;
   font-size: 16px; }
 
+h5 {
+  font-weight: 600;
+  font-size: 12px; }
+
 p {
   font-size: 15px;
   line-height: 1.8em; }
@@ -494,6 +498,13 @@ p {
   height: 330px;
   background-color: #e9ecef; }
 
+.section__delivery .section__text-wrapper {
+  margin-top: 85px; }
+.section__delivery__image {
+  width: 100%;
+  height: 300px;
+  background-color: #e9ecef; }
+
 .section__merit .merit__text-wrapper {
   padding-left: 15px;
   margin-top: 73px; }
@@ -547,6 +558,9 @@ p {
   .section__outro .button-wrapper {
     margin-top: 30px; }
 
+a {
+  text-decoration: none; }
+
 .nav {
   position: absolute;
   z-index: 999;
@@ -569,6 +583,26 @@ p {
     margin-top: 20px;
     color: #868e96;
     font-size: 13.5px; }
+
+.footer {
+  padding: 35px 0;
+  background-color: #343a40;
+  color: #dee2e6; }
+  .footer_bold {
+    margin-right: 4px;
+    font-weight: 600; }
+  .footer_content {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 2em; }
+  .footer_list_title {
+    margin-bottom: 15px; }
+  .footer_list {
+    font-size: 12px; }
+  .footer_item {
+    margin-top: 8px;
+    color: #dee2e6;
+    font-weight: 300; }
 
 .section {
   padding: 120px 0; }
