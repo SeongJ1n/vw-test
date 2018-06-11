@@ -6,9 +6,12 @@
 @import 'ingredients/type';
 @import 'ingredients/mixin';
 @import 'pages/index';
+@import 'pages/subscribe';
 
 
 a { text-decoration: none; }
+
+.empty { height: 1px; }
 
 // Navigation
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -37,11 +40,17 @@ a { text-decoration: none; }
   &__item {
     display: inline-block;
     padding: 0px 20px;
-    margin-top: 20px;
+    margin-top: 22px;
 
     color: $gray-6;
 
     font-size: 13.5px;
+  }
+
+  &__item--active {
+    color: $gray-7;
+
+    font-weight: 600;
   }
 }
 
@@ -53,27 +62,27 @@ a { text-decoration: none; }
   background-color: $gray-8;
   color: $gray-3;
 
-  &_bold {
+  &__bold {
     margin-right: 4px;
 
     font-weight: 600;
   }
 
-  &_content {
+  &__content {
     font-weight: 300;
     font-size: 12px;
     line-height: 2em;
   }
 
-  &_list_title {
+  &__list__title {
     margin-bottom: 15px;
   }
 
-  &_list {
+  &__list {
     font-size: 12px;
   }
 
-  &_item {
+  &__item {
     margin-top: 8px;
 
     color: $gray-3;
@@ -104,7 +113,7 @@ a { text-decoration: none; }
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .button {
   display: inline-block;
-  padding: 13px 25px 14px;
+  padding: 14px 25px 16px;
 
   font-weight: 500;
   font-size: 14px;
