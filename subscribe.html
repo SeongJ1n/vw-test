@@ -34,20 +34,20 @@
   <div class="container">
     <div class="row">
       <div class="two columns empty"></div>
-      <div class="three columns">
+      <div class="three columns step__item step__item--active">
         <!-- 클릭했을 때, Step으로 이동함 -->
         <a href="">
-          <div class="step__circle step__circle--active">1</div>
-          <h4 class="step__title step__title--active">야식선택</h4>
+          <div class="step__circle">1</div>
+          <h4 class="step__title">야식선택</h4>
         </a>
       </div>
-      <div class="three columns">
+      <div class="three columns step__item">
         <a href="">
             <div class="step__circle">2</div>
             <h4 class="step__title">옵션추가</h4>
           </a>
       </div>
-      <div class="three columns">
+      <div class="three columns step__item">
         <a href="">
             <div class="step__circle">3</div>
             <h4 class="step__title">기간선택</h4>
@@ -58,26 +58,92 @@
 </div>
 
 <!-- Select Nightmeal -->
-<section class="section select-nightmeal">
+<section class="select select__nightmeal">
   <div class="container">
-    <h2 class="section__title">야식을 선택하세요</h2>
+    <h2 class="select__header">야식을 선택하세요</h2>
     <div class="row select__item-wrapper">
-      <div class="one columns empty"></div>
-      <div class="five columns select__item select__item--selected">
+      <div class="two columns empty"></div>
+      <div class="four columns select__item select__item--selected">
         <span class="select__circle"></span>
         <div class="select__text-wrapper">
           <h4 class="select__title">스낵</h4>
-          <p class="select__content">손가락까지 빨아먹고 싶은</br>페어링 스낵</p>
+          <p class="select__content">대박 맛있는 페어링 스낵</br>( 포만도 🍚)</p>
         </div>
       </div>
-      <div class="five columns select__item">
+      <div class="four columns select__item">
+        <span class="select__circle"></span>
         <div class="select__text-wrapper">
           <h4 class="select__title">콤보</h4>
-          <p class="select__content">저절로 맥주를 부르는 페어링</br>스낵과 야식 플래터</p>
+          <p class="select__content">페어링 스낵과 야식 플래터</br>( 포만도 🍚🍚🍚🍚🍚)</p>
         </div>
       </div>
     </div>
     <div class="button-wrapper">
+      <a class="button button--filled" href="">다음 단계로</a>
+    </div>
+  </div>
+</section>
+
+<!-- Select Add On -->
+<section class="select select__add-on">
+  <div class="container">
+    <h2 class="select__header">옵션을 추가하세요</h2>
+    <div class="row select__item-wrapper">
+      <div class="two columns empty"></div>
+      <div class="four columns select__item">
+        <span class="select__circle"></span>
+        <div class="select__text-wrapper">
+          <h4 class="select__title">맥주맛 무알콜 음료</h4>
+          <p class="select__content">무알콜 음료 2종×2병</br>( 월 2회 총 8병 )</p>
+        </div>
+      </div>
+      <div class="four columns select__item select__item--selected">
+        <span class="select__circle"></span>
+        <div class="select__text-wrapper">
+          <h4 class="select__title">이달의 큐레이션 맥주</h4>
+          <p class="select__content">크래프트 맥주 2종×2병</br>( 월 2회 총 8병 )</p>
+        </div>
+      </div>
+    </div>
+    <a class="button button--text" href="">마실 건 필요 없어요</a>
+    <div class="button-wrapper">
+      <a class="button button--ghost" href="">이전 단계로</a>
+      <a class="button button--filled" href="">다음 단계로</a>
+    </div>
+  </div>
+</section>
+
+<!-- Select Period -->
+<section class="select select__period">
+  <div class="container">
+    <h2 class="select__header">기간을 선택하세요</h2>
+    <div class="row select__item-wrapper">
+      <div class="one-half columns empty"></div>
+      <div class="three columns select__item">
+        <span class="select__circle"></span>
+        <h1>1달</h1>
+        <p>2회 배달</p>
+        <hr>
+        <h4>￦36,000</h4>
+        <h2>￦36,000</h2>
+      </div>
+      <div class="three columns select__item">
+        <span class="select__circle"></span>
+        <h2>2달</h2>
+        <p>4회 배달</p>
+        <h4>￦72,000</h4>
+        <h2>￦70,000</h2>
+      </div>
+      <div class="three columns select__item select__item--selected">
+        <span class="select__circle"></span>
+        <h2>3달</h2>
+        <p>6회 배달</p>
+        <h4>￦108,000</h4>
+        <h2>￦104,000</h2>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <a class="button button--ghost" href="">이전 단계로</a>
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>

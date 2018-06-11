@@ -5,18 +5,19 @@
   min-height: 500px;
 
   background-color: $gray-1;
+  .cover {
+    &__title {
+      margin-top: 95px;
 
-  &__title {
-    margin-top: 95px;
+      font-weight: 300;
+    }
 
-    font-weight: 300;
-  }
+    &__subtitle {
+      margin-top: 20px;
+      margin-left: 2px;
 
-  &__subtitle {
-    margin-top: 20px;
-    margin-left: 2px;
-
-    color: $gray-6;
+      color: $gray-6;
+    }
   }
 
   .button-wrapper {
@@ -77,14 +78,13 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__nightmeal {
   padding: 160px 0 100px;
-}
-.section__nightmeal {
+
   .section__text-wrapper {
     padding-left: 20px;
     margin-top: 90px;
   }
 
-  &__image {
+  .nightmeal__image {
     width: 100%;
     height: 330px;
 
@@ -99,7 +99,7 @@
     margin-top: 85px;
   }
 
-  &__image {
+  .delivery__image {
     width: 100%;
     height: 300px;
 
@@ -144,7 +144,7 @@
     margin-top: 120px;
   }
 
-  &__image {
+  .calendar__image {
     width: 100%;
     height: 380px;
 
@@ -159,7 +159,7 @@
     text-align: center;
   }
 
-  .insta {
+  .insta__item {
     height: 360px;
     margin-top: 40px;
 
@@ -171,14 +171,13 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__beluga {
   padding: 100px 0 160px;
-}
-.section__beluga {
+
   .section__text-wrapper {
     padding-left: 20px;
     margin-top: 35px;
   }
 
-  &__image {
+  .beluga__image {
     width: 100%;
     height: 400px;
 
@@ -193,17 +192,19 @@
 
   background-color: $gray-1;
 
-  &__title {
-    margin-top: 96px;
+  .outro {
+    &__title {
+      margin-top: 96px;
 
-    font-weight: 300;
-  }
+      font-weight: 300;
+    }
 
-  &__subtitle {
-    margin-top: 20px;
-    margin-left: 2px;
+    &__subtitle {
+      margin-top: 20px;
+      margin-left: 2px;
 
-    color: $gray-6;
+      color: $gray-6;
+    }
   }
 
   .button-wrapper {

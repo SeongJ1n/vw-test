@@ -76,7 +76,7 @@
   .one-third.column               { width: 30.6666666667%; }
   .two-thirds.column              { width: 65.3333333333%; }
 
-  .one-half.columns                { width: 11%; }
+  .one-half.columns                { width: 9%; }
 
   /* Offsets */
   .offset-by-one.column,
@@ -374,10 +374,8 @@ td:last-child {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 1px solid #dee2e6; }
 
 
 /* Clearing
