@@ -207,17 +207,6 @@ table {
   .offset-by-one-half.column,
   .offset-by-one-half.columns {
     margin-left: 52%; } }
-/* Base Styles
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* NOTE
-html is set to 62.5% so that all the REM measurements throughout Skeleton
-are based on 10px sizing. So basically 1.5rem = 15px :) */
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 input[type="email"],
@@ -287,8 +276,6 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
@@ -321,8 +308,6 @@ th:last-child,
 td:last-child {
   padding-right: 0; }
 
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
@@ -594,7 +579,6 @@ p {
   padding: 60px 0 110px;
   text-align: center; }
   .select__header {
-    font-weight: 600;
     font-size: 27px; }
   .select .button-wrapper {
     margin-top: 40px; }
@@ -736,12 +720,6 @@ p {
   padding: 35px 32px 40px;
   background-color: white; }
 
-a {
-  text-decoration: none; }
-
-.empty {
-  height: 1px; }
-
 .nav {
   position: absolute;
   z-index: 999;
@@ -823,5 +801,11 @@ a {
 .button--text {
   border: 0;
   color: #c9a87a; }
+
+a {
+  text-decoration: none; }
+
+.empty {
+  height: 1px; }
 
 /*# sourceMappingURL=common.css.map */

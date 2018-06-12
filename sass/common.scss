@@ -8,10 +8,13 @@
 @import 'pages/index';
 @import 'pages/subscribe';
 
-
-a { text-decoration: none; }
-
-.empty { height: 1px; }
+// Table of contents
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// - Navigation
+// - Footer
+// - Section
+// - Button
+// - Etc
 
 // Navigation
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -144,3 +147,8 @@ a { text-decoration: none; }
 
   color: $primary;
 }
+
+// Etc
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+a { text-decoration: none; }
+.empty { height: 1px; }
