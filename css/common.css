@@ -357,77 +357,72 @@ there.
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
-  src: local("Lato Thin"), local("Lato-Thin"), url(../fonts/Lato-Thin.eot), url(../fonts/Lato-Thin.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Thin.woff) format("woff"), url(../fonts/Lato-Thin.woff2) format("woff2"), url(../fonts/Lato-Thin.otf) format("opentype"); }
+  src: local("Lato Thin"), local("Lato-Thin"), url(../fonts/Lato-Thin.eot), url(../fonts/Lato-Thin.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Thin.woff) format("woff"), url(../fonts/Lato-Thin.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
-  src: local("Lato Light"), local("Lato-Light"), url(../fonts/Lato-Light.eot), url(../fonts/Lato-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Light.woff) format("woff"), url(../fonts/Lato-Light.woff2) format("woff2"), url(../fonts/Lato-Light.otf) format("opentype"); }
+  src: local("Lato Light"), local("Lato-Light"), url(../fonts/Lato-Light.eot), url(../fonts/Lato-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Light.woff) format("woff"), url(../fonts/Lato-Light.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
-  src: local("Lato Regular"), local("Lato-Regular"), url(../fonts/Lato-Regular.eot), url(../fonts/Lato-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Regular.woff) format("woff"), url(../fonts/Lato-Regular.woff2) format("woff2"), url(../fonts/Lato-Regular.otf) format("opentype"); }
+  src: local("Lato Regular"), local("Lato-Regular"), url(../fonts/Lato-Regular.eot), url(../fonts/Lato-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Regular.woff) format("woff"), url(../fonts/Lato-Regular.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 500;
-  src: local("Lato Medium"), local("Lato-Medium"), url(../fonts/Lato-Medium.eot), url(../fonts/Lato-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Medium.woff) format("woff"), url(../fonts/Lato-Medium.woff2) format("woff2"), url(../fonts/Lato-Medium.otf) format("opentype"); }
+  src: local("Lato Medium"), local("Lato-Medium"), url(../fonts/Lato-Medium.eot), url(../fonts/Lato-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Medium.woff) format("woff"), url(../fonts/Lato-Medium.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 600;
-  src: local("Lato Semibold"), local("Lato-Semibold"), url(../fonts/Lato-Semibold.eot), url(../fonts/Lato-Semibold.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Semibold.woff) format("woff"), url(../fonts/Lato-Semibold.woff2) format("woff2"), url(../fonts/Lato-Semibold.otf) format("opentype"); }
+  src: local("Lato Semibold"), local("Lato-Semibold"), url(../fonts/Lato-Semibold.eot), url(../fonts/Lato-Semibold.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Semibold.woff) format("woff"), url(../fonts/Lato-Semibold.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
-  src: local("Lato Bold"), local("Lato-Bold"), url(../fonts/Lato-Bold.eot), url(../fonts/Lato-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Bold.woff) format("woff"), url(../fonts/Lato-Bold.woff2) format("woff2"), url(../fonts/Lato-Bold.otf) format("opentype"); }
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 800;
-  src: local("Lato Heavy"), local("Lato-Heavy"), url(../fonts/Lato-Heavy.eot), url(../fonts/Lato-Heavy.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Heavy.woff) format("woff"), url(../fonts/Lato-Heavy.woff2) format("woff2"), url(../fonts/Lato-Heavy.otf) format("opentype"); }
+  src: local("Lato Bold"), local("Lato-Bold"), url(../fonts/Lato-Bold.eot), url(../fonts/Lato-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Bold.woff) format("woff"), url(../fonts/Lato-Bold.woff2) format("woff2"); }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
-  src: local("Lato Black"), local("Lato-Black"), url(../fonts/Lato-Black.eot), url(../fonts/Lato-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Black.woff) format("woff"), url(../fonts/Lato-Black.woff2) format("woff2"), url(../fonts/Lato-Black.otf) format("opentype"); }
+  src: local("Lato Black"), local("Lato-Black"), url(../fonts/Lato-Black.eot), url(../fonts/Lato-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/Lato-Black.woff) format("woff"), url(../fonts/Lato-Black.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 100;
-  src: local("Noto Sans Thin"), local("NotoSans-Thin"), url(../fonts/NotoSans-Thin.eot), url(../fonts/NotoSans-Thin.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Thin.woff) format("woff"), url(../fonts/NotoSans-Thin.woff2) format("woff2"), url(../fonts/NotoSans-Thin.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Thin"), local("NotoSansCJKkr-Thin"), url(../fonts/NotoSans-Thin.eot), url(../fonts/NotoSans-Thin.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Thin.woff) format("woff"), url(../fonts/NotoSans-Thin.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;
-  src: local("Noto Sans Light"), local("NotoSans-Light"), url(../fonts/NotoSans-Light.eot), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"), url(../fonts/NotoSans-Light.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Light"), local("NotoSansCJKkr-Light"), url(../fonts/NotoSans-Light.eot), url(../fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Light.woff) format("woff"), url(../fonts/NotoSans-Light.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
-  src: local("Noto Sans DemiLight"), local("NotoSans-DemiLight"), url(../fonts/NotoSans-DemiLight.eot), url(../fonts/NotoSans-DemiLight.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-DemiLight.woff) format("woff"), url(../fonts/NotoSans-DemiLight.woff2) format("woff2"), url(../fonts/NotoSans-DemiLight.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR DemiLight"), local("NotoSansCJKkr-DemiLight"), url(../fonts/NotoSans-DemiLight.eot), url(../fonts/NotoSans-DemiLight.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-DemiLight.woff) format("woff"), url(../fonts/NotoSans-DemiLight.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  src: local("Noto Sans Regular"), local("NotoSans-Regular"), url(../fonts/NotoSans-Regular.eot), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"), url(../fonts/NotoSans-Regular.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Regular"), local("NotoSansCJKkr-Regular"), url(../fonts/NotoSans-Regular.eot), url(../fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Regular.woff) format("woff"), url(../fonts/NotoSans-Regular.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 600;
-  src: local("Noto Sans Medium"), local("NotoSans-Medium"), url(../fonts/NotoSans-Medium.eot), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"), url(../fonts/NotoSans-Medium.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Medium"), local("NotoSansCJKkr-Medium"), url(../fonts/NotoSans-Medium.eot), url(../fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Medium.woff) format("woff"), url(../fonts/NotoSans-Medium.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
-  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url(../fonts/NotoSans-Bold.eot), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"), url(../fonts/NotoSans-Bold.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Bold"), local("NotoSansCJKkr-Bold"), url(../fonts/NotoSans-Bold.eot), url(../fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Bold.woff) format("woff"), url(../fonts/NotoSans-Bold.woff2) format("woff2"); }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 900;
-  src: local("Noto Sans Black"), local("NotoSans-Black"), url(../fonts/NotoSans-Black.eot), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"), url(../fonts/NotoSans-Black.otf) format("opentype"); }
+  src: local("Noto Sans CJK KR Black"), local("NotoSansCJKkr-Black"), url(../fonts/NotoSans-Black.eot), url(../fonts/NotoSans-Black.eot?#iefix) format("embedded-opentype"), url(../fonts/NotoSans-Black.woff) format("woff"), url(../fonts/NotoSans-Black.woff2) format("woff2"); }
 body {
   font-family: 'Lato', 'Noto Sans KR', Sans-serif;
   font-size: 15px;
