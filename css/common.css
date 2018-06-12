@@ -655,8 +655,8 @@ p {
     -moz-border-radius: 3px;
     border-radius: 3px; }
     .select__tag--emphasis {
-      border: 1px solid #ff6565;
-      color: #ff6565; }
+      border: 1px solid #ff8a8d;
+      color: #ff8a8d; }
     .select__tag--positive {
       border: 1px solid #7bbb5e;
       color: #7bbb5e; }
@@ -729,7 +729,7 @@ p {
     display: inline-block;
     margin-left: 5px;
     padding-top: 2px;
-    color: #ff6565;
+    color: #ff8a8d;
     font-size: 13px;
     vertical-align: top;
     -webkit-border-radius: 3px;
