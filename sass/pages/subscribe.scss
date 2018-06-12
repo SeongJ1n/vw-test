@@ -122,6 +122,8 @@
   } // 카드 UI 코드 끝
 
   &__title {
+    display: inline-block;
+
     font-weight: 700;
   }
 
@@ -132,6 +134,23 @@
 
     font-size: 13px;
     line-height: 1.6em;
+  }
+
+  &__tag {
+    margin-left: 6px;
+    padding: 2px 4px;
+
+    font-size: 13px;
+
+    @include border-radius(3px);
+    &--emphasis {
+      border: 1px solid $emphasis;
+      color: $emphasis;
+    }
+    &--positive {
+      border: 1px solid $positive;
+      color: $positive;
+    }
   }
 
   &__text-wrapper {
@@ -211,10 +230,25 @@
     margin-bottom: 25px;
   }
   &__price {
+    display: inline-block;
+    margin-left: 1px;
+
     color: $gray-4;
 
     text-decoration: line-through;
     &--none { text-decoration: none; }
+  }
+  &__discount {
+    display: inline-block;
+    margin-left: 5px;
+    padding-top: 2px;
+
+    color: $emphasis;
+
+    font-size: 13px;
+    vertical-align: top;
+
+    @include border-radius(3px);
   }
   &__sale-price {
     margin-top: 6px;
@@ -266,12 +300,6 @@
 
     background-color: $gray-1;
   }
-  .button--text {
-    margin-top: 20px;
-  }
-  .button-wrapper {
-    margin-top: 18px;
-  }
 }
 
 // Select Period
@@ -291,7 +319,7 @@
     content: "";
   }
   .select__item {
-    padding: 35px 32px 40px;
+    padding: 38px 0 38px 32px;
 
     background-color: white;
   }
