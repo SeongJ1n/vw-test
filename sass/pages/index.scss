@@ -42,7 +42,6 @@
     }
 
     &__item {
-      font-family: 'Lato', 'Noto Sans KR';
       font-size: 36px;
       letter-spacing: -.03em;
       b {
@@ -128,7 +127,7 @@
       line-height: 1.4em;
     }
 
-    &__explain {
+    &__content {
       margin-top: 16px;
 
       color: $gray-6;

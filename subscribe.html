@@ -19,10 +19,11 @@
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
-          <a href=""><li class="nav__item"><b class="nav__item--active">정기구독</b></li></a>
-          <a href=""><li class="nav__item">선물하기</li></a>
-          <a href=""><li class="nav__item">케이터링</li></a>
-          <a href=""><li class="nav__item">로그인</li></a>
+          <!-- <a href=""><li class="nav__item"><b class="nav__item--active">정기구독</b></li></a> -->
+          <!-- <a href=""><li class="nav__item">선물하기</li></a> -->
+          <!-- <a href=""><li class="nav__item">케이터링</li></a> -->
+          <!-- <a href=""><li class="nav__item">로그인</li></a> -->
+          <a href="https://open.kakao.com/o/sKysSdu"><li class="nav__item">도움이 필요해요</li></a>
         </ul>
       </div>
     </div>
@@ -34,23 +35,29 @@
   <div class="container">
     <div class="row">
       <div class="two columns empty"></div>
-      <div class="three columns step__item step__item--active">
+      <div class="two columns step__item step__item--complete">
         <!-- 클릭했을 때, Step으로 이동함 -->
         <a href="">
           <div class="step__circle">1</div>
           <h4 class="step__title">야식선택</h4>
         </a>
       </div>
-      <div class="three columns step__item">
+      <div class="two columns step__item step__item--active">
         <a href="">
             <div class="step__circle">2</div>
             <h4 class="step__title">옵션추가</h4>
           </a>
       </div>
-      <div class="three columns step__item">
+      <div class="two columns step__item">
         <a href="">
             <div class="step__circle">3</div>
             <h4 class="step__title">기간선택</h4>
+          </a>
+      </div>
+      <div class="two columns step__item">
+        <a href="">
+            <div class="step__circle">4</div>
+            <h4 class="step__title">결제하기</h4>
           </a>
       </div>
     </div>
@@ -105,9 +112,8 @@
         </div>
       </div>
     </div>
-    <a class="button button--text" href="">마실 건 필요 없어요</a>
     <div class="button-wrapper">
-      <a class="button button--ghost" href="">이전 단계로</a>
+      <a class="button button--text" href="">마실 건 필요 없어요</a>
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>
@@ -121,29 +127,30 @@
       <div class="one-half columns empty"></div>
       <div class="three columns select__item">
         <span class="select__circle"></span>
-        <h1>1달</h1>
-        <p>2회 배달</p>
-        <hr>
-        <h4>￦36,000</h4>
-        <h2>￦36,000</h2>
+        <h1 class="select__month">1달</h1>
+        <p class="select__times">2회 배달</p>
+        <hr class="select__hr">
+        <h4 class="select__price select__price--none">&nbsp</h4>
+        <h2 class="select__sale-price">￦36,000</h2>
       </div>
       <div class="three columns select__item">
         <span class="select__circle"></span>
-        <h2>2달</h2>
-        <p>4회 배달</p>
-        <h4>￦72,000</h4>
-        <h2>￦70,000</h2>
+        <h1 class="select__month">2달</h1>
+        <p class="select__times">4회 배달</p>
+        <hr class="select__hr">
+        <h4 class="select__price">￦72,000</h4>
+        <h2 class="select__sale-price">￦70,000</h2>
       </div>
       <div class="three columns select__item select__item--selected">
         <span class="select__circle"></span>
-        <h2>3달</h2>
-        <p>6회 배달</p>
-        <h4>￦108,000</h4>
-        <h2>￦104,000</h2>
+        <h1 class="select__month">3달</h1>
+        <p class="select__times">6회 배달</p>
+        <hr class="select__hr">
+        <h4 class="select__price">￦108,000</h4>
+        <h2 class="select__sale-price">￦104,000</h2>
       </div>
     </div>
     <div class="button-wrapper">
-      <a class="button button--ghost" href="">이전 단계로</a>
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>

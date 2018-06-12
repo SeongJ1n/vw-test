@@ -7,11 +7,21 @@
 
   background-color: rgba(248,249,250,.4);
 
-  &__item--active {
+  &__item--complete {
     .step__circle {
       background-color: $primary;
       border-color: $primary;
       color: white;
+    }
+    .step__title {
+      color: $primary;
+    }
+  }
+
+  &__item--active {
+    .step__circle {
+      border-color: $primary;
+      color: $primary;
     }
     .step__title {
       color: $primary;
@@ -27,7 +37,6 @@
 
     color: $gray-5;
 
-    font-family: 'Lato';
     font-weight: 500;
     line-height: 24px;
     text-align: center;
@@ -49,7 +58,11 @@
 // Select Item
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .select {
+  position: relative;
 
+  padding: 60px 0 110px;
+
+  text-align: center;
   &__header {
     font-weight: 600;
     font-size: 27px;
@@ -168,17 +181,42 @@
       @include border-radius(3px);
       content: "";
     }
-  } // 체크표시 코드 끝
+  }
+  // 체크표시 코드 끝
+
+  // 기간선택
+  &__month {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1em;
+  }
+  &__times {
+    margin-top: 5px;
+    margin-left: 1px;
+
+    color: $gray-6;
+  }
+  &__hr {
+    width: 15%;
+    margin-top: 15px;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+  &__price {
+    color: $gray-4;
+
+    text-decoration: line-through;
+    &--none { text-decoration: none; }
+  }
+  &__sale-price {
+    margin-top: 6px;
+  }
+  // 기간선택 코드 끝
 }
 
 // Select Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .select__nightmeal {
-  position: relative;
-
-  padding: 60px 0 110px;
-
-  text-align: center;
   &:before {
     position: absolute;
     z-index: -999;
@@ -202,11 +240,6 @@
 // Select Add On
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .select__add-on {
-  position: relative;
-
-  padding: 60px 0 110px;
-
-  text-align: center;
   &:before {
     position: absolute;
     z-index: -999;
@@ -236,11 +269,6 @@
 // Select Period
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .select__period {
-  position: relative;
-
-  padding: 60px 0 110px;
-
-  text-align: center;
   &:before {
     position: absolute;
     z-index: -999;
@@ -255,6 +283,8 @@
     content: "";
   }
   .select__item {
-    text-align: center;
+    padding: 35px 32px 40px;
+
+    background-color: white;
   }
 }
