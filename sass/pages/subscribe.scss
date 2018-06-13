@@ -456,8 +456,8 @@
   &__alert {}
 }
 
-  .input:focus~.input__label,
-  .input:not(:placeholder-shown)~.input__label {
+  input:focus~.input__label,
+  input:not(:placeholder-shown)~.input__label {
     top: -15px;
     font-size: 14px;
   }
