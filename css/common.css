@@ -735,6 +735,9 @@ p {
   .input:focus ~ .input__label {
     top: -15px;
     font-size: 14px; }
+  .input:not(:placeholder-shown) ~ .input__label {
+    top: -15px;
+    font-size: 14px; }
   .input__bar__horizontal:before {
     position: absolute;
     top: 0;

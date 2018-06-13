@@ -367,6 +367,10 @@
     top: -15px;
     font-size: 14px;
   }
+  &:not(:placeholder-shown)~.input__label {
+    top: -15px;
+    font-size: 14px;
+  }
 
 
   &__bar__horizontal:before {
