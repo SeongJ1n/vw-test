@@ -453,6 +453,11 @@
     transition-delay: .4s;
   }
 
+  .input:focus~.input__label,
+  .input:not(:placeholder-shown)~.input__label {
+    top: -15px;
+    font-size: 14px;
+  }
 
 
   &__alert {}

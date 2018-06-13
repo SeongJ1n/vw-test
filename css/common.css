@@ -791,6 +791,10 @@ p {
   .input:focus ~ .input__bar__vertical:after, .input:not(:placeholder-shown) ~ .input__bar__vertical:after {
     transform: scaleY(1);
     transition-delay: .4s; }
+  .input .input:focus ~ .input__label,
+  .input .input:not(:placeholder-shown) ~ .input__label {
+    top: -15px;
+    font-size: 14px; }
 
 .nav {
   position: absolute;
