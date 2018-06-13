@@ -165,7 +165,7 @@
 
           <div class="six columns">
             <div class="input-wrapper">
-              <input class="input" type="text" placeholder=" ">
+              <input id="myInput" class="input" type="text" placeholder=" ">
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
               <label class="input__label">수령인</label>
@@ -235,6 +235,9 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript">
+  setTimeout(function() { document.getElementById('myInput').focus(); }, 10);
+</script>
 
 </body>
 

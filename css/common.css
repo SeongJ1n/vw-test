@@ -714,15 +714,14 @@ p {
 .select__q {
   text-align: left; }
 
-input:focus {
-  outline: 0; }
-
 .input {
   width: 100%;
   padding: 10px 10px 7px 5px;
   border: 1px solid #dee2e6;
   font-size: 15px;
   box-sizing: border-box; }
+  .input:focus {
+    outline: 0; }
   .input-wrapper {
     position: relative; }
   .input__label {
@@ -792,11 +791,6 @@ input:focus {
   .input:focus ~ .input__bar__vertical:after, .input:not(:placeholder-shown) ~ .input__bar__vertical:after {
     transform: scaleY(1);
     transition-delay: .4s; }
-
-input:focus ~ .input__label,
-input:not(:placeholder-shown) ~ .input__label {
-  top: -15px;
-  font-size: 14px; }
 
 .nav {
   position: absolute;
