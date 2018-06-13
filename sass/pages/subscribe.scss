@@ -442,13 +442,13 @@
     transform: scaleY(0);
     transform-origin: bottom center;
   }
-  &:focus ~ .input__bar__vertical:before,
-  &:not(:placeholder-shown) ~ .input__bar__vertical:before {
+  &:focus~.input__bar__vertical:before,
+  &:not(:placeholder-shown)~.input__bar__vertical:before {
     transform: scaleY(1);
     transition-delay: 0s;
   }
-  &:focus ~ .input__bar__vertical:after,
-  &:not(:placeholder-shown) ~ .input__bar__vertical:after {
+  &:focus~.input__bar__vertical:after,
+  &:not(:placeholder-shown)~.input__bar__vertical:after {
     transform: scaleY(1);
     transition-delay: .4s;
   }
