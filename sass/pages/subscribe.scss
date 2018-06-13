@@ -333,6 +333,8 @@
 
 }
 
+  input:focus { outline: 0; }
+
 .input {
   width: 100%;
   padding: 10px 10px 7px 5px;
@@ -343,7 +345,7 @@
 
   box-sizing: border-box;
 
-  &:focus { outline: 0; }
+
 
   &-wrapper {
     position: relative;

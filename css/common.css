@@ -714,14 +714,15 @@ p {
 .select__q {
   text-align: left; }
 
+input:focus {
+  outline: 0; }
+
 .input {
   width: 100%;
   padding: 10px 10px 7px 5px;
   border: 1px solid #dee2e6;
   font-size: 15px;
   box-sizing: border-box; }
-  .input:focus {
-    outline: 0; }
   .input-wrapper {
     position: relative; }
   .input__label {
