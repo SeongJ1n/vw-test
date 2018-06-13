@@ -732,10 +732,7 @@ p {
     font-size: 15px;
     transition: 0.25s ease;
     pointer-events: none; }
-  .input:focus ~ .input__label {
-    top: -15px;
-    font-size: 14px; }
-  .input:not(:placeholder-shown) ~ .input__label {
+  .input:focus ~ .input__label, .input:valid ~ .input__label {
     top: -15px;
     font-size: 14px; }
   .input__bar__horizontal:before {
@@ -759,10 +756,10 @@ p {
     transition-delay: .4s;
     transform: scaleX(0);
     transform-origin: left center; }
-  .input:focus ~ .input__bar__horizontal:before, .input:not(:placeholder-shown) ~ .input__bar__horizontal:before {
+  .input:focus ~ .input__bar__horizontal:before, .input:valid ~ .input__bar__horizontal:before {
     transform: scaleX(1);
     transition-delay: .6s; }
-  .input:focus ~ .input__bar__horizontal:after, .input:not(:placeholder-shown) ~ .input__bar__horizontal:after {
+  .input:focus ~ .input__bar__horizontal:after, .input:valid ~ .input__bar__horizontal:after {
     transform: scaleX(1);
     transition-delay: .2s; }
   .input__bar__vertical:before {
@@ -788,10 +785,10 @@ p {
     transition-delay: .2s;
     transform: scaleY(0);
     transform-origin: bottom center; }
-  .input:focus ~ .input__bar__vertical:before, .input:not(:placeholder-shown) ~ .input__bar__vertical:before {
+  .input:focus ~ .input__bar__vertical:before, .input:valid ~ .input__bar__vertical:before {
     transform: scaleY(1);
     transition-delay: 0s; }
-  .input:focus ~ .input__bar__vertical:after, .input:not(:placeholder-shown) ~ .input__bar__vertical:after {
+  .input:focus ~ .input__bar__vertical:after, .input:valid ~ .input__bar__vertical:after {
     transform: scaleY(1);
     transition-delay: .4s; }
 
