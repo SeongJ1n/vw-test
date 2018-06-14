@@ -331,6 +331,7 @@
 .select__q {
   text-align: left;
 
+  background-color: $gray-1;
 }
 
 .input {
@@ -339,6 +340,8 @@
   // border: 0;
   border: 1px solid $border;
 
+  background-color: white;
+
   font-weight: 400;
   font-size: 14px;
 
@@ -346,20 +349,20 @@
   @include border-radius(3px);
   &:focus { outline: 0; }
   &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $gray-6;
+    color: $gray-5;
     opacity: 1; /* Firefox */
   }
   &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $gray-6;
+    color: $gray-5;
   }
   &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $gray-6;
+    color: $gray-5;
   }
 
   &-wrapper {
     position: relative;
 
-    margin-top: 32px;
+    margin-top: 40px;
   }
 
   &__label {
@@ -369,7 +372,8 @@
 
     color: $gray-6;
 
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 13px;
 
     pointer-events: none;
   }
@@ -468,6 +472,7 @@
   }
 
   &__alert {}
+
 }
 
 
