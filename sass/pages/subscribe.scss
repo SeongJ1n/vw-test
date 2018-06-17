@@ -1,10 +1,11 @@
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Step
-// - Select Item
-// - Select Nightmeal
-// - Select Add on
-// - Select Period
+// - Subscribe Item
+// - Subscribe Nightmeal
+// - Subscribe Add on
+// - Subscribe Period
+// - Subscribe Purchase
 
 
 // Step
@@ -59,14 +60,14 @@
 
     color: $gray-5;
 
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
   }
 }
 
-// Select Item
+// Subscribe Item
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.select {
+.subscribe {
   position: relative;
 
   padding: 60px 0 110px;
@@ -90,7 +91,7 @@
     text-align: left;
 
     cursor: pointer;
-    transition: .25s ease-out;
+    transition: .25s ease-out box-shadow;
 
     @include border-radius(3px);
 
@@ -256,9 +257,9 @@
   // 기간선택 코드 끝
 }
 
-// Select Nightmeal
+// Subscribe Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.select__nightmeal {
+.subscribe__nightmeal {
   &:before {
     position: absolute;
     z-index: -999;
@@ -272,16 +273,16 @@
 
     content: "";
   }
-  .select__item {
+  .subscribe__item {
     min-height: 350px;
 
     background-color: $gray-1;
   }
 }
 
-// Select Add On
+// Subscribe Add On
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.select__add-on {
+.subscribe__add-on {
   &:before {
     position: absolute;
     z-index: -999;
@@ -295,16 +296,16 @@
 
     content: "";
   }
-  .select__item {
+  .subscribe__item {
     min-height: 350px;
 
     background-color: $gray-1;
   }
 }
 
-// Select Period
+// Subscribe Period
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.select__period {
+.subscribe__period {
   &:before {
     position: absolute;
     z-index: -999;
@@ -318,7 +319,7 @@
 
     content: "";
   }
-  .select__item {
+  .subscribe__item {
     padding: 38px 0 38px 32px;
 
     background-color: white;
@@ -326,159 +327,68 @@
 }
 
 
-// Select q
+// Subscribe Purchase
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.select__q {
+.subscribe__purchase {
   text-align: left;
 
   background-color: $gray-1;
+  .purchaser-info {
+    padding: 25px 20px;
+    margin-top: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
+                0 1px  6px  rgba(0, 0, 0, .015),
+                0 8px  8px  rgba(0, 0, 0, .012),
+                0 16px 16px rgba(0, 0, 0, .012),
+                8px 32px 32px rgba(0, 0, 0, .018),
+                8px 64px 64px rgba(0, 0, 0, .018);
+
+    @include border-radius(3px);
+
+    .checkbox-wrapper {
+      margin-top: 15px;
+    }
+
+    &__header {
+      color: $gray-7;
+
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    &__item-wrapper {
+      overflow: hidden;
+    }
+
+    &__item {
+      float: left;
+
+      margin-right: 11px;
+
+      color: $gray-7;
+
+      font-weight: 600;
+    }
+  }
 }
 
-.input {
-  width: 100%;
-  padding: 9px;
-  // border: 0;
-  border: 1px solid $border;
+.description {
+  padding: 25px 20px;
+  margin-top: 15px;
 
-  background-color: white;
+  background-color: $gray-2;
 
-  font-weight: 400;
-  font-size: 14px;
-
-  box-sizing: border-box;
   @include border-radius(3px);
-  &:focus { outline: 0; }
-  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $gray-5;
-    opacity: 1; /* Firefox */
+  &__item {
+    color: $gray-7;
+
+    font-size: 12px;
+    line-height: 1.4em;
   }
-  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $gray-5;
+  &__item+.description__item {
+    margin-top: 8px;
   }
-  &::-ms-input-placeholder { /* Microsoft Edge */
-    color: $gray-5;
-  }
-
-  &-wrapper {
-    position: relative;
-
-    margin-top: 40px;
-  }
-
-  &__label {
-    position: absolute;
-    top: -20px;
-    left: 0px;
-
-    color: $gray-6;
-
-    font-weight: 600;
-    font-size: 13px;
-
-    pointer-events: none;
-  }
-
-// not(:placeholder-shown)
-
-  &__bar__horizontal:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-    border-top: 1px solid $gray-8;
-
-    content: "";
-    transition: .2s ease;
-    transform: scaleX(0);
-    transform-origin: right center;
-
-    pointer-events: none;
-    @include border-radius(3px);
-  }
-
-  &__bar__horizontal:after {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px solid $gray-8;
-
-    content: "";
-    transition: .15s ease;
-    transition-delay: .3s;
-    transform: scaleX(0);
-    transform-origin: left center;
-    pointer-events: none;
-    @include border-radius(3px);
-  }
-  &:focus~.input__bar__horizontal:before,
-  &:valid~.input__bar__horizontal:before {
-    transform: scaleX(1);
-    transition-delay: .45s;
-  }
-  &:focus~.input__bar__horizontal:after,
-  &:valid~.input__bar__horizontal:after {
-    transform: scaleX(1);
-    transition-delay: .15s;
-  }
-
-  &__bar__vertical:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-    border-left: 1px solid $gray-8;
-
-    content: "";
-    transition: .15s ease;
-    transition-delay: .45s;
-    transform: scaleY(0);
-    transform-origin: top center;
-    pointer-events: none;
-    @include border-radius(3px);
-  }
-  &__bar__vertical:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 100%;
-    height: 100%;
-    border-right: 1px solid $gray-8;
-
-    content: "";
-    transition: .15s ease;
-    transition-delay: .15s;
-    transform: scaleY(0);
-    transform-origin: bottom center;
-    pointer-events: none;
-    @include border-radius(3px);
-  }
-  &:focus~.input__bar__vertical:before,
-  &:valid~.input__bar__vertical:before {
-    transform: scaleY(1);
-    transition-delay: 0s;
-  }
-  &:focus~.input__bar__vertical:after,
-  &:valid~.input__bar__vertical:after {
-    transform: scaleY(1);
-    transition-delay: .3s;
-  }
-
-  &__alert {}
-
 }
-
-
-
-
-
-
-
-
