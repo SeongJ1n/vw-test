@@ -18,10 +18,6 @@
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
-          <!-- <a href=""><li class="nav__item"><b class="nav__item--active">정기구독</b></li></a> -->
-          <!-- <a href=""><li class="nav__item">선물하기</li></a> -->
-          <!-- <a href=""><li class="nav__item">케이터링</li></a> -->
-          <!-- <a href=""><li class="nav__item">로그인</li></a> -->
           <a href="https://pf.kakao.com/_xlLHTd"><li class="nav__item">도움이 필요해요</li></a>
         </ul>
       </div>
@@ -156,12 +152,12 @@
 </section> -->
 
 <!-- Subscribe Purchase -->
-<section class="subscribe subscribe__purchase">
+<section class="subscribe subscribe__delivery">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
-      <form class="five columns">
-          <h4 class="purchaser-info__header">주문자 정보</h4>
+      <div class="five columns">
+        <h4 class="purchaser-info__header">주문자 정보</h4>
         <div class="purchaser-info">
           <ul class="purchaser-info__item-wrapper">
             <li class="purchaser-info__item">장성진</li>
@@ -171,95 +167,151 @@
             <div class="twelve columns">
               <div class="checkbox-wrapper">
                 <input id="purchaser" class="checkbox" type="checkbox">
-                <label for="purchaser" class="checkbox__label"><span class="checkbox__icon"></span>수령인과 동일합니다</label>
+                <label for="purchaser" class="checkbox__label"><span class="checkbox__icon"></span>수령인과 동일합니다.</label>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="six columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" value="장성진" required>
-              <label class="input__label">수령인*</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" value="장성진" required>
+                <label class="input__label">수령인*</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">수령인을 입력해주세요.</span>
             </div>
-            <span class="input__alert">수령인을 입력해주세요.</span>
+
+            <div class="six columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" placeholder="- 없이 입력하세요" required>
+                <label class="input__label">휴대폰 연락처*</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">연락처를 입력해주세요.</span>
+            </div>
           </div>
 
-          <div class="six columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" placeholder="- 없이 입력하세요" required>
-              <label class="input__label">휴대폰 연락처*</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <input class="input input--invalid" type="text" required>
+                <label class="input__label">수령할 주소*</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert input__alert--show">주소를 입력해주세요.</span>
             </div>
-            <span class="input__alert">연락처를 입력해주세요.</span>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" required>
+                <label class="input__label">상세 주소*</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <div class="checkbox-wrapper">
+                <input id="office" class="checkbox" type="checkbox">
+                <label for="office" class="checkbox__label"><span class="checkbox__icon"></span>사무실입니다(오후 배달만 가능)</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" placeholder="공동현관 비밀번호/자유출입/경비실 호출 등" required>
+                <label class="input__label">출입 방법</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" placeholder="문 앞/경비실/택배함/그 외 장소" required>
+                <label class="input__label">특이사항 및 수령 방법</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="description">
+            <ul>
+              <li class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요.</li>
+              <li class="description__item">특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe subscribe__purchase">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns">
+        <div class="subscribe-info row">
+          <div class="twelve columns subscribe-info__item">스낵 야식과 이달의 맥주 3달(총 6회)</br>
+          <span>첫 배달일은 6월 18일 목요일입니다.</span>
           </div>
         </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="input-wrapper">
-              <input class="input input--invalid" type="text" required>
-              <label class="input__label">수령할 주소*</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
-            </div>
-            <span class="input__alert input__alert--show">주소를 입력해주세요.</span>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" required>
-              <label class="input__label">상세 주소*</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="checkbox-wrapper">
-              <input id="office" class="checkbox" type="checkbox">
-              <label for="office" class="checkbox__label"><span class="checkbox__icon"></span>사무실입니다(오후 배달만 가능)</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" placeholder="공동현관 비밀번호/자유출입/경비실 호출 등" required>
-              <label class="input__label">출입 방법</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" placeholder="문 앞/경비실/택배함/그 외 장소" required>
-              <label class="input__label">특이사항 및 수령 방법</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="description">
-          <ul>
-            <li class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요.</li>
-            <li class="description__item">특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</li>
+        <div class="purchase">
+          <ul class="purchase-info">
+            <li class="purchase-info__item">
+              <span class="purchase-info__label">구독 신청 금액</span>
+              <span class="purchase-info__value">₩155,000</span>
+            </li>
+            <li class="purchase-info__item">
+              <span class="purchase-info__label">적립금 사용</span>
+              <div class="input-wrapper">
+                <input class="input" type="text" placeholder="₩5,000 사용가능" required>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+            </li>
+            <li class="purchase-info__item purchase-info__total">
+              <span class="purchase-info__label">결제 금액</span>
+              <span class="purchase-info__value">₩150,000</span>
+            </li>
+            <li class="purchase-info__item">
+              <div class="select-wrapper">
+                <select name="option" class="select">
+                  <option value="card">신용/체크카드</option>
+                  <option value="trans">실시간 계좌이체</option>
+                </select>
+              </div>
+            </li>
           </ul>
+          <div class="row">
+            <div class="twelve columns">
+              <div class="checkbox-wrapper">
+                <input id="test" class="checkbox" type="checkbox" checked>
+                <label for="test" class="checkbox__label"><span class="checkbox__icon"></span>전자금융거래 약관 동의</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-wrapper">
+            <a class="button button--filled" href="">결제 진행</a>
+          </div>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 </section>

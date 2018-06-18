@@ -322,6 +322,12 @@
     color: $gray-7;
 
     font-size: 13px;
+
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
   &__icon {
     position: relative;
@@ -334,7 +340,7 @@
     border: 1px solid $gray-4;
 
     vertical-align: middle;
-    transition: 0.2s ease background-color;
+    transition: 0.15s ease background-color;
 
     @include border-radius(3px);
   }
@@ -343,7 +349,7 @@ input[type="checkbox"]:checked + label span {
   border-color: $primary;
   background-color: $primary;
 
-  transition: 0.2s ease;
+  transition: 0.15s ease background-color, border-color;
   &:after {
     position: absolute;
     top: 2px;
@@ -364,5 +370,9 @@ input[type="checkbox"]:checked + label span {
 
 // Etc
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+body *::selection {
+  background-color: rgba(201,168,122,.4);
+}
+
 a { text-decoration: none; }
 .empty { height: 1px; }
