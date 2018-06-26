@@ -83,13 +83,13 @@
         <p class="section__content">매달 둘째 주, 넷째 주 목요일마다</br>집으로 야식 박스가 찾아갑니다.</p>
       </div>
       <div class="three columns">
-       <img class="delivery__image" src="/">
+       <img class="delivery__image" src="img/delivery.png">
       </div>
       <div class="three columns">
-       <img class="delivery__image" src="/">
+       <img class="delivery__image" src="img/delivery.png">
       </div>
       <div class="three columns">
-       <img class="delivery__image" src="/">
+       <img class="delivery__image" src="img/delivery.png">
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@
       <div class="six columns merit">
         <div class="row">
           <div class="six columns">
-            <img class="merit__image" src="">
+            <img class="merit__image" src="img/merit.png">
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">매달 새로운 경험</h3>
@@ -113,7 +113,7 @@
       <div class="six columns merit">
         <div class="row">
           <div class="six columns">
-            <img class="merit__image" src="">
+            <img class="merit__image" src="img/merit.png">
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">매달 새로운 경험</h3>
@@ -145,9 +145,36 @@
   <div class="container">
     <h2 class="section__title">받아보니깐 어땠어요?</h2>
     <div class="row">
-      <div class="four columns insta__item"></div>
-      <div class="four columns insta__item"></div>
-      <div class="four columns insta__item"></div>
+      <div class="four columns insta__item">
+        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <div class="insta__content">
+          <div class="insta__profile">
+            <span class="insta__icon"></span>
+            <h4 class="insta__username">seongj1n</h4>
+          </div>
+          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+        </div>
+      </div>
+      <div class="four columns insta__item">
+        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <div class="insta__content">
+          <div class="insta__profile">
+            <span class="insta__icon"></span>
+            <h4 class="insta__username">seongj1n</h4>
+          </div>
+          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+        </div>
+      </div>
+      <div class="four columns insta__item">
+        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <div class="insta__content">
+          <div class="insta__profile">
+            <span class="insta__icon"></span>
+            <h4 class="insta__username">seongj1n</h4>
+          </div>
+          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -229,51 +256,63 @@
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script type="text/javascript">
   window.sr = ScrollReveal({
-    duration: 1150,
+    duration: 1250,
     scale: 1,
+    useDelay: "onload",
     easing: "cubic-bezier(0.3, 0, 0.3, 1)"
   });
 
-  sr.reveal("img", {
-    distance: "80px",
-    scale: 0.99,
-    delay: 0,
-  });
 
   sr.reveal(".section__title", {
-    distance: "40px",
-    delay: 200
+    distance: "60px",
+    delay: 300
   });
   sr.reveal(".section__content", {
-    distance: "30px",
-    delay: 300
+    distance: "50px",
+    delay: 400
   });
 
 
   // Section Cover
   sr.reveal(".cover__title", {
-    distance: "50px",
+    distance: "60px",
     delay: 300
   });
   sr.reveal(".cover__subtitle", {
-    distance: "50px",
+    distance: "60px",
     delay: 600
   });
   sr.reveal(".section__cover .button-wrapper", {
-    distance: "30px",
+    distance: "40px",
     delay: 1000
   });
 
 
+  // Section Delivery
+  sr.reveal(".delivery__image", {
+    distance: "90px",
+    scale: 0.99,
+    delay: 0,
+  }, 300);
+
+
   // Section Nightmeal
+  sr.reveal(".nightmeal__image", {
+    origin: "left",
+    distance: "60px",
+    scale: 0.99,
+    delay: 0,
+  });
   sr.reveal(".nightmeal__circle", {
-    distance: "30px",
+    origin: "left",
+    distance: "40px",
     scale: 0.9,
     rotate: { y: 25 },
     delay: 300
   });
   sr.reveal(".nightmeal__rectangle", {
-    distance: "30px",
+    origin: "left",
+    distance: "40px",
     scale: 0.9,
     rotate: { z: 5 },
     delay: 400,
@@ -281,27 +320,54 @@
 
 
   // Section Merit
+  sr.reveal(".merit__image", {
+    distance: "50px",
+    delay: 0
+  }, 400);
   sr.reveal(".merit__title", {
-    distance: "30px",
+    distance: "40px",
     delay: 200
-  });
+  }, 400);
   sr.reveal(".merit__content", {
-    distance: "30px",
+    distance: "40px",
     delay: 300
+  }, 400);
+
+
+  // Section Calendar
+  sr.reveal(".calendar__image", {
+    distance: "90px",
+    scale: 0.99,
+    delay: 0,
+  });
+
+
+  // Section Insta
+  sr.reveal(".insta__item", {
+    distance: "100px",
+    delay: 200,
+  }, 300);
+
+
+  // Section Beluga
+  sr.reveal(".beluga__image", {
+    distance: "90px",
+    scale: 0.99,
+    delay: 0,
   });
 
 
   // Section Outro
   sr.reveal(".outro__title", {
-    distance: "50px",
+    distance: "60px",
     delay: 300
   });
   sr.reveal(".outro__subtitle", {
-    distance: "50px",
+    distance: "60px",
     delay: 600
   });
   sr.reveal(".section__outro .button-wrapper", {
-    distance: "30px",
+    distance: "40px",
     delay: 1000
   });
 

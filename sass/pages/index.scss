@@ -113,7 +113,7 @@
     width: 250px;
     height: 250px;
 
-    background-color: $primary;
+    background: url("../img/pattern.png");
 
     @include border-radius(50%);
   }
@@ -129,7 +129,7 @@
     width: 100px;
     height: 250px;
 
-    background-color: $primary ;
+    background: url("../img/pattern.png");
 
     transform: rotate(42deg);
     content: "";
@@ -201,11 +201,45 @@
     text-align: center;
   }
 
-  .insta__item {
-    height: 360px;
-    margin-top: 40px;
+  .insta {
+    &__item {
+      overflow: hidden;
+      margin-top: 40px;
 
-    background-color: $gray-2;
+      @include border-radius(5px);
+      box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
+                  0 1px  6px  rgba(0, 0, 0, .015),
+                  0 8px  8px  rgba(0, 0, 0, .012),
+                  0 16px 16px rgba(0, 0, 0, .012),
+                  8px 32px 32px rgba(0, 0, 0, .018),
+                  8px 64px 64px rgba(0, 0, 0, .018);
+    }
+    &__pic { }
+    &__content {
+      padding: 30px;
+    }
+    &__icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+
+      background: url("../img/insta__icon.png");
+      background-size: cover;
+    }
+    &__username {
+      display: inline-block;
+      margin-top: 2px;
+      margin-left: 5px;
+
+      font-weight: 600;
+      vertical-align: top;
+    }
+    &__text {
+      margin-top: 10px;
+
+      font-size: 14px;
+      line-height: 1.7em;
+    }
   }
 }
 
