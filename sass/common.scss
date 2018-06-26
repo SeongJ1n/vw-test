@@ -134,6 +134,11 @@
 .button--filled {
   background-color: $primary;
   color: white;
+
+  transition: .2s ease-out background-color;
+  &:hover {
+    background-color: $primary--dark;
+  }
 }
 
 .button--ghost {
@@ -141,12 +146,22 @@
 
   background-color: transparent;
   color: $primary;
+
+  transition: .2s ease-out background-color;
+  &:hover {
+    background-color: rgba(191,157,91,.1);
+  }
 }
 
 .button--text {
   border: 0;
 
   color: $primary;
+
+  transition: .2s ease-out background-color;
+  &:hover {
+    background-color: rgba(191,157,91,.1);
+  }
 }
 
 
@@ -371,7 +386,7 @@ input[type="checkbox"]:checked + label span {
 // Etc
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 body *::selection {
-  background-color: rgba(201,168,122,.4);
+  background-color: rgba(191,157,91,.4);
 }
 
 a { text-decoration: none; }

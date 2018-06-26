@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="two columns">
-        <img class="nav__logo" src="/">
+        <div class="nav__logo"></div>
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
@@ -62,7 +62,9 @@
   <div class="container">
     <div class="row">
       <div class="seven columns">
-        <img class="nightmeal__image" src="/">
+        <img class="nightmeal__image" src="img/package.png">
+        <div class="nightmeal__circle"></div>
+        <div class="nightmeal__rectangle"></div>
       </div>
       <div class="five columns section__text-wrapper">
         <h2 class="section__title">야식 박스엔</br>뭐뭐 들어있어요?</h2>
@@ -132,7 +134,7 @@
         <p class="section__content">매달 둘째 주, 넷째 주 목요일마다</br>집으로 야식 박스가 찾아갑니다.</p>
       </div>
       <div class="eight columns">
-       <img class="calendar__image" src="/">
+       <img class="calendar__image" src="img/calendar.png">
       </div>
     </div>
   </div>
@@ -155,7 +157,7 @@
   <div class="container">
     <div class="row">
       <div class="seven columns">
-        <img class="beluga__image" src="/">
+        <img class="beluga__image" src="img/beluga.jpg">
       </div>
       <div class="five columns section__text-wrapper">
         <h2 class="section__title">벨루가가 키우는 벨루가,</br>미운 7살 덩덩이</h2>
@@ -224,5 +226,87 @@
 </footer>
 
 </body>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript">
+  window.sr = ScrollReveal({
+    duration: 1150,
+    scale: 1,
+    easing: "cubic-bezier(0.3, 0, 0.3, 1)"
+  });
+
+  sr.reveal("img", {
+    distance: "80px",
+    scale: 0.99,
+    delay: 0,
+  });
+
+  sr.reveal(".section__title", {
+    distance: "40px",
+    delay: 200
+  });
+  sr.reveal(".section__content", {
+    distance: "30px",
+    delay: 300
+  });
+
+
+  // Section Cover
+  sr.reveal(".cover__title", {
+    distance: "50px",
+    delay: 300
+  });
+  sr.reveal(".cover__subtitle", {
+    distance: "50px",
+    delay: 600
+  });
+  sr.reveal(".section__cover .button-wrapper", {
+    distance: "30px",
+    delay: 1000
+  });
+
+
+  // Section Nightmeal
+  sr.reveal(".nightmeal__circle", {
+    distance: "30px",
+    scale: 0.9,
+    rotate: { y: 25 },
+    delay: 300
+  });
+  sr.reveal(".nightmeal__rectangle", {
+    distance: "30px",
+    scale: 0.9,
+    rotate: { z: 5 },
+    delay: 400,
+  });
+
+
+  // Section Merit
+  sr.reveal(".merit__title", {
+    distance: "30px",
+    delay: 200
+  });
+  sr.reveal(".merit__content", {
+    distance: "30px",
+    delay: 300
+  });
+
+
+  // Section Outro
+  sr.reveal(".outro__title", {
+    distance: "50px",
+    delay: 300
+  });
+  sr.reveal(".outro__subtitle", {
+    distance: "50px",
+    delay: 600
+  });
+  sr.reveal(".section__outro .button-wrapper", {
+    distance: "30px",
+    delay: 1000
+  });
+
+
+
+</script>
 
 </html>

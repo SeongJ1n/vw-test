@@ -15,7 +15,9 @@
 .section__cover {
   min-height: 500px;
 
-  background-color: $gray-1;
+  background: url("../img/main.png");
+  background-size: cover;
+
   .cover {
     &__title {
       margin-top: 95px;
@@ -94,11 +96,43 @@
     margin-top: 90px;
   }
 
+  .seven.columns {
+    position: relative;
+  }
+
   .nightmeal__image {
     width: 100%;
     height: 330px;
+  }
+  .nightmeal__circle {
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: -20px;
 
-    background-color: $gray-2;
+    width: 250px;
+    height: 250px;
+
+    background-color: $primary;
+
+    @include border-radius(50%);
+  }
+  .nightmeal__rectangle {
+    position: absolute;
+    z-index: -1;
+    top: 170px;
+    right: 220px;
+  }
+  .nightmeal__rectangle:before {
+    position: absolute;
+
+    width: 100px;
+    height: 250px;
+
+    background-color: $primary ;
+
+    transform: rotate(42deg);
+    content: "";
   }
 }
 
@@ -150,15 +184,13 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section__calendar {
   .section__text-wrapper {
-    padding-left: 25px;
-    margin-top: 120px;
+    padding-left: 50px;
+    margin-top: 80px;
   }
 
   .calendar__image {
     width: 100%;
-    height: 380px;
-
-    background-color: $gray-2;
+    height: 435px;
   }
 }
 
@@ -189,9 +221,9 @@
 
   .beluga__image {
     width: 100%;
-    height: 400px;
+    height: 412px;
 
-    background-color: $gray-2;
+    @include border-radius(0 0 120px 0);
   }
 }
 
@@ -200,7 +232,8 @@
 .section__outro {
   min-height: 380px;
 
-  background-color: $gray-1;
+  background: url("../img/outro.png");
+  background-size: cover;
 
   .outro {
     &__title {

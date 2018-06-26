@@ -89,10 +89,12 @@
 
     border: 1px solid $border;
 
+    background-size: cover;
+
     text-align: left;
 
     cursor: pointer;
-    transition: .25s ease-out box-shadow;
+    transition: .25s ease-out;
 
     @include border-radius(3px);
 
@@ -116,7 +118,7 @@
                   0 16px 16px rgba(0, 0, 0, .012),
                   8px 32px 32px rgba(0, 0, 0, .018),
                   8px 64px 64px rgba(0, 0, 0, .018);
-      .select__circle { display: inline-block; }
+      .subscribe__circle { display: inline-block; }
     }
     &-wrapper {
       margin-top: 36px;
@@ -126,33 +128,34 @@
   &__title {
     display: inline-block;
 
+    // color: white;
+
     font-weight: 700;
   }
 
   &__content {
     margin-top: 10px;
 
-    color: $gray-6;
+    // color: $gray-6;
 
     font-size: 13px;
     line-height: 1.6em;
   }
 
   &__tag {
-    margin-left: 6px;
-    padding: 2px 4px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 
+    display: inline-block;
+    padding: 8px 10px;
+
+    background-color: white;
+
+    font-weight: 600;
     font-size: 13px;
 
-    @include border-radius(3px);
-    &--emphasis {
-      border: 1px solid $emphasis;
-      color: $emphasis;
-    }
-    &--positive {
-      border: 1px solid $positive;
-      color: $positive;
-    }
+    @include border-radius(5px);
   }
 
   &__text-wrapper {
@@ -162,10 +165,6 @@
 
     min-width: 145px;
     padding: 25px 30px 20px 23px;
-
-    background-color: white;
-
-    @include border-radius(0 3px 0 3px);
   }
 
   // 선택했을 때, 나오는 체크표시
@@ -194,7 +193,7 @@
 
       background-color: white;
 
-      @include border-radius(2px);
+      @include border-radius(3px);
       content: "";
     }
     &:after {
@@ -273,11 +272,11 @@
     background-color: $gray-0;
 
     content: "";
+
+
   }
   .subscribe__item {
-    min-height: 350px;
-
-    background-color: $gray-1;
+    min-height: 410px;
   }
 }
 
@@ -298,7 +297,7 @@
     content: "";
   }
   .subscribe__item {
-    min-height: 350px;
+    min-height: 410px;
 
     background-color: $gray-1;
   }
@@ -437,8 +436,8 @@
                 0 1px  6px  rgba(0, 0, 0, .015),
                 0 8px  8px  rgba(0, 0, 0, .012),
                 0 16px 16px rgba(0, 0, 0, .012),
-                8px 32px 32px rgba(0, 0, 0, .018),
-                8px 64px 64px rgba(0, 0, 0, .018);
+                8px 32px 32px rgba(0, 0, 0, .012),
+                8px 64px 64px rgba(0, 0, 0, .012);
     &:before {
       position: absolute;
       top: 0;
@@ -489,18 +488,22 @@
       color: $gray-6;
 
       font-size: 16px;
-      .input-wrapper {
-        // float: right;
-        display: inline-block;
-        width: 55%;
-        margin-top: 0;
-      }
+      .input-wrapper { margin-top: 0; }
     }
     &-info__label {
-      display: inline-block;
-      width: 43.8%;
+      position: relative;
 
       font-size: 14px;
+    }
+    &-info__link {
+      display: inline-block;
+      margin-top: 9px;
+      border-bottom: 1px solid $primary;
+
+      color: $primary;
+
+      font-weight: 600;
+      font-size: 12px;
     }
     &-info__value {
       float: right;
@@ -512,7 +515,7 @@
     &-info__total {
       margin-top: 20px;
       padding: 20px 0 0;
-      border-top: 1px solid $border;
+      border-top: 1px dashed $border;
 
       .purchase-info__label {
         color: $gray-9;
