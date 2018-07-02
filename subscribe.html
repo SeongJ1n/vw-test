@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>성진이 일터</title>
   <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/jsCalendar.css">
+  <script type="text/javascript" src="js/jsCalendar.js"></script>
 </head>
 
 <body>
@@ -59,8 +61,39 @@
   </div>
 </div>
 
+<!-- Subscribe Gift -->
+<section class="subscribe subscribe__gift">
+  <div class="container">
+    <h2 class="subscribe__header">선물 유형을 선택하세요</h2>
+    <div class="row subscribe__item-wrapper">
+      <div class="one-half columns empty"></div>
+      <div class="three columns subscribe__item subscribe__item--selected">
+        <span class="subscribe__circle"></span>
+        <h1 class="subscribe__type">생일</h1>
+        <hr class="subscribe__hr">
+        <p class="subscribe__explain">내 생일은 3월 6일 기억해</br>내년에 선물주세요</p>
+      </div>
+      <div class="three columns subscribe__item">
+        <span class="subscribe__circle"></span>
+        <h1 class="subscribe__type">감사</h1>
+        <hr class="subscribe__hr">
+        <p class="subscribe__explain">감사 감삼 감이 감일</br>감오 감육 감칠맛</p>
+      </div>
+      <div class="three columns subscribe__item">
+        <span class="subscribe__circle"></span>
+        <h1 class="subscribe__type">기타</h1>
+        <hr class="subscribe__hr">
+        <p class="subscribe__explain">기타는 역시 일렉이지</br>알렉스트라자 아님</p>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <a class="button button--filled" href="">다음 단계로</a>
+    </div>
+  </div>
+</section>
+
 <!-- Subscribe Nightmeal -->
-<section class="subscribe subscribe__nightmeal">
+<!-- <section class="subscribe subscribe__nightmeal">
   <div class="container">
     <h2 class="subscribe__header">야식을 선택하세요</h2>
     <div class="row subscribe__item-wrapper">
@@ -86,9 +119,9 @@
     </div>
   </div>
 </section>
-
+ -->
 <!-- Subscribe Add On -->
-<section class="subscribe subscribe__add-on">
+<!-- <section class="subscribe subscribe__add-on">
   <div class="container">
     <h2 class="subscribe__header">옵션을 추가하세요</h2>
     <div class="row subscribe__item-wrapper">
@@ -114,7 +147,7 @@
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Subscribe Period -->
 <section class="subscribe subscribe__period">
@@ -154,7 +187,7 @@
 </section>
 
 <!-- Subscribe Purchase -->
-<!-- <section class="subscribe subscribe__delivery">
+<section class="subscribe subscribe__delivery">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -174,90 +207,100 @@
             </div>
           </div>
         </div>
-        <form>
-          <div class="row">
-            <div class="six columns">
-              <div class="input-wrapper">
-                <input class="input" type="text" value="장성진" required>
-                <label class="input__label">수령인*</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
-              <span class="input__alert">수령인을 입력해주세요.</span>
-            </div>
 
-            <div class="six columns">
-              <div class="input-wrapper">
-                <input class="input" type="text" placeholder="- 없이 입력하세요" required>
-                <label class="input__label">휴대폰 연락처*</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
-              <span class="input__alert">연락처를 입력해주세요.</span>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="최대 30자까지 입력할 수 있습니다" required>
+              <label class="input__label">전달할 메세지</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="twelve columns">
-              <div class="input-wrapper">
-                <input class="input input--invalid" type="text" required>
-                <label class="input__label">수령할 주소*</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
-              <span class="input__alert input__alert--show">주소를 입력해주세요.</span>
+        <div class="row">
+          <div class="six columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" value="장성진" required>
+              <label class="input__label">수령인*</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">수령인을 입력해주세요.</span>
+          </div>
+
+          <div class="six columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="- 없이 입력하세요" required>
+              <label class="input__label">휴대폰 번호*</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">휴대폰 번호를 입력해주세요.</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input input--invalid" type="text" required>
+              <label class="input__label">수령할 주소*</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert input__alert--show">주소를 입력해주세요.</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" required>
+              <label class="input__label">상세 주소*</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="twelve columns">
-              <div class="input-wrapper">
-                <input class="input" type="text" required>
-                <label class="input__label">상세 주소*</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="checkbox-wrapper">
+              <input id="office" class="checkbox" type="checkbox">
+              <label for="office" class="checkbox__label"><span class="checkbox__icon"></span>사무실입니다(새벽 배달 불가)</label>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="twelve columns">
-              <div class="checkbox-wrapper">
-                <input id="office" class="checkbox" type="checkbox">
-                <label for="office" class="checkbox__label"><span class="checkbox__icon"></span>사무실입니다(새벽 배달 불가)</label>
-              </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="공동현관 비밀번호/자유출입/경비실 호출 등" required>
+              <label class="input__label">출입 방법</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="twelve columns">
-              <div class="input-wrapper">
-                <input class="input" type="text" placeholder="공동현관 비밀번호/자유출입/경비실 호출 등" required>
-                <label class="input__label">출입 방법</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="문 앞/경비실/택배함/그 외 장소" required>
+              <label class="input__label">특이사항 및 수령 방법</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
             </div>
           </div>
+        </div>
 
-          <div class="row">
-            <div class="twelve columns">
-              <div class="input-wrapper">
-                <input class="input" type="text" placeholder="문 앞/경비실/택배함/그 외 장소" required>
-                <label class="input__label">특이사항 및 수령 방법</label>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="description">
-            <ul>
-              <li class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요.</li>
-              <li class="description__item">특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</li>
-            </ul>
-          </div>
-        </form>
+        <div class="description">
+          <ul>
+            <li class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요.</li>
+            <li class="description__item">특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -308,8 +351,8 @@
           <div class="row">
             <div class="twelve columns">
               <div class="checkbox-wrapper">
-                <input id="test" class="checkbox" type="checkbox" checked>
-                <label for="test" class="checkbox__label"><span class="checkbox__icon"></span>전자금융거래 약관 동의</label>
+                <input id="ftp" class="checkbox" type="checkbox" checked>
+                <label for="ftp" class="checkbox__label"><span class="checkbox__icon"></span>전자금융거래 약관 동의</label>
               </div>
             </div>
           </div>
@@ -321,7 +364,176 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
+
+<!-- Subscribe Success -->
+<section class="subscribe subscribe__success">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns">
+        <div class="row">
+          <div class="twelve columns receipt">
+            <h2 class="receipt__title">{장성진}님 신청 꺼마워요!</h2>
+            <h4 class="receipt__subtitle">
+              첫 배달일은 6월 28일 목요일입니다.
+            </h4>
+            <p class="receipt__content">
+              배달이 완료된 이후에 적립금 {₩500}이 적립될 예정입니다.</br>6월 28일 이후 사용할 수 있는 적립금은 {₩12,500}입니다.
+            </p>
+            <hr>
+            <ul class="receipt__list">
+              <li class="receipt__item"><span class="receipt__price">₩155,000</span>정기 구독<br><span class="receipt__item__description">스낵 야식과 이달의 맥주 3달(총 6회)</span></li>
+              <li class="receipt__item">적립금 사용<span class="receipt__price">-₩5,000</span></li>
+              <hr>
+              <li class="receipt__item receipt__item--result">결제 금액<span class="receipt__price">₩150,000</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="receipt__pattern"></div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="auto-jsCalendar" data-month-format="YYYY년 month"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Login -->
+<section class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns login">
+        <h2 class="login__title">로그인</h2>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="- 없이 입력하세요"  required>
+              <label class="input__label">휴대폰번호</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">아이디를 입력해주세요.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" required>
+              <label class="input__label">비밀번호</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">비밀번호를 입력해주세요.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="checkbox-wrapper">
+              <input id="remember" class="checkbox" type="checkbox">
+              <label for="remember" class="checkbox__label"><span class="checkbox__icon"></span>날 기억해줘!</label>
+              <a class="login__find-pw" href="">비밀번호가 뭐더라?</a>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrapper row">
+          <a class="button button--facebook six columns" href="">페이스북 로그인</a>
+          <a class="button button--filled six columns" href="">로그인</a>
+        </div>
+        <div class="login__hr">이럴수가 회원이 아니세요?</div>
+        <div class="row">
+          <a class="button button--ghost twelve columns" href="">가입하기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Adult verify -->
+<section class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns adult-verify">
+        <h2 class="adult-verify__title">잠시 확인 좀 하겠습니다</h2>
+        <h4 class="adult-verify__subtitle">구독 신청은 만 19세 이상 성인부터 가능합니다</br>인증한 아이디가 있다면? <a href="">로그인하기</a></h4>
+        <div class="button-wrapper row">
+          <a class="button button--filled twelve columns" href="">만 19세 이상 성인 인증</a>
+        </div>
+        <div class="description">
+          <ul>
+            <li class="description__item">개인정보 수집 및 이용 동의 약관에 동의한 것으로 간주합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sign up -->
+<section class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns sign-up">
+        <h2 class="sign-up__title">가입하기</h2>
+        <div class="row">
+          <div class="six columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" value="장성진" required>
+              <label class="input__label">이름</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">이름을 입력해주세요.</span>
+          </div>
+          <div class="six columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="- 없이 입력하세요" required>
+              <label class="input__label">휴대폰 번호</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">휴대폰 번호를 입력해주세요.</span>
+          </div>
+        </div>
+        <div class="button-wrapper row">
+          <a class="button button--facebook facebook--connected twelve columns" href="">페이스북 연결 완료</a>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" placeholder="비밀번호 규칙은 뭐가 될까용" required>
+              <label class="input__label">비밀번호</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">비밀번호를 입력해주세요.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="input-wrapper">
+              <input class="input" type="text" required>
+              <label class="input__label">비밀번호 확인</label>
+              <span class="input__bar__horizontal"></span>
+              <span class="input__bar__vertical"></span>
+            </div>
+            <span class="input__alert">비밀번호가 일치하지 않습니다.</span>
+          </div>
+        </div>
+        <div class="button-wrapper row">
+          <a class="button button--filled twelve columns" href="">다 적었어요</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer">
@@ -368,5 +580,6 @@
 </footer>
 
 </body>
+
 
 </html>

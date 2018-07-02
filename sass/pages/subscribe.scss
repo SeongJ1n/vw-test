@@ -2,6 +2,7 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Step
 // - Subscribe Item
+// - Subscribe Gift
 // - Subscribe Nightmeal
 // - Subscribe Add on
 // - Subscribe Period
@@ -78,11 +79,6 @@
     font-size: 27px;
   }
 
-  .button-wrapper {
-    margin-top: 40px;
-    .button { min-width: 110px; }
-  }
-
   // 카드 UI
   &__item {
     position: relative;
@@ -99,25 +95,27 @@
     @include border-radius(3px);
 
     &:hover {
+      border-color: $gray-5;
+
       transform: scale(1.01);
-      box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
-                  0 1px  6px  rgba(0, 0, 0, .015),
-                  0 8px  8px  rgba(0, 0, 0, .012),
-                  0 16px 16px rgba(0, 0, 0, .012),
-                  8px 32px 32px rgba(0, 0, 0, .018),
-                  8px 64px 64px rgba(0, 0, 0, .018);
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                  0 1px  6px  rgba(0, 23, 80, .03),
+                  0 8px  8px  rgba(0, 23, 80, .024),
+                  0 16px 16px rgba(0, 23, 80, .024),
+                  8px 32px 32px rgba(0, 23, 80, .036),
+                  8px 64px 64px rgba(0, 23, 80, .036);
     }
 
     &--selected {
       border-color: $positive;
 
       transform: scale(1.01);
-      box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
-                  0 1px  6px  rgba(0, 0, 0, .015),
-                  0 8px  8px  rgba(0, 0, 0, .012),
-                  0 16px 16px rgba(0, 0, 0, .012),
-                  8px 32px 32px rgba(0, 0, 0, .018),
-                  8px 64px 64px rgba(0, 0, 0, .018);
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                  0 1px  6px  rgba(0, 23, 80, .03),
+                  0 8px  8px  rgba(0, 23, 80, .024),
+                  0 16px 16px rgba(0, 23, 80, .024),
+                  8px 32px 32px rgba(0, 23, 80, .036),
+                  8px 64px 64px rgba(0, 23, 80, .036);
       .subscribe__circle { display: inline-block; }
     }
     &-wrapper {
@@ -212,6 +210,22 @@
   }
   // 체크표시 코드 끝
 
+  // 선물유형선택
+  &__type {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1em;
+  }
+  &__explain {
+    margin-top: 5px;
+    margin-left: 1px;
+
+    color: $gray-6;
+
+    line-height: 1.65em;
+  }
+  // 선물유형선택 코드 끝
+
   // 기간선택
   &__month {
     font-weight: 500;
@@ -226,9 +240,9 @@
   }
   &__hr {
     width: 15%;
-    margin-top: 15px;
+    margin-top: 16px;
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
   &__price {
     display: inline-block;
@@ -257,6 +271,38 @@
   // 기간선택 코드 끝
 }
 
+
+// Subscribe Item
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.subscribe__gift {
+  &:before {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 240px;
+
+    background-color: $gray-0;
+
+    content: "";
+  }
+  .subscribe__item {
+    padding: 38px 0 38px 32px;
+
+    background-color: white;
+  }
+  .subscribe__hr {
+    margin: 22px 0 18px 2px;
+  }
+  .button-wrapper {
+    margin-top: 40px;
+    .button { min-width: 160px; }
+  }
+}
+
+
 // Subscribe Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .subscribe__nightmeal {
@@ -272,11 +318,13 @@
     background-color: $gray-0;
 
     content: "";
-
-
   }
   .subscribe__item {
     min-height: 410px;
+  }
+  .button-wrapper {
+    margin-top: 40px;
+    .button { min-width: 160px; }
   }
 }
 
@@ -301,6 +349,10 @@
 
     background-color: $gray-1;
   }
+  .button-wrapper {
+    margin-top: 40px;
+    .button { min-width: 160px; }
+  }
 }
 
 // Subscribe Period
@@ -323,6 +375,10 @@
     padding: 38px 0 38px 32px;
 
     background-color: white;
+  }
+  .button-wrapper {
+    margin-top: 40px;
+    .button { min-width: 160px; }
   }
 }
 
@@ -376,25 +432,6 @@
     }
   }
 }
-.description {
-  padding: 25px 20px;
-  margin-top: 15px;
-
-  background-color: $gray-2;
-
-  text-align: center;
-
-  @include border-radius(3px);
-  &__item {
-    color: $gray-6;
-
-    font-size: 12px;
-    line-height: 1.4em;
-  }
-  &__item+.description__item {
-    margin-top: 8px;
-  }
-}
 
 
 // Subscribe Purchase
@@ -429,15 +466,15 @@
 
     font-weight: 600;
     font-size: 17px;
+    text-align: left;
     line-height: 1.6em;
 
-    // @include border-radius(2px 2px 0 0);
-    box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
-                0 1px  6px  rgba(0, 0, 0, .015),
-                0 8px  8px  rgba(0, 0, 0, .012),
-                0 16px 16px rgba(0, 0, 0, .012),
-                8px 32px 32px rgba(0, 0, 0, .012),
-                8px 64px 64px rgba(0, 0, 0, .012);
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                0 1px  6px  rgba(0, 23, 80, .015),
+                0 8px  8px  rgba(0, 23, 80, .012),
+                0 16px 16px rgba(0, 23, 80, .012),
+                8px 32px 32px rgba(0, 23, 80, .018),
+                8px 64px 64px rgba(0, 23, 80, .018);
     &:before {
       position: absolute;
       top: 0;
@@ -458,17 +495,16 @@
       font-size: 14px;
     }
   }
-  .purchase {
 
+  .purchase {
     padding: 20px;
 
-    @include border-radius(0 0 3px 3px);
-    box-shadow: 0 4px  4px  rgba(0, 0, 0, .01),
-                0 1px  6px  rgba(0, 0, 0, .015),
-                0 8px  8px  rgba(0, 0, 0, .012),
-                0 16px 16px rgba(0, 0, 0, .012),
-                8px 32px 32px rgba(0, 0, 0, .018),
-                8px 64px 64px rgba(0, 0, 0, .018);
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                0 1px  6px  rgba(0, 23, 80, .03),
+                0 8px  8px  rgba(0, 23, 80, .024),
+                0 16px 16px rgba(0, 23, 80, .024),
+                8px 32px 32px rgba(0, 23, 80, .036),
+                8px 64px 64px rgba(0, 23, 80, .036);
     .button-wrapper {
       margin-top: 15px;
     }
@@ -535,38 +571,100 @@
   }
 }
 
-.select {
-  position: relative;
 
-  width: 100%;
-  height: 48px;
-  border: 1px solid $primary;
 
-  background-color: white;
-  color: $primary;
+// Subscribe Success
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.subscribe__success {
+  .receipt {
+    position: relative;
 
-  font-size: 14px;
-  font-weight: 600;
-  text-indent: 16px;
+    overflow: hidden;
+    padding: 45px 30px 35px;
 
-  @include border-radius(3px);
-  -webkit-appearance: none;
-  &:focus {
-    outline: none;
-  }
-  &-wrapper:before {
-    position: absolute;
-    z-index: 999;
-    top: 13px;
-    right: 16px;
+    color: $gray-7;
 
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: solid $primary;
-    border-width: 0 1px 1px 0;
+    font-weight: 600;
+    font-size: 17px;
+    text-align: left;
+    line-height: 1.6em;
 
-    transform: rotate(45deg);
-    content: "";
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                0 1px  6px  rgba(0, 23, 80, .015),
+                0 8px  8px  rgba(0, 23, 80, .012),
+                0 16px 16px rgba(0, 23, 80, .012),
+                8px 32px 32px rgba(0, 23, 80, .018),
+                8px 64px 64px rgba(0, 23, 80, .018);
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+
+      background-color: $primary;
+
+      content: "";
+    }
+    &__title {}
+    &__subtitle {
+      margin-top: 4px;
+
+      color: $gray-6;
+
+      font-weight: 500;
+      font-size: 14px;
+    }
+    &__content {
+      margin-top: 25px;
+
+      font-weight: 500;
+      font-size: 14px;
+    }
+    hr {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border-color: $gray-2;
+    }
+    &__list {
+      hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px dashed $border;
+        border-bottom: 0;
+      }
+    }
+    &__item {
+      padding: 5px 0;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.7em;
+      &__description {
+        color: $gray-6;
+
+        font-weight: 500;
+      }
+      &--result {
+        font-size: 16px;
+      }
+    }
+    &__price {
+      float: right;
+
+      font-weight: 600;
+    }
+    &__pattern {
+      position: relative;
+
+      width: 100%;
+      height: 6px;
+
+      background: url("../img/receipt__pattern.png");
+      background-size: 12px 6px;
+
+    }
   }
 }

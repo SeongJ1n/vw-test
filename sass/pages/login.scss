@@ -1,0 +1,227 @@
+// Table of contents
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// - Login
+// - Sign up
+// - Adult verify
+
+// Login
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.login {
+  position: relative;
+
+  padding: 50px 30px;
+
+  background-color: white;
+
+  text-align: left;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+
+    content: "";
+  }
+
+  .button-wrapper {
+    margin-top: 20px;
+  }
+  .button {
+    padding: 13px 0 14px;
+    text-align: center;
+  }
+  .button~.button {
+    margin-left: 4%;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+  }
+  &__find-pw {
+    float: right;
+
+    color: $primary;
+
+    font-size: 13px;
+    line-height: 18px;
+  }
+  &__sign-up {
+    font-size: 14px;
+
+    text-align: center;
+    a {
+      border-bottom: 1px solid $primary;
+
+      color: $primary;
+    }
+  }
+  &__hr {
+    position: relative;
+    z-index: 1;
+
+    padding: 22px 0;
+
+    color: $gray-5;
+
+    text-align: center;
+    font-size: 14px;
+    &:before {
+      position: absolute;
+      z-index: -2;
+      top: 48%;
+      left: 0;
+
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dashed $border;
+
+      content: "";
+    }
+    &:after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+
+      display: inline-block;
+      width: 46%;
+      height: 100%;
+
+      background-color: white;
+
+      content: "";
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+// Sign up
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.sign-up {
+  position: relative;
+
+  padding: 50px 30px 30px;
+
+  background-color: white;
+
+  text-align: left;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+
+    content: "";
+  }
+  .button-wrapper { margin-top: 20px; }
+  &__title {
+    margin-bottom: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  .facebook--connected {
+    border: 1px solid #4263b1;
+
+    background-color: rgba(66,99,177,0.1);
+    color: #4263b1;
+
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+
+// Adult verify
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.adult-verify {
+  position: relative;
+
+  padding: 50px 30px 30px;
+
+  background-color: white;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $emphasis;
+
+    content: "";
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+  }
+  &__subtitle {
+    margin-top: 15px;
+
+    color: $gray-6;
+
+    line-height: 1.7em;
+    font-size: 15px;
+    a {
+      border-bottom: 1px solid $primary;
+
+      color: $primary;
+    }
+  }
+  .button-wrapper {
+    margin-top: 35px;
+    .button--filled {
+      background-color: $emphasis;
+      &:hover {
+        background-color: $emphasis--dark;
+      }
+    }
+  }
+  .description {
+    padding: 20px 15px;
+    border: 1px dashed $border;
+
+    background-color: transparent;
+  }
+}
