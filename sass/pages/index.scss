@@ -1,7 +1,8 @@
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Section Cover
-// - Section Delivery
+// - Section Progressbar
+// - Section Boxitem
 // - Section Merit
 // - Section Calendar
 // - Section Insta
@@ -12,16 +13,20 @@
 // Section Cover
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.section__cover {
-  min-height: 500px;
+.section.section__cover {
+  padding: 0;
 
   background: url("../img/main.jpg");
   background-size: cover;
 
   .cover {
-    &__title {
-      margin-top: 95px;
+    &__content-wrapper {
+      position: relative;
 
+      padding: 275px 0 325px;
+    }
+
+    &__title {
       font-weight: 300;
     }
 
@@ -34,62 +39,76 @@
   }
 
   .button-wrapper {
+    position: relative;
+
     margin-top: 32px;
   }
 
-  .countdown {
+  .progressbar {
     position: absolute;
-    z-index: 1;
-    top: 488px;
-    left: 0;
+    bottom: -40px;
 
-    width: 436px;
-    padding: 35px 0;
+    overflow: hidden;
+    padding: 15px 35px;
 
     background-color: white;
 
-    @include border-radius(0 0 120px 0);
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                0 1px  6px  rgba(0, 23, 80, .015),
+                0 8px  8px  rgba(0, 23, 80, .012),
+                0 16px 16px rgba(0, 23, 80, .012),
+                8px 32px 32px rgba(0, 23, 80, .018),
+                8px 64px 64px rgba(0, 23, 80, .018);
+    &__number {
+      display: inline-block;
+      margin-top: 7px;
 
-    &__items {
-      margin-top: 10px;
+      color: $gray-7;
     }
-
-    &__item {
-      font-size: 36px;
-      letter-spacing: -.03em;
-      b {
-        color: $gray-2;
-
-        font-weight: 400;
-      }
-    }
-
-    &__unit {
-      margin-left: -1px;
-      margin-right: 15px;
-    }
-
-    &:before {
-      position: absolute;
-      z-index: -1;
-      left: -150%;
-      top: 0;
+    &__price {
+      float: right;
 
       display: inline-block;
-      width: 200%;
-      height: 100%;
+      margin-top: 7px;
 
-      background-color: white;
+      color: $gray-4;
 
-      content: "";
+      font-size: 18px;
+    }
+    &__total {
+      position: relative;
+
+      height: 2px;
+      margin-top: 15px;
+
+      background-color: $gray-1;
+    }
+    &__percent {
+      position: absolute;
+      top: -1px;
+
+      display: inline-block;
+      width: 82%;
+      height: 4px;
+
+      background-color: $primary;
+
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .08),
+                  0 1px  6px  rgba(0, 23, 80, .12),
+                  0 8px  8px  rgba(0, 23, 80, .1),
+                  0 16px 16px rgba(0, 23, 80, .1),
+                  8px 32px 32px rgba(0, 23, 80, .14),
+                  8px 64px 64px rgba(0, 23, 80, .14);
     }
   }
+
 }
+
 
 // Section Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__nightmeal {
-  padding: 160px 0 100px;
+  padding: 230px 0 140px;
 
   .section__text-wrapper {
     padding-left: 20px;
@@ -136,24 +155,62 @@
   }
 }
 
-// Section Delivery
+// Section Boxitem
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.section__delivery {
+.section.section__boxitem {
+  padding: 140px 0 140px;
   .section__text-wrapper {
-    margin-top: 85px;
+    margin-top: 80px;
   }
+  .row~.row { margin-top: 25px; }
+  .boxitem {
+    position: relative;
 
-  .delivery__image {
-    width: 100%;
-    height: 300px;
+    padding: 20px 20px 25px;
 
-    background-color: $gray-2;
+    text-align: center;
+
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                0 1px  6px  rgba(0, 23, 80, .015),
+                0 8px  8px  rgba(0, 23, 80, .012),
+                0 16px 16px rgba(0, 23, 80, .012),
+                8px 32px 32px rgba(0, 23, 80, .018),
+                8px 64px 64px rgba(0, 23, 80, .018);
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $primary;
+
+      content: "";
+    }
+    &__image {
+      width: 100%;
+    }
+    &__title {
+      margin-top: 20px;
+
+      font-weight: 600;
+    }
+    &__content {
+      margin-top: 10px;
+
+      color: $gray-6;
+
+      font-size: 14px;
+      line-height: 1.6em;
+    }
   }
 }
 
 // Section Merit
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.section__merit {
+.section.section__merit {
+  padding: 110px 0 110px;
   .merit {
     &__text-wrapper {
       padding-left: 15px;
@@ -162,9 +219,6 @@
 
     &__image {
       width: 100%;
-      height: 240px;
-
-      background-color: $gray-2;
     }
 
     &__title {
@@ -182,7 +236,8 @@
 
 // Section Calendar
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.section__calendar {
+.section.section__calendar {
+  padding: 120px 0 100px;
   .section__text-wrapper {
     padding-left: 50px;
     margin-top: 80px;
@@ -204,7 +259,7 @@
   .insta {
     &__item {
       overflow: hidden;
-      margin-top: 40px;
+      margin-top: 50px;
 
       @include border-radius(5px);
       box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
@@ -246,18 +301,30 @@
 // Section Beluga
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__beluga {
-  padding: 100px 0 160px;
+  padding: 130px 0 220px;
 
   .section__text-wrapper {
-    padding-left: 20px;
-    margin-top: 35px;
+    padding-left: 40px;
+    margin-top: 45px;
   }
 
   .beluga__image {
-    width: 100%;
-    height: 412px;
+    position: relative;
 
-    @include border-radius(0 0 120px 0);
+    &:after {
+      position: absolute;
+      z-index: -1;
+      top: 16px;
+      left: 16px;
+
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border: dashed $primary;
+      border-width: 0 1px 1px 0;
+
+      content: "";
+    }
   }
 }
 
@@ -266,7 +333,7 @@
 .section__outro {
   min-height: 380px;
 
-  background: url("../img/outro.png");
+  background: url("../img/outro.jpg");
   background-size: cover;
 
   .outro {
@@ -280,7 +347,7 @@
       margin-top: 20px;
       margin-left: 2px;
 
-      color: $gray-6;
+      color: $gray-7;
     }
   }
 

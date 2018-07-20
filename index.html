@@ -29,10 +29,10 @@
 </nav>
 
 <!-- Section Cover -->
-<section class="section section__cover">
+<section id="sectionCover" class="section section__cover">
   <div class="container">
     <div class="row">
-      <div class="six columns">
+      <div class="five columns cover__content-wrapper">
         <h1 class="cover__title">오늘도 수고한 나에게,</br>벨루가</h1>
         <h4 class="cover__subtitle">나에게 찾아오는 야식박스</h4>
         <div class="button-wrapper">
@@ -41,17 +41,16 @@
         </div>
       </div>
     </div>
-    <div class="countdown">
-      <h4>이번 주문 마감까지</h4>
-      <div class="countdown__items">
-        <span class="countdown__item"><b>0</b>5</span>
-        <span class="countdown__unit">일</span>
-        <span class="countdown__item"><b>0</b>2</span>
-        <span class="countdown__unit">시간</span>
-        <span class="countdown__item">34</span>
-        <span class="countdown__unit">분</span>
-        <span class="countdown__item">59</span>
-        <span class="countdown__unit">초</span>
+    <div class="row">
+      <div class="progressbar twelve columns">
+        <div class="nine columns">
+          <h4 class="progressbar__number">7월 2차 구독 진행중</h4>
+          <h4 class="progressbar__price">82%</h4>
+          <div class="progressbar__total">
+            <span class="progressbar__percent"></span>
+          </div>
+        </div>
+        <a class="button button--ghost three columns" href="">3일밖에 안남았어요</a>
       </div>
     </div>
   </div>
@@ -67,29 +66,51 @@
         <div class="nightmeal__rectangle"></div>
       </div>
       <div class="five columns section__text-wrapper">
-        <h2 class="section__title">야식 박스엔</br>뭐뭐 들어있어요?</h2>
-        <p class="section__content">옵션을 모두 선택하면 야식, 크래프트비어,</br>맥주도감, 위생용품, 사이드스낵이 들어갑니다.</p>
+        <h2 class="section__title">나를 위한</br>벨루가만의 야식박스</h2>
+        <p class="section__content">매번 시킬 필요없이 편하게 집으로</br>정기배달을 받아볼 수 있어요</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section Delivery -->
-<section class="section section__delivery">
+<!-- Section Boxitem -->
+<section class="section section__boxitem">
   <div class="container">
     <div class="row">
-      <div class="three columns section__text-wrapper">
-        <h2 class="section__title">{5월 24일}에</br>받을 수 있었던 것들</h2>
-        <p class="section__content">매달 둘째 주, 넷째 주 목요일마다</br>집으로 야식 박스가 찾아갑니다.</p>
+      <div class="four columns section__text-wrapper">
+        <h2 class="section__title">구성품에 대해</br>자세히 알려줘요!</h2>
+        <p class="section__content">옵션을 모두 선택하면 야식, 사이드스낵,</br>크래프트 맥주, 맥주도감, 위생용품이 들어갑니다</p>
       </div>
-      <div class="three columns">
-       <img class="delivery__image" src="img/delivery.png">
-      </div>
-      <div class="three columns">
-       <img class="delivery__image" src="img/delivery.png">
-      </div>
-      <div class="three columns">
-       <img class="delivery__image" src="img/delivery.png">
+      <div class="eight columns">
+        <div class="row">
+          <div class="four columns boxitem">
+            <img class="boxitem__image" src="img/boxitem__01.png">
+            <h4 class="boxitem__title">고메 야식</h4>
+            <p class="boxitem__content">맛있어서 살이 쪄도</br>억울하지 않아요</p>
+          </div>
+          <div class="four columns boxitem">
+            <img class="boxitem__image" src="img/boxitem__02.png">
+            <h4 class="boxitem__title">사이드 스낵</h4>
+            <p class="boxitem__content">야금야금 먹다가</br>손가락까지 빨아먹어요</p>
+          </div>
+          <div class="four columns boxitem">
+            <img class="boxitem__image" src="img/boxitem__03.png">
+            <h4 class="boxitem__title">크래프트 맥주</h4>
+            <p class="boxitem__content">매번 새로운 맥주를</br>경험할 수 있어요</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="four columns boxitem">
+            <img class="boxitem__image" src="img/boxitem__04.png">
+            <h4 class="boxitem__title">맥주도감</h4>
+            <p class="boxitem__content">수집욕구를 자극하는</br>수집욕구를 자극해요</p>
+          </div>
+          <div class="four columns boxitem">
+            <img class="boxitem__image" src="img/boxitem__05.png">
+            <h4 class="boxitem__title">위생용품</h4>
+            <p class="boxitem__content">작지만 꼭 필요한</br>위생용품과 코스터</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -102,7 +123,7 @@
       <div class="six columns merit">
         <div class="row">
           <div class="six columns">
-            <img class="merit__image" src="img/merit.png">
+            <img class="merit__image" src="img/merit__01.png">
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">매달 새로운 경험</h3>
@@ -113,11 +134,12 @@
       <div class="six columns merit">
         <div class="row">
           <div class="six columns">
-            <img class="merit__image" src="img/merit.png">
+            <img class="merit__image" src="img/merit__02.png">
           </div>
           <div class="six columns merit__text-wrapper">
-            <h3 class="merit__title">매달 새로운 경험</h3>
-            <p class="merit__content">비어 마스터가 선정한 새로운</br>맥주와 야식을 함께 즐겨보세요.</p>
+            <h3 class="merit__title">지친 나를 위한 선물</h3>
+            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?
+            스트레스를 털어버리고 집에서 편안하게 즐기세요.</p>
           </div>
         </div>
       </div>
@@ -146,33 +168,43 @@
     <h2 class="section__title">받아보니깐 어땠어요?</h2>
     <div class="row">
       <div class="four columns insta__item">
-        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <img class="insta__pic" src="img/insta__01.jpg" width="100%" height="auto">
         <div class="insta__content">
           <div class="insta__profile">
             <span class="insta__icon"></span>
-            <h4 class="insta__username">seongj1n</h4>
+            <h4 class="insta__username">yeonuhong</h4>
           </div>
-          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+          <p class="insta__text">
+          벨루가 서비스 도착! 비어마스터가 선정한</br>
+          맥주와 함께 페어링된 야식까지 문 앞에 쓱-</br>
+          배달 된다니 뭔가 왕창 선물 받은 기분이다.</p>
         </div>
       </div>
       <div class="four columns insta__item">
-        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <img class="insta__pic" src="img/insta__02.jpg" width="100%" height="auto">
         <div class="insta__content">
           <div class="insta__profile">
             <span class="insta__icon"></span>
-            <h4 class="insta__username">seongj1n</h4>
+            <h4 class="insta__username">tori_bar_kitchen</h4>
           </div>
-          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+          <p class="insta__text">
+            #와디즈로 #벨루가 #월드컵 기념 펀딩 !</br>
+            #스웨덴전 하루 전인 오늘 검정박스에 배송</br>
+            스웨덴 #시드르 #버드와이저 #까르후
+          </p>
         </div>
       </div>
       <div class="four columns insta__item">
-        <img class="insta__pic" src="img/insta.png" width="100%" height="auto">
+        <img class="insta__pic" src="img/insta__03.jpg" width="100%" height="auto">
         <div class="insta__content">
           <div class="insta__profile">
             <span class="insta__icon"></span>
-            <h4 class="insta__username">seongj1n</h4>
+            <h4 class="insta__username">bitna.y</h4>
           </div>
-          <p class="insta__text">단언컨데 벨루가(@velugabrewery)는</br>최고의 서비스입니다. BEER FOR LIFE.</br>#맥주 #맥주스타그램 #beer #veluga</p>
+          <p class="insta__text">
+          남편님이 무려 한달전에 주문한 #veluga</br>
+          #월드컵크래프트비어 한국 경기 당일마다</br>
+          배달되는 상대 국가 #맥주 와 #야식 세트!</p>
         </div>
       </div>
     </div>
@@ -184,7 +216,9 @@
   <div class="container">
     <div class="row">
       <div class="seven columns">
-        <img class="beluga__image" src="img/beluga.jpg">
+        <div class="beluga__image">
+          <img width="100%" heigh="100%" src="img/beluga.jpg">
+        </div>
       </div>
       <div class="five columns section__text-wrapper">
         <h2 class="section__title">벨루가가 키우는 벨루가,</br>미운 7살 덩덩이</h2>
@@ -254,7 +288,9 @@
 
 </body>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 <script type="text/javascript">
+
   window.sr = ScrollReveal({
     duration: 1250,
     scale: 1,
@@ -272,34 +308,24 @@
     delay: 400
   });
 
-
   // Section Cover
-  sr.reveal(".cover__title", {
-    distance: "60px",
-    delay: 300
-  });
-  sr.reveal(".cover__subtitle", {
-    distance: "60px",
-    delay: 600
-  });
-  sr.reveal(".section__cover .button-wrapper", {
-    distance: "40px",
-    delay: 1000
-  });
-
-  sr.reveal(".countdown", {
-    origin: "left",
-    distance: "700px",
-    delay: 1300
-  });
-
-
-  // Section Delivery
-  sr.reveal(".delivery__image", {
-    distance: "90px",
-    scale: 0.99,
-    delay: 0,
-  }, 300);
+  // sr.reveal(".section__cover", {
+  //   // origin: "right",
+  //   duration: 1000,
+  //   distance: "200px",
+  //   scale: 1.05,
+  //   delay: 100
+  // });
+  // sr.reveal(".cover__content-wrapper", {
+  //   origin: "left",
+  //   duration: 900,
+  //   distance: "200px",
+  //   delay: 600
+  // });
+  // sr.reveal(".section__cover .button-wrapper", {
+  //   distance: "40px",
+  //   delay: 1000
+  // });
 
 
   // Section Nightmeal
@@ -376,8 +402,6 @@
     distance: "40px",
     delay: 1000
   });
-
-
 
 </script>
 

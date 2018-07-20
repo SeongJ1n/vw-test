@@ -16,9 +16,14 @@
 // - Section
 // - Button
 // - Input
+// - Radio
 // - Select list
 // - Description
 // - Etc
+
+body {
+  overflow-x: hidden;
+}
 
 // Navigation
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -35,7 +40,8 @@
     height: 36px;
     margin-top: 12px;
 
-    background-color: $gray-9;
+    background: url("../img/logo.jpg");
+    background-size: cover;
 
     @include border-radius(50%);
   }
@@ -130,7 +136,6 @@
 
   box-sizing: border-box;
   transition: .2s ease-out background-color;
-  @include border-radius(3px);
   &:active { transform: scale(0.99); }
 }
 
@@ -195,7 +200,6 @@
   font-size: 14px;
 
   box-sizing: border-box;
-  @include border-radius(3px);
 
   // invalid 상태일 때
   &--invalid {
@@ -268,7 +272,6 @@
     transform-origin: right center;
 
     pointer-events: none;
-    @include border-radius(3px);
   }
   &__bar__horizontal:after {
     position: absolute;
@@ -285,7 +288,6 @@
     transform: scaleX(0);
     transform-origin: left center;
     pointer-events: none;
-    @include border-radius(3px);
   }
   &:focus~.input__bar__horizontal:before,
   &:valid~.input__bar__horizontal:before {
@@ -312,7 +314,6 @@
     transform: scaleY(0);
     transform-origin: top center;
     pointer-events: none;
-    @include border-radius(3px);
   }
   &__bar__vertical:after {
     position: absolute;
@@ -329,7 +330,6 @@
     transform: scaleY(0);
     transform-origin: bottom center;
     pointer-events: none;
-    @include border-radius(3px);
   }
   &:focus~.input__bar__vertical:before,
   &:valid~.input__bar__vertical:before {
@@ -372,8 +372,6 @@
 
     vertical-align: middle;
     transition: 0.15s ease background-color;
-
-    @include border-radius(3px);
   }
 }
 input[type="checkbox"]:checked + label span {
@@ -399,6 +397,97 @@ input[type="checkbox"]:checked + label span {
   }
 }
 
+// Radio
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.radio-wrapper {
+  margin-top: 20px;
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + .radio__label .radio__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid $border;
+
+    vertical-align: middle;
+
+    box-sizing: border-box;
+
+    @include border-radius(50%);
+  }
+  input[type="radio"]:checked + .radio__label .radio__icon {
+    background-color: $positive;
+    border-color: $positive;
+  }
+
+  input[type="radio"]:checked + .radio__label {
+    border-color: $positive;
+    color: $positive;
+
+    font-weight: 500;
+  }
+
+  .radio {
+    &__header {
+      color: $gray-7;
+
+      font-weight: 500;
+      font-size: 13px;
+    }
+    &__label {
+      margin-top: 10px;
+      padding: 18px;
+      border: 1px solid $border;
+
+      background-color: white;
+      color: $gray-6;
+
+      font-size: 14px;
+
+      cursor: pointer;
+    }
+    &__label ~ .radio__label {
+      margin-top: 6px;
+    }
+    &__icon {
+      position: relative;
+
+      transform: rotate(45deg);
+
+      &:before {
+        position: absolute;
+        top: 3px;
+        left: 9px;
+
+        width: 2px;
+        height: 9px;
+
+        background-color: white;
+
+        @include border-radius(3px);
+        content: "";
+      }
+      &:after {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+
+        width: 6px;
+        height: 2px;
+
+        background-color: white;
+
+        @include border-radius(3px);
+        content: "";
+      }
+    }
+  }
+}
+
+
 
 // Select list
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -418,8 +507,8 @@ input[type="checkbox"]:checked + label span {
   font-weight: 600;
   text-indent: 16px;
 
-  @include border-radius(3px);
   -webkit-appearance: none;
+  @include border-radius(0);
   &:focus {
     outline: none;
   }
@@ -444,14 +533,12 @@ input[type="checkbox"]:checked + label span {
 // Description
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .description {
-  padding: 25px 20px;
+  padding: 20px 15px;
   margin-top: 15px;
-
-  background-color: $gray-2;
+  border: 1px dashed $gray-4;
 
   text-align: center;
 
-  @include border-radius(3px);
   &__item {
     color: $gray-6;
 

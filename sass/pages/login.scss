@@ -219,9 +219,9 @@
     }
   }
   .description {
-    padding: 20px 15px;
-    border: 1px dashed $border;
+    padding: 15px;
 
     background-color: transparent;
+    border-color: $border;
   }
 }
