@@ -2,22 +2,19 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Step
 // - Subscribe Item
-// - Subscribe Gift
 // - Subscribe Nightmeal
 // - Subscribe Add on
 // - Subscribe Period
 // - Subscribe Delivery
 // - Subscribe Purchase
+// - Subscribe Success
 
 
 // Step
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .step {
-  padding: 20px 0;
-  margin-top: 60px;
+  padding: 80px 0 20px;
   border-bottom: 1px solid $border;
-
-  background-color: rgba(248,249,250,.4);
 
   &__item--complete {
     .step__circle {
@@ -50,7 +47,7 @@
     color: $gray-5;
 
     font-weight: 500;
-    line-height: 24px;
+    line-height: 22px;
     text-align: center;
 
     @include border-radius(50%);
@@ -96,6 +93,8 @@
     &:hover {
       border-color: $gray-5;
 
+      -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
       transform: scale(1.01);
       box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
                   0 1px  6px  rgba(0, 23, 80, .03),
@@ -108,6 +107,8 @@
     &--selected {
       border-color: $positive;
 
+      -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
       transform: scale(1.01);
       box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
                   0 1px  6px  rgba(0, 23, 80, .03),
@@ -179,6 +180,8 @@
     background-color: $positive;
 
     @include border-radius(50%);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 
     &:before {
@@ -269,37 +272,6 @@
     margin-top: 6px;
   }
   // 기간선택 코드 끝
-}
-
-
-// Subscribe Item
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-.subscribe__gift {
-  &:before {
-    position: absolute;
-    z-index: -999;
-    top: 0;
-
-    display: block;
-    width: 100%;
-    height: 240px;
-
-    background-color: $gray-0;
-
-    content: "";
-  }
-  .subscribe__item {
-    padding: 38px 0 38px 32px;
-
-    background-color: white;
-  }
-  .subscribe__hr {
-    margin: 22px 0 18px 2px;
-  }
-  .button-wrapper {
-    margin-top: 40px;
-    .button { min-width: 160px; }
-  }
 }
 
 
@@ -511,8 +483,6 @@
       width: 100%;
 
       text-align: center;
-
-      box-sizing: border-box;
     }
     &-info__item {
       position: relative;
@@ -665,5 +635,72 @@
       background-size: 12px 6px;
 
     }
+
+    // coupon
+    &__coupon {
+      position: relative;
+      z-index: 1;
+
+      display: inline-block;
+      width: 100%;
+      margin-top: 30px;
+      padding: 22px 25px 25px;
+
+      background-color: white;
+
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1.7em;
+      text-align: left;
+
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                  0 1px  6px  rgba(0, 23, 80, .015),
+                  0 8px  8px  rgba(0, 23, 80, .012),
+                  0 16px 16px rgba(0, 23, 80, .012),
+                  8px 32px 32px rgba(0, 23, 80, .018),
+                  8px 64px 64px rgba(0, 23, 80, .018);
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+
+        background-color: $primary;
+
+        content: "";
+      }
+      .button {
+        display: block;
+        margin-top: 18px;
+        padding: 12px 25px 13px;
+      }
+    }
+    &__couponcode {
+      float: right;
+
+      font-weight: 600;
+    }
+    &__couponlink {
+      border-bottom: 1px solid $primary;
+
+      color: $primary;
+
+      font-weight: 500;
+    }
+  }
+  .jsCalendar table {
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                0 1px  6px  rgba(0, 23, 80, .03),
+                0 8px  8px  rgba(0, 23, 80, .024),
+                0 16px 16px rgba(0, 23, 80, .024),
+                8px 32px 32px rgba(0, 23, 80, .036),
+                8px 64px 64px rgba(0, 23, 80, .036);
+  }
+  .button-wrapper {
+    margin-top: 20px;
+    .button { width: 100%; }
   }
 }

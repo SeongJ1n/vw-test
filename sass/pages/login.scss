@@ -4,6 +4,7 @@
 // - Sign up
 // - Adult verify
 
+
 // Login
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .login {
@@ -107,6 +108,8 @@
       background-color: white;
 
       content: "";
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
     }
   }
@@ -172,6 +175,8 @@
   padding: 50px 30px 30px;
 
   background-color: white;
+
+  text-align: center;
 
   box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
               0 1px  6px  rgba(0, 23, 80, .03),

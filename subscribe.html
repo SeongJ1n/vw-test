@@ -11,6 +11,8 @@
 
 <body>
 
+<div class="wrap">
+
 <!-- Navigation -->
 <nav id="nav" class="nav" style="border-bottom: 1px solid #dee2e6">
   <div class="container">
@@ -51,7 +53,7 @@
             <h4 class="step__title">기간선택</h4>
           </a>
       </div>
-      <div class="two columns step__item step__item--active">
+      <div class="two columns step__item step__item--complete">
         <a href="">
             <div class="step__circle">4</div>
             <h4 class="step__title">결제하기</h4>
@@ -121,7 +123,7 @@
 </section> -->
 
 <!-- Subscribe Add On -->
-<section class="subscribe subscribe__add-on">
+<!-- <section class="subscribe subscribe__add-on">
   <div class="container">
     <h2 class="subscribe__header">옵션을 추가하세요</h2>
     <div class="row subscribe__item-wrapper">
@@ -148,7 +150,7 @@
     </div>
   </div>
 </section>
-
+ -->
 <!-- Subscribe Period -->
 <!-- <section class="subscribe subscribe__period">
   <div class="container">
@@ -263,22 +265,22 @@
         </div>
 
         <div class="row">
-          <div class="twelve columns">
-
+          <div class="twelve columns radio-wrapper--text">
             <h4 class="radio__header">새벽 배달 필수 정보</h4>
-            <input class="radio" id="gift-type--default" name="gift-type" type="radio" checked>
-            <label for="gift-type--default" class="six columns radio__label">
+            <input class="radio" id="door-check--yes" name="door-check" type="radio" checked>
+            <label for="door-check--yes" class="radio__label">
               <span class="radio__icon"></span>공동현관 출입
             </label>
-            <input class="radio" id="gift-type--thankyou" name="gift-type" type="radio">
-            <label for="gift-type--thankyou" class="six columns radio__label">
+            <input class="radio" id="door-check--no" name="door-check" type="radio">
+            <label for="door-check--no" class="radio__label">
               <span class="radio__icon"></span>출입 제한 없음
             </label>
 
+            <div class="input-wrapper">
               <input class="input" type="text" placeholder="열쇠 버튼 + 1234 + * 버튼" required>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
-
+            </div>
           </div>
         </div>
 
@@ -390,7 +392,7 @@
         </div>
 
         <div class="row">
-          <div class="twelve columns radio-wrapper">
+          <div class="twelve columns radio-wrapper--gc">
             <h4 class="radio__header">선물 유형</h4>
             <input class="radio" id="gift-type--default" name="gift-type" type="radio" checked>
             <label for="gift-type--default" class="twelve columns radio__label">
@@ -476,7 +478,7 @@
 </section> -->
 
 <!-- Subscribe Success -->
-<!-- <section class="subscribe subscribe__success">
+<section class="subscribe subscribe__success">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -507,10 +509,91 @@
             <div class="auto-jsCalendar" data-month-format="YYYY년 month"></div>
           </div>
         </div>
+        <div class="button-wrapper">
+          <a class="button button--filled" href="">내 구독 조회</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Subscribe Success
+Virtual Account -->
+<!-- <section class="subscribe subscribe__success">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns">
+        <div class="row">
+          <div class="twelve columns receipt">
+            <h2 class="receipt__title">입금만 하면 완료!</h2>
+            <h4 class="receipt__subtitle">
+              결제 완료시 첫 배달일은 6월 28일 목요일입니다.
+            </h4>
+            <p class="receipt__content">
+              입금계좌 ⃓ 농협은행 79004159423232</br>예금주 ⃓ 벨루가브루어리 주식회사</br>24시간 이내에 입금해주셔야 결제 완료됩니다.
+            </p>
+            <hr>
+            <ul class="receipt__list">
+              <li class="receipt__item"><span class="receipt__price">₩155,000</span>정기 구독<br><span class="receipt__item__description">스낵 야식과 이달의 맥주 3달(총 6회)</span></li>
+              <li class="receipt__item">적립금 사용<span class="receipt__price">-₩5,000</span></li>
+              <hr>
+              <li class="receipt__item receipt__item--result">입금 금액<span class="receipt__price">₩150,000</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="receipt__pattern"></div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="auto-jsCalendar" data-month-format="YYYY년 month"></div>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <a class="button button--filled" href="">내 구독 조회</a>
+        </div>
       </div>
     </div>
   </div>
 </section> -->
+
+
+<!-- Subscribe Success Gift -->
+<!-- <section class="subscribe subscribe__success">
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns">
+        <div class="row">
+          <div class="twelve columns receipt">
+            <h2 class="receipt__title">선물 구매 완료!</h2>
+            <h4 class="receipt__subtitle">
+              받는 분도 정말 좋아할거에요.
+            </h4>
+            <p class="receipt__content">
+              {장성진}님이 작성한 메세지를 한 번 더 확인해주세요.</br>
+              "당신 Birthday 축하. 나의 호의에 늘 감사하십시오."
+            </p>
+            <hr>
+            <ul class="receipt__list">
+              <li class="receipt__item"><span class="receipt__price">₩155,000</span>선물 금액<br><span class="receipt__item__description">스낵 야식과 이달의 맥주 3달(총 6회)</span></li>
+              <li class="receipt__item">적립금 사용<span class="receipt__price">-₩5,000</span></li>
+              <hr>
+              <li class="receipt__item receipt__item--result">결제 금액<span class="receipt__price">₩150,000</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="receipt__coupon">
+          <span class="receipt__couponcode">F7C4YOU</span>쿠폰 코드<br>
+          <a class="receipt__couponlink" href="bit.ly/velugacoupon">bit.ly/velugacoupon</a>
+          <a class="button button--filled" href="">선물 받을 사람한테 전해주기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
 
 <!-- Login -->
 <!-- <section class="subscribe">
@@ -523,7 +606,7 @@
           <div class="twelve columns">
             <div class="input-wrapper">
               <input class="input" type="text" placeholder="- 없이 입력하세요"  required>
-              <label class="input__label">휴대폰번호</label>
+              <label class="input__label">휴대폰 번호</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
             </div>
@@ -561,7 +644,8 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
+ -->
 
 <!-- Adult verify -->
 <!-- <section class="subscribe">
@@ -582,7 +666,8 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
+ -->
 
 <!-- Sign up -->
 <!-- <section class="subscribe">
@@ -644,6 +729,7 @@
   </div>
 </section> -->
 
+
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
@@ -688,7 +774,28 @@
   </div>
 </footer>
 
-</body>
+</div>
 
+<!-- Modal - Coupon -->
+<!-- <div class="modal">
+  <div class="modal__content row">
+    <h2 class="modal__title">쿠폰 등록</h2>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="input-wrapper" style="margin-top: 30px;">
+          <input class="input" type="text" placeholder="코드를 입력하세요"  required>
+          <span class="input__bar__horizontal"></span>
+          <span class="input__bar__vertical"></span>
+        </div>
+        <span class="input__alert">알맞은 쿠폰 코드를 입력해주세요.</span>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <a class="button button--filled twelve columns" href="">등록하기</a>
+    </div>
+  </div>
+</div> -->
+
+</body>
 
 </html>

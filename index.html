@@ -9,6 +9,8 @@
 
 <body>
 
+<div class="wrap">
+
 <!-- Navigation -->
 <nav id="nav" class="nav">
   <div class="container">
@@ -20,8 +22,8 @@
         <ul class="nav__menu">
           <a href="/vw-test/subscribe"><li class="nav__item">정기구독</li></a>
           <a href=""><li class="nav__item">선물하기</li></a>
-          <a href=""><li class="nav__item">케이터링</li></a>
-          <a href=""><li class="nav__item">로그인</li></a>
+          <a href="/vw-test/mypage"><li class="nav__item">케이터링</li></a>
+          <a href="/vw-test/login"><li class="nav__item">로그인</li></a>
         </ul>
       </div>
     </div>
@@ -286,6 +288,8 @@
   </div>
 </footer>
 
+</div>
+
 </body>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
@@ -309,23 +313,27 @@
   });
 
   // Section Cover
-  // sr.reveal(".section__cover", {
-  //   // origin: "right",
-  //   duration: 1000,
-  //   distance: "200px",
-  //   scale: 1.05,
-  //   delay: 100
-  // });
-  // sr.reveal(".cover__content-wrapper", {
-  //   origin: "left",
-  //   duration: 900,
-  //   distance: "200px",
-  //   delay: 600
-  // });
-  // sr.reveal(".section__cover .button-wrapper", {
-  //   distance: "40px",
-  //   delay: 1000
-  // });
+  sr.reveal(".section__cover", {
+    origin: "right",
+    duration: 1200,
+    distance: "130px",
+    delay: 100
+  });
+  sr.reveal(".cover__content-wrapper", {
+    origin: "left",
+    duration: 1500,
+    distance: "200px",
+    delay: 600
+  });
+  sr.reveal(".section__cover .button-wrapper", {
+    distance: "40px",
+    delay: 1000
+  });
+  sr.reveal(".progressbar", {
+    distance: "40px",
+    delay: 1000
+  });
+
 
 
   // Section Nightmeal
@@ -349,6 +357,13 @@
     rotate: { z: 5 },
     delay: 400,
   });
+
+
+  // Section Boxitem
+  sr.reveal(".boxitem", {
+    distance: "100px",
+    delay: 200,
+  }, 300);
 
 
   // Section Merit

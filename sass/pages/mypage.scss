@@ -1,0 +1,173 @@
+// Table of contents
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+// - Submenu
+// - Mypage - Subscribe
+// - Mypage - Table
+
+
+// Submenu
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.submenu {
+  &__item { padding: 15px 0; }
+  &__item a {
+    color: $gray-5;
+
+    transition: 0.25s ease-out;
+    &:hover { color: $gray-9; }
+  }
+  &__item--active a {
+    color: $gray-9;
+  }
+}
+
+
+
+// Mypage - Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.mypage {
+  padding: 120px 0;
+
+  &__subscribe {
+    position: relative;
+
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                0 1px  6px  rgba(0, 23, 80, .03),
+                0 8px  8px  rgba(0, 23, 80, .024),
+                0 16px 16px rgba(0, 23, 80, .024),
+                8px 32px 32px rgba(0, 23, 80, .036),
+                8px 64px 64px rgba(0, 23, 80, .036);
+    &:before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+
+      background-color: $primary;
+
+      content: "";
+    }
+    &__item {
+      position: relative;
+
+      padding: 38px 0 38px 38px;
+    }
+    &__item ~ .mypage__subscribe__item:before {
+      position: absolute;
+      top: 20%;
+      left: 0px;
+
+      display: inline-block;
+      width: 1px;
+      height: 60%;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+    &__title {
+      color: $gray-5;
+
+      font-size: 13px;
+      font-weight: 600;
+      b {
+        display: inline-block;
+        margin-top: 8px;
+
+        color: $gray-9;
+
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    &__content {
+      margin-top: 20px;
+
+      font-size: 20px;
+    }
+    &__link {
+      color: $primary;
+
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    &__address {
+      margin-top: 20px;
+      span {
+        display: inline-block;
+        margin-top: 25px;
+
+        color: $gray-5;
+
+        font-size: 14px;
+      }
+      p {
+        margin-top: 12px;
+
+        font-size: 14px;
+        line-height: 1.3em;
+      }
+    }
+
+    hr {
+      margin-top: 25px;
+
+      border-color: $gray-1;
+    }
+
+    .row:nth-child(1) {
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
+                  0 1px  6px  rgba(0, 23, 80, .01),
+                  0 8px  8px  rgba(0, 23, 80, .01),
+                  0 16px 16px rgba(0, 23, 80, .01),
+                  8px 32px 32px rgba(0, 23, 80, .01),
+                  8px 64px 64px rgba(0, 23, 80, .01);
+    }
+    .jsCalendar table { background-color: transparent; }
+    .auto-jsCalendar {
+      position: relative;
+
+      padding: 0px 20px 25px 20px;
+
+      &:before {
+        position: absolute;
+        top: 8%;
+        left: 0px;
+
+        display: inline-block;
+        width: 1px;
+        height: 82%;
+
+        background-color: $gray-1;
+
+        content: "";
+      }
+    }
+  }
+}
+
+
+// Mypage - Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.mypage__table {
+  width: 100%;
+  margin-top: 20px;
+  th, td { font-size: 14px; }
+  th {
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+  }
+  td {
+    border-bottom: 1px dashed $border;
+  }
+  tr:last-child {
+    border-bottom: 1px solid $border;
+  }
+}
+
+
+
