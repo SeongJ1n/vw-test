@@ -279,7 +279,7 @@ h1 {
   letter-spacing: -.03em; }
 
 h2 {
-  font-size: 25px;
+  font-size: 27px;
   letter-spacing: -.03em; }
 
 h3 {
@@ -524,7 +524,7 @@ p {
     content: ""; }
 
 .section.section__boxitem .section__text-wrapper {
-  margin-top: 80px; }
+  margin-top: 55px; }
 .section.section__boxitem .row ~ .row {
   margin-top: 25px; }
 .section.section__boxitem .boxitem {

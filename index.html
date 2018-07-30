@@ -69,7 +69,7 @@
       </div>
       <div class="five columns section__text-wrapper">
         <h2 class="section__title">나를 위한</br>벨루가만의 야식박스</h2>
-        <p class="section__content">매번 시킬 필요없이 편하게 집으로</br>정기배달을 받아볼 수 있어요</p>
+        <p class="section__content">더운 여름날, 추운 겨울날, 나가기 귀찮은날</br>맛있는 야식과 새로운 맥주가 나를 찾아온다면?</br>매번 시킬 필요없이 정기배달 받아보세요.</p>
       </div>
     </div>
   </div>
@@ -81,7 +81,7 @@
     <div class="row">
       <div class="four columns section__text-wrapper">
         <h2 class="section__title">구성품에 대해</br>자세히 알려줘요!</h2>
-        <p class="section__content">옵션을 모두 선택하면 야식, 사이드스낵,</br>크래프트 맥주, 맥주도감, 위생용품이 들어갑니다</p>
+        <p class="section__content">옵션을 모두 선택하면 야식, 사이드스낵,</br>크래프트 맥주, 맥주도감, 위생용품이</br>벨루가 야식박스 안에 들어있어요.</p>
       </div>
       <div class="eight columns">
         <div class="row">
@@ -105,7 +105,7 @@
           <div class="four columns boxitem">
             <img class="boxitem__image" src="img/boxitem__04.png">
             <h4 class="boxitem__title">맥주도감</h4>
-            <p class="boxitem__content">수집욕구를 자극하는</br>수집욕구를 자극해요</p>
+            <p class="boxitem__content">수집욕구를 자극하는</br>맥주도감카드</p>
           </div>
           <div class="four columns boxitem">
             <img class="boxitem__image" src="img/boxitem__05.png">
@@ -129,7 +129,7 @@
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">매달 새로운 경험</h3>
-            <p class="merit__content">비어 마스터가 선정한 새로운</br>맥주와 야식을 함께 즐겨보세요.</p>
+            <p class="merit__content">비어 마스터가 선정한 야식과</br>새로운 맥주를 경험해보세요.</p>
           </div>
         </div>
       </div>
@@ -140,8 +140,7 @@
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">지친 나를 위한 선물</h3>
-            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?
-            스트레스를 털어버리고 집에서 편안하게 즐기세요.</p>
+            <p class="merit__content">벨루가만의 패키징으로 받을 때의</br>ㅇ</p>
           </div>
         </div>
       </div>
@@ -292,11 +291,27 @@
 
 </body>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <script type="text/javascript">
 
+
+$(window).on('resize', function () {
+  var winWidth = $(window).width();
+  var winHeight = $(window).height();
+  var $loginWrap = $('#loginWrap');
+  $loginWrap.css(
+    'padding-top', winHeight/5.5);
+  $loginWrap.css(
+    'padding-bottom', winHeight/5.5+214);
+
+  if(winWidth <= 768){
+  }
+});
+
+
   window.sr = ScrollReveal({
-    duration: 1250,
+    duration: 900,
     scale: 1,
     useDelay: "onload",
     easing: "cubic-bezier(0.3, 0, 0.3, 1)"
@@ -315,48 +330,86 @@
   // Section Cover
   sr.reveal(".section__cover", {
     origin: "right",
-    duration: 1200,
     distance: "130px",
     delay: 100
   });
   sr.reveal(".cover__content-wrapper", {
     origin: "left",
-    duration: 1500,
     distance: "200px",
     delay: 600
   });
   sr.reveal(".section__cover .button-wrapper", {
-    distance: "40px",
-    delay: 1000
+    origin: "left",
+    distance: "0px",
+    delay: 600
   });
   sr.reveal(".progressbar", {
-    distance: "40px",
-    delay: 1000
+    distance: "0px",
+    duration: 800,
+    delay: 1800,
+    easing: "cubic-bezier(0.2, 1.5, 0.5, 1)"
   });
 
 
 
   // Section Nightmeal
-  sr.reveal(".nightmeal__image", {
-    origin: "left",
-    distance: "60px",
-    scale: 0.99,
-    delay: 0,
-  });
-  sr.reveal(".nightmeal__circle", {
-    origin: "left",
-    distance: "40px",
-    scale: 0.9,
-    rotate: { y: 25 },
-    delay: 300
-  });
-  sr.reveal(".nightmeal__rectangle", {
-    origin: "left",
-    distance: "40px",
-    scale: 0.9,
-    rotate: { z: 5 },
-    delay: 400,
-  });
+
+$(document).ready(function () {
+  var winHeight = $(window).height();
+
+  if(winHeight >= 900){
+    sr.reveal(".nightmeal__image", {
+      origin: "left",
+      distance: "60px",
+      scale: 0.99,
+      delay: 2500,
+    });
+    sr.reveal(".nightmeal__circle", {
+      origin: "left",
+      distance: "40px",
+      scale: 0.9,
+      rotate: { y: 25 },
+      delay: 2800
+    });
+    sr.reveal(".nightmeal__rectangle", {
+      origin: "left",
+      distance: "40px",
+      scale: 0.9,
+      rotate: { z: 5 },
+      delay: 2900,
+    });
+    sr.reveal(".section__nightmeal .section__title", {
+      distance: "60px",
+      delay: 2800
+    });
+    sr.reveal(".section__nightmeal .section__content", {
+      distance: "50px",
+      delay: 2900
+    });
+  }
+  else {
+    sr.reveal(".nightmeal__image", {
+      origin: "left",
+      distance: "60px",
+      scale: 0.99,
+      delay: 0,
+    });
+    sr.reveal(".nightmeal__circle", {
+      origin: "left",
+      distance: "40px",
+      scale: 0.9,
+      rotate: { y: 25 },
+      delay: 300
+    });
+    sr.reveal(".nightmeal__rectangle", {
+      origin: "left",
+      distance: "40px",
+      scale: 0.9,
+      rotate: { z: 5 },
+      delay: 400,
+    });
+  }
+});
 
 
   // Section Boxitem
