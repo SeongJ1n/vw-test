@@ -86,29 +86,29 @@
       <div class="eight columns">
         <div class="row">
           <div class="four columns boxitem">
-            <img class="boxitem__image" src="img/boxitem__01.png">
+            <img class="boxitem__image" src="img/boxitem__gourmet.png">
             <h4 class="boxitem__title">고메 야식</h4>
             <p class="boxitem__content">맛있어서 살이 쪄도</br>억울하지 않아요</p>
           </div>
           <div class="four columns boxitem">
-            <img class="boxitem__image" src="img/boxitem__02.png">
+            <img class="boxitem__image" src="img/boxitem__snack.png">
             <h4 class="boxitem__title">사이드 스낵</h4>
             <p class="boxitem__content">야금야금 먹다가</br>손가락까지 빨아먹어요</p>
           </div>
           <div class="four columns boxitem">
-            <img class="boxitem__image" src="img/boxitem__03.png">
+            <img class="boxitem__image" src="img/boxitem__beer.png">
             <h4 class="boxitem__title">크래프트 맥주</h4>
             <p class="boxitem__content">매번 새로운 맥주를</br>경험할 수 있어요</p>
           </div>
         </div>
         <div class="row">
           <div class="four columns boxitem">
-            <img class="boxitem__image" src="img/boxitem__04.png">
+            <img class="boxitem__image" src="img/boxitem__card.png">
             <h4 class="boxitem__title">맥주도감</h4>
             <p class="boxitem__content">수집욕구를 자극하는</br>맥주도감카드</p>
           </div>
           <div class="four columns boxitem">
-            <img class="boxitem__image" src="img/boxitem__05.png">
+            <img class="boxitem__image" src="img/boxitem__coaster.png">
             <h4 class="boxitem__title">위생용품</h4>
             <p class="boxitem__content">작지만 꼭 필요한</br>위생용품과 코스터</p>
           </div>
@@ -140,7 +140,7 @@
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">지친 나를 위한 선물</h3>
-            <p class="merit__content">벨루가만의 패키징으로 받을 때의</br>ㅇ</p>
+            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?</br>이제 집에서 편안하게 즐기세요.</p>
           </div>
         </div>
       </div>
@@ -295,27 +295,14 @@
 
 <script type="text/javascript">
 
-
-$(window).on('resize', function () {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-  var $loginWrap = $('#loginWrap');
-  $loginWrap.css(
-    'padding-top', winHeight/5.5);
-  $loginWrap.css(
-    'padding-bottom', winHeight/5.5+214);
-
-  if(winWidth <= 768){
-  }
-});
-
-$(document).ready(function () {
   window.sr = ScrollReveal({
     duration: 900,
     scale: 1,
     useDelay: "onload",
     easing: "cubic-bezier(0.3, 0, 0.3, 1)"
   });
+
+$(document).ready(function () {
 
   sr.reveal(".section__title", {
     distance: "60px",
@@ -344,7 +331,6 @@ $(document).ready(function () {
   });
   sr.reveal(".progressbar", {
     distance: "0px",
-    duration: 800,
     delay: 1300,
     easing: "cubic-bezier(0.2, 1.5, 0.5, 1)"
   });
@@ -380,11 +366,11 @@ $(document).ready(function () {
     });
     sr.reveal(".section__nightmeal .section__title", {
       distance: "60px",
-      delay: 2100
+      delay: 2100,
     });
     sr.reveal(".section__nightmeal .section__content", {
       distance: "50px",
-      delay: 2200
+      delay: 2200,
     });
   }
   else {
@@ -408,7 +394,7 @@ $(document).ready(function () {
       rotate: { z: 5 },
       delay: 400,
     });
-  }
+  };
 });
 
 

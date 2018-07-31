@@ -1,22 +1,105 @@
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
+// - Profile
 // - Submenu
 // - Mypage - Subscribe
 // - Mypage - Table
 
 
+// Profile
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.profile {
+  padding-top: 25px;
+
+  &__title {
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-top: 10px;
+
+    color: $gray-5;
+    line-height: 1.6em;
+  }
+}
+
+
 // Submenu
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .submenu {
-  &__item { padding: 15px 0; }
+  margin-top: 45px;
+
+  &__item {
+    padding: 15px 0;
+
+    &:hover a { color: $gray-9; }
+    &:hover .submenu__icon__subscribe {
+      background: url("../img/submenu__icon__subscribe--active.png");
+      background-size: cover;
+    }
+    &:hover .submenu__icon__myinfo {
+      background: url("../img/submenu__icon__myinfo--active.png");
+      background-size: cover;
+    }
+    &:hover .submenu__icon__point {
+      background: url("../img/submenu__icon__point--active.png");
+      background-size: cover;
+    }
+    &:hover .submenu__icon__gift {
+      background: url("../img/submenu__icon__gift--active.png");
+      background-size: cover;
+    }
+  }
+
   &__item a {
+    margin-left: 18px;
     color: $gray-5;
 
+    vertical-align: super;
+
     transition: 0.25s ease-out;
-    &:hover { color: $gray-9; }
   }
   &__item--active a {
     color: $gray-9;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+
+    transition: 0.25s ease-out;
+    &--active.submenu__icon__subscribe {
+      background: url("../img/submenu__icon__subscribe--active.png");
+      background-size: cover;
+    }
+    &__subscribe {
+      background: url("../img/submenu__icon__subscribe.png");
+      background-size: cover;
+    }
+    &--active.submenu__icon__myinfo {
+      background: url("../img/submenu__icon__myinfo--active.png");
+      background-size: cover;
+    }
+    &__myinfo {
+      background: url("../img/submenu__icon__myinfo.png");
+      background-size: cover;
+    }
+    &--active.submenu__icon__point {
+      background: url("../img/submenu__icon__point--active.png");
+      background-size: cover;
+    }
+    &__point {
+      background: url("../img/submenu__icon__point.png");
+      background-size: cover;
+    }
+    &--active.submenu__icon__gift {
+      background: url("../img/submenu__icon__gift--active.png");
+      background-size: cover;
+    }
+    &__gift {
+      background: url("../img/submenu__icon__gift.png");
+      background-size: cover;
+    }
   }
 }
 
@@ -166,6 +249,16 @@
   }
   tr:last-child {
     border-bottom: 1px solid $border;
+  }
+
+  &__title {
+    margin-top: 40px;
+  }
+  &__link {
+    color: $primary;
+
+    font-weight: 500;
+    font-size: 14px;
   }
 }
 
