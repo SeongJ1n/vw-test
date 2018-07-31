@@ -487,8 +487,50 @@ p {
       background-color: #bf9d5b;
       box-shadow: 0 4px 4px rgba(0, 23, 80, 0.08), 0 1px 6px rgba(0, 23, 80, 0.12), 0 8px 8px rgba(0, 23, 80, 0.1), 0 16px 16px rgba(0, 23, 80, 0.1), 8px 32px 32px rgba(0, 23, 80, 0.14), 8px 64px 64px rgba(0, 23, 80, 0.14); }
 
+.section.section__merit {
+  padding: 155px 0 5px; }
+  .section.section__merit .merit__text-wrapper {
+    padding-left: 15px;
+    margin-top: 73px; }
+  .section.section__merit .merit__image {
+    width: 100%; }
+  .section.section__merit .merit__title {
+    font-weight: 400;
+    line-height: 1.4em; }
+  .section.section__merit .merit__content {
+    margin-top: 16px;
+    color: #868e96; }
+
+.section.section__boxitem .section__text-wrapper {
+  margin-top: 55px; }
+.section.section__boxitem .row ~ .row {
+  margin-top: 25px; }
+.section.section__boxitem .boxitem {
+  position: relative;
+  padding: 20px 20px 25px;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.01), 0 1px 6px rgba(0, 23, 80, 0.015), 0 8px 8px rgba(0, 23, 80, 0.012), 0 16px 16px rgba(0, 23, 80, 0.012), 8px 32px 32px rgba(0, 23, 80, 0.018), 8px 64px 64px rgba(0, 23, 80, 0.018); }
+  .section.section__boxitem .boxitem:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #bf9d5b;
+    content: ""; }
+  .section.section__boxitem .boxitem__image {
+    width: 100%; }
+  .section.section__boxitem .boxitem__title {
+    margin-top: 20px;
+    font-weight: 600; }
+  .section.section__boxitem .boxitem__content {
+    margin-top: 10px;
+    color: #868e96;
+    font-size: 14px;
+    line-height: 1.6em; }
+
 .section.section__nightmeal {
-  padding: 200px 0 120px; }
+  padding: 60px 0 130px; }
   .section.section__nightmeal .section__text-wrapper {
     padding-left: 20px;
     margin-top: 90px; }
@@ -523,50 +565,8 @@ p {
     transform: rotate(42deg);
     content: ""; }
 
-.section.section__boxitem .section__text-wrapper {
-  margin-top: 55px; }
-.section.section__boxitem .row ~ .row {
-  margin-top: 25px; }
-.section.section__boxitem .boxitem {
-  position: relative;
-  padding: 20px 20px 25px;
-  text-align: center;
-  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.01), 0 1px 6px rgba(0, 23, 80, 0.015), 0 8px 8px rgba(0, 23, 80, 0.012), 0 16px 16px rgba(0, 23, 80, 0.012), 8px 32px 32px rgba(0, 23, 80, 0.018), 8px 64px 64px rgba(0, 23, 80, 0.018); }
-  .section.section__boxitem .boxitem:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #bf9d5b;
-    content: ""; }
-  .section.section__boxitem .boxitem__image {
-    width: 100%; }
-  .section.section__boxitem .boxitem__title {
-    margin-top: 20px;
-    font-weight: 600; }
-  .section.section__boxitem .boxitem__content {
-    margin-top: 10px;
-    color: #868e96;
-    font-size: 14px;
-    line-height: 1.6em; }
-
-.section.section__merit {
-  padding: 100px 0; }
-  .section.section__merit .merit__text-wrapper {
-    padding-left: 15px;
-    margin-top: 73px; }
-  .section.section__merit .merit__image {
-    width: 100%; }
-  .section.section__merit .merit__title {
-    font-weight: 400;
-    line-height: 1.4em; }
-  .section.section__merit .merit__content {
-    margin-top: 16px;
-    color: #868e96; }
-
 .section.section__calendar {
-  padding: 100px 0; }
+  padding: 80px 0; }
   .section.section__calendar .section__text-wrapper {
     padding-left: 50px;
     margin-top: 80px; }
@@ -575,7 +575,7 @@ p {
     height: 435px; }
 
 .section.section__insta {
-  padding: 110px 0; }
+  padding: 80px 0; }
   .section.section__insta .section__title {
     text-align: center; }
   .section.section__insta .insta__item {
@@ -605,7 +605,7 @@ p {
     line-height: 1.7em; }
 
 .section.section__beluga {
-  padding: 100px 0 210px; }
+  padding: 110px 0 210px; }
   .section.section__beluga .section__text-wrapper {
     padding-left: 40px;
     margin-top: 45px; }
@@ -1081,6 +1081,18 @@ p {
     .submenu__item:hover .submenu__icon__gift {
       background: url("../img/submenu__icon__gift--active.png");
       background-size: cover; }
+    .submenu__item--active .submenu__icon__subscribe {
+      background: url("../img/submenu__icon__subscribe--active.png");
+      background-size: cover; }
+    .submenu__item--active .submenu__icon__myinfo {
+      background: url("../img/submenu__icon__myinfo--active.png");
+      background-size: cover; }
+    .submenu__item--active .submenu__icon__point {
+      background: url("../img/submenu__icon__point--active.png");
+      background-size: cover; }
+    .submenu__item--active .submenu__icon__gift {
+      background: url("../img/submenu__icon__gift--active.png");
+      background-size: cover; }
   .submenu__item a {
     margin-left: 18px;
     color: #adb5bd;
@@ -1093,26 +1105,14 @@ p {
     width: 22px;
     height: 22px;
     transition: 0.25s ease-out; }
-    .submenu__icon--active.submenu__icon__subscribe {
-      background: url("../img/submenu__icon__subscribe--active.png");
-      background-size: cover; }
     .submenu__icon__subscribe {
       background: url("../img/submenu__icon__subscribe.png");
-      background-size: cover; }
-    .submenu__icon--active.submenu__icon__myinfo {
-      background: url("../img/submenu__icon__myinfo--active.png");
       background-size: cover; }
     .submenu__icon__myinfo {
       background: url("../img/submenu__icon__myinfo.png");
       background-size: cover; }
-    .submenu__icon--active.submenu__icon__point {
-      background: url("../img/submenu__icon__point--active.png");
-      background-size: cover; }
     .submenu__icon__point {
       background: url("../img/submenu__icon__point.png");
-      background-size: cover; }
-    .submenu__icon--active.submenu__icon__gift {
-      background: url("../img/submenu__icon__gift--active.png");
       background-size: cover; }
     .submenu__icon__gift {
       background: url("../img/submenu__icon__gift.png");
@@ -1196,6 +1196,12 @@ p {
 .mypage__table {
   width: 100%;
   margin-top: 20px; }
+  .mypage__table-wrapper .button-wrapper {
+    float: right;
+    display: inline-block;
+    margin-top: 31px; }
+    .mypage__table-wrapper .button-wrapper .button--ghost {
+      padding: 10px 14px; }
   .mypage__table th, .mypage__table td {
     font-size: 14px; }
   .mypage__table th {
@@ -1205,12 +1211,64 @@ p {
     border-bottom: 1px dashed #dee2e6; }
   .mypage__table tr:last-child {
     border-bottom: 1px solid #dee2e6; }
+  .mypage__table .view td:last-child {
+    position: relative; }
+    .mypage__table .view td:last-child:before {
+      position: absolute;
+      top: 11px;
+      right: 55%;
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-bottom: 4px;
+      border: solid #212529;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+      content: "";
+      transition: 0.2s ease-out; }
+  .mypage__table .view.open td:last-child:before {
+    top: 17px;
+    transform: rotate(225deg); }
   .mypage__table__title {
-    margin-top: 40px; }
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: 600; }
   .mypage__table__link {
     color: #bf9d5b;
     font-weight: 500;
     font-size: 14px; }
+  .mypage__table .view {
+    cursor: pointer; }
+  .mypage__table .fold {
+    display: none;
+    background-color: #f8f9fa; }
+    .mypage__table .fold__item {
+      position: relative;
+      padding: 20px 0 20px 20px; }
+    .mypage__table .fold__item ~ .fold__item:before {
+      position: absolute;
+      top: 20%;
+      left: 0px;
+      display: inline-block;
+      width: 1px;
+      height: 60%;
+      background-color: #e9ecef;
+      content: ""; }
+    .mypage__table .fold__title {
+      color: #adb5bd;
+      font-size: 13px;
+      font-weight: 600; }
+    .mypage__table .fold__content {
+      margin-top: 12px;
+      font-size: 15px;
+      line-height: 1.5em; }
+  .mypage__table .open {
+    display: table-row; }
+
+.mypage__gift .mypage__table__title {
+  margin-top: 26px; }
+.mypage__gift .button-wrapper {
+  margin-top: 17px; }
 
 * {
   box-sizing: border-box;
@@ -1302,6 +1360,7 @@ body {
   letter-spacing: -.025em;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
   transition: .2s ease-out background-color; }
   .button:active {
     -webkit-transform: scale(0.99);

@@ -4,6 +4,7 @@
 // - Submenu
 // - Mypage - Subscribe
 // - Mypage - Table
+// - Mypage - Gift
 
 
 // Profile
@@ -48,6 +49,23 @@
       background: url("../img/submenu__icon__gift--active.png");
       background-size: cover;
     }
+
+    &--active .submenu__icon__subscribe {
+      background: url("../img/submenu__icon__subscribe--active.png");
+      background-size: cover;
+    }
+    &--active .submenu__icon__myinfo {
+      background: url("../img/submenu__icon__myinfo--active.png");
+      background-size: cover;
+    }
+    &--active .submenu__icon__point {
+      background: url("../img/submenu__icon__point--active.png");
+      background-size: cover;
+    }
+    &--active .submenu__icon__gift {
+      background: url("../img/submenu__icon__gift--active.png");
+      background-size: cover;
+    }
   }
 
   &__item a {
@@ -68,32 +86,16 @@
     height: 22px;
 
     transition: 0.25s ease-out;
-    &--active.submenu__icon__subscribe {
-      background: url("../img/submenu__icon__subscribe--active.png");
-      background-size: cover;
-    }
     &__subscribe {
       background: url("../img/submenu__icon__subscribe.png");
-      background-size: cover;
-    }
-    &--active.submenu__icon__myinfo {
-      background: url("../img/submenu__icon__myinfo--active.png");
       background-size: cover;
     }
     &__myinfo {
       background: url("../img/submenu__icon__myinfo.png");
       background-size: cover;
     }
-    &--active.submenu__icon__point {
-      background: url("../img/submenu__icon__point--active.png");
-      background-size: cover;
-    }
     &__point {
       background: url("../img/submenu__icon__point.png");
-      background-size: cover;
-    }
-    &--active.submenu__icon__gift {
-      background: url("../img/submenu__icon__gift--active.png");
       background-size: cover;
     }
     &__gift {
@@ -239,6 +241,20 @@
 .mypage__table {
   width: 100%;
   margin-top: 20px;
+
+  &-wrapper {
+    .button-wrapper {
+      float: right;
+
+      display: inline-block;
+      margin-top: 31px;
+
+      .button--ghost {
+        padding: 10px 14px;
+      }
+    }
+  }
+
   th, td { font-size: 14px; }
   th {
     border-top: 1px solid $border;
@@ -251,8 +267,37 @@
     border-bottom: 1px solid $border;
   }
 
+  .view td:last-child {
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 11px;
+      right: 55%;
+
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-bottom: 4px;
+      border: solid $gray-9;
+      border-width: 0 1px 1px 0;
+
+      transform: rotate(45deg);
+      content: "";
+      transition: 0.2s ease-out;
+    }
+  }
+  .view.open td:last-child:before {
+    top: 17px;
+
+    transform: rotate(225deg);
+  }
+
   &__title {
+    display: inline-block;
     margin-top: 40px;
+
+    font-weight: 600;
   }
   &__link {
     color: $primary;
@@ -260,7 +305,57 @@
     font-weight: 500;
     font-size: 14px;
   }
+  .view {
+    cursor: pointer;
+  }
+  .fold {
+    display: none;
+    background-color: $gray-0;
+    &__item {
+      position: relative;
+
+      padding: 20px 0 20px 20px;
+    }
+    &__item ~ .fold__item:before {
+      position: absolute;
+      top: 20%;
+      left: 0px;
+
+      display: inline-block;
+      width: 1px;
+      height: 60%;
+
+      background-color: $gray-2;
+
+      content: "";
+    }
+    &__title {
+      color: $gray-5;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+    &__content{
+      margin-top: 12px;
+
+      font-size: 15px;
+      line-height: 1.5em;
+    }
+  }
+  .open {
+    display: table-row;
+  }
 }
 
+// Mypage - Gift
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.mypage__gift {
+  .mypage__table__title {
+    margin-top: 26px;
+  }
+  .button-wrapper {
+    margin-top: 17px;
+  }
+}
 

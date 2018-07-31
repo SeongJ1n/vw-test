@@ -58,18 +58,31 @@
   </div>
 </section>
 
-<!-- Section Nightmeal -->
-<section class="section section__nightmeal">
+<!-- Section Merit -->
+<section class="section section__merit">
   <div class="container">
     <div class="row">
-      <div class="seven columns">
-        <img class="nightmeal__image" src="img/package.png">
-        <div class="nightmeal__circle"></div>
-        <div class="nightmeal__rectangle"></div>
+      <div class="six columns merit">
+        <div class="row">
+          <div class="six columns">
+            <img class="merit__image" src="img/merit__01.png">
+          </div>
+          <div class="six columns merit__text-wrapper">
+            <h3 class="merit__title">매달 새로운 경험</h3>
+            <p class="merit__content">비어 마스터가 선정한 야식과</br>새로운 맥주를 경험해보세요.</p>
+          </div>
+        </div>
       </div>
-      <div class="five columns section__text-wrapper">
-        <h2 class="section__title">나를 위한</br>벨루가만의 야식박스</h2>
-        <p class="section__content">더운 여름날, 추운 겨울날, 나가기 귀찮은날</br>맛있는 야식과 새로운 맥주가 나를 찾아온다면?</br>매번 시킬 필요없이 정기배달 받아보세요.</p>
+      <div class="six columns merit">
+        <div class="row">
+          <div class="six columns">
+            <img class="merit__image" src="img/merit__02.png">
+          </div>
+          <div class="six columns merit__text-wrapper">
+            <h3 class="merit__title">지친 나를 위한 선물</h3>
+            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?</br>이제 집에서 편안하게 즐기세요.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -118,31 +131,18 @@
   </div>
 </section>
 
-<!-- Section Merit -->
-<section class="section section__merit">
+<!-- Section Nightmeal -->
+<section class="section section__nightmeal">
   <div class="container">
     <div class="row">
-      <div class="six columns merit">
-        <div class="row">
-          <div class="six columns">
-            <img class="merit__image" src="img/merit__01.png">
-          </div>
-          <div class="six columns merit__text-wrapper">
-            <h3 class="merit__title">매달 새로운 경험</h3>
-            <p class="merit__content">비어 마스터가 선정한 야식과</br>새로운 맥주를 경험해보세요.</p>
-          </div>
-        </div>
+      <div class="seven columns">
+        <img class="nightmeal__image" src="img/package.png">
+        <div class="nightmeal__circle"></div>
+        <div class="nightmeal__rectangle"></div>
       </div>
-      <div class="six columns merit">
-        <div class="row">
-          <div class="six columns">
-            <img class="merit__image" src="img/merit__02.png">
-          </div>
-          <div class="six columns merit__text-wrapper">
-            <h3 class="merit__title">지친 나를 위한 선물</h3>
-            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?</br>이제 집에서 편안하게 즐기세요.</p>
-          </div>
-        </div>
+      <div class="five columns section__text-wrapper">
+        <h2 class="section__title">나를 위한</br>벨루가만의 야식박스</h2>
+        <p class="section__content">더운 여름날, 추운 겨울날, 나가기 귀찮은날</br>맛있는 야식과 새로운 맥주가 나를 찾아온다면?</br>매번 시킬 필요없이 정기배달 받아보세요.</p>
       </div>
     </div>
   </div>
@@ -344,56 +344,32 @@ $(document).ready(function () {
   var winHeight = $(window).height();
 
   if(winHeight >= 900){
-    sr.reveal(".nightmeal__image", {
-      origin: "left",
-      distance: "60px",
-      scale: 0.99,
-      delay: 1800,
-    });
-    sr.reveal(".nightmeal__circle", {
-      origin: "left",
-      distance: "40px",
-      scale: 0.9,
-      rotate: { y: 25 },
-      delay: 2100
-    });
-    sr.reveal(".nightmeal__rectangle", {
-      origin: "left",
-      distance: "40px",
-      scale: 0.9,
-      rotate: { z: 5 },
-      delay: 2200,
-    });
-    sr.reveal(".section__nightmeal .section__title", {
-      distance: "60px",
-      delay: 2100,
-    });
-    sr.reveal(".section__nightmeal .section__content", {
+    sr.reveal(".merit__image", {
       distance: "50px",
-      delay: 2200,
-    });
+      delay: 1800
+    }, 400);
+    sr.reveal(".merit__title", {
+      distance: "40px",
+      delay: 2000
+    }, 400);
+    sr.reveal(".merit__content", {
+      distance: "40px",
+      delay: 2100
+    }, 400);
   }
   else {
-    sr.reveal(".nightmeal__image", {
-      origin: "left",
-      distance: "60px",
-      scale: 0.99,
-      delay: 0,
-    });
-    sr.reveal(".nightmeal__circle", {
-      origin: "left",
+    sr.reveal(".merit__image", {
+      distance: "50px",
+      delay: 0
+    }, 400);
+    sr.reveal(".merit__title", {
       distance: "40px",
-      scale: 0.9,
-      rotate: { y: 25 },
+      delay: 200
+    }, 400);
+    sr.reveal(".merit__content", {
+      distance: "40px",
       delay: 300
-    });
-    sr.reveal(".nightmeal__rectangle", {
-      origin: "left",
-      distance: "40px",
-      scale: 0.9,
-      rotate: { z: 5 },
-      delay: 400,
-    });
+    }, 400);
   };
 });
 
@@ -405,20 +381,27 @@ $(document).ready(function () {
   }, 300);
 
 
-  // Section Merit
-  sr.reveal(".merit__image", {
-    distance: "50px",
-    delay: 0
-  }, 400);
-  sr.reveal(".merit__title", {
+  // Section Nightmeal
+  sr.reveal(".nightmeal__image", {
+    origin: "left",
+    distance: "60px",
+    scale: 0.99,
+    delay: 0,
+  });
+  sr.reveal(".nightmeal__circle", {
+    origin: "left",
     distance: "40px",
-    delay: 200
-  }, 400);
-  sr.reveal(".merit__content", {
-    distance: "40px",
+    scale: 0.9,
+    rotate: { y: 25 },
     delay: 300
-  }, 400);
-
+  });
+  sr.reveal(".nightmeal__rectangle", {
+    origin: "left",
+    distance: "40px",
+    scale: 0.9,
+    rotate: { z: 5 },
+    delay: 400,
+  });
 
   // Section Calendar
   sr.reveal(".calendar__image", {

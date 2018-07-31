@@ -164,6 +164,7 @@ body {
   text-align: center;
   text-decoration: none;
 
+  cursor: pointer;
   transition: .2s ease-out background-color;
   &:active {
     -webkit-transform: scale(0.99);
