@@ -40,37 +40,37 @@
           <h4 class="profile__subtitle">지금까지 벨루가와 함께</br>240병을 마셨어요.</h4>
         </div>
         <ul class="submenu">
-          <li class="submenu__item"><span class="submenu__icon submenu__icon__subscribe"></span><a href="">내 구독</a></li>
+          <li class="submenu__item submenu__item--active"><span class="submenu__icon submenu__icon__subscribe"></span><a href="">내 구독</a></li>
           <li class="submenu__item"><span class="submenu__icon submenu__icon__myinfo"></span><a href="">내 정보</a></li>
           <li class="submenu__item"><span class="submenu__icon submenu__icon__point"></span><a href="">적립금</a></li>
-          <li class="submenu__item submenu__item--active"><span class="submenu__icon submenu__icon__gift"></span><a href="">선물함</a></li>
+          <li class="submenu__item"><span class="submenu__icon submenu__icon__gift"></span><a href="">선물함</a></li>
         </ul>
       </div>
 <!--       <div class="mypage__subscribe-wrapper">
         <div class="three columns empty"></div>
         <div class="nine columns mypage__subscribe">
           <div class="row">
-            <div class="five columns mypage__subscribe__item">
-              <h4 class="mypage__subscribe__title">구독 상품</h4>
-              <h3 class="mypage__subscribe__content">스낵 야식과 이달의 맥주 3달</h3>
+            <div class="five columns mypage__summary__item">
+              <h4 class="mypage__summary__title">구독 상품</h4>
+              <h3 class="mypage__summary__content">스낵 야식과 이달의 맥주 3달</h3>
             </div>
-            <div class="three-half columns mypage__subscribe__item">
-              <h4 class="mypage__subscribe__title">다음 배달일</h4>
-              <h3 class="mypage__subscribe__content">7월 1차(7/12)</h3>
+            <div class="three-half columns mypage__summary__item">
+              <h4 class="mypage__summary__title">다음 배달일</h4>
+              <h3 class="mypage__summary__content">7월 1차(7/12)</h3>
             </div>
-            <div class="three-half columns mypage__subscribe__item">
-              <h4 class="mypage__subscribe__title">잔여 횟수</h4>
-              <h3 class="mypage__subscribe__content">
+            <div class="three-half columns mypage__summary__item">
+              <h4 class="mypage__summary__title">잔여 횟수</h4>
+              <h3 class="mypage__summary__content">
                 6회
-                <a href="" class="mypage__subscribe__link">/ 연장하기</a>
+                <a href="" class="mypage__summary__link">/ 연장하기</a>
               </h3>
             </div>
           </div>
           <div class="row">
-            <div class="five columns mypage__subscribe__item">
-              <h4 class="mypage__subscribe__title">
+            <div class="five columns mypage__summary__item">
+              <h4 class="mypage__summary__title">
                 <b>배달 정보</b>
-                <a href="" class="mypage__subscribe__link">/ 변경하기</a>
+                <a href="" class="mypage__summary__link">/ 변경하기</a>
               </h4>
               <ul class="mypage__subscribe__address">
                 <li class="six columns">
@@ -101,68 +101,28 @@
           </div>
         </div>
         <div class="nine columns" style="float: right;">
-          <div class="row mypage__table-wrapper">
-            <table class="mypage__table">
-              <h3 class="mypage__table__title">구독 이력<a class="mypage__table__link" href=""> / 맥주 로그 보기</a></h3>
-              <tr>
-                <th>주문번호</th>
-                <th>구독 상품</th>
-                <th>기간</th>
-                <th>배달 주소</th>
-                <th>시작</th>
-                <th>종료</th>
-              </tr>
-              <tr>
-                <td>2018071612345678</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>서울시 관악구</td>
-                <td>7월 1차(7/12)</td>
-                <td>9월 2차(9/25)</td>
-              </tr>
-              <tr>
-                <td>2018041241587761</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>서울시 관악구</td>
-                <td>4월 1차(4/10)</td>
-                <td>6월 2차(6/22)</td>
-              </tr>
-              <tr>
-                <td>2018011585188899</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>서울시 관악구</td>
-                <td>1월 1차(1/9)</td>
-                <td>3월 2차(3/26)</td>
-              </tr>
-              <tr>
-                <td>2017101251518888</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>서울시 관악구</td>
-                <td>10월 1차(10/5)</td>
-                <td>12월 2차(12/24)</td>
-              </tr>
-              <tr>
-                <td>2017071612345678</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>서울시 관악구</td>
-                <td>7월 1차(7/9)</td>
-                <td>9월 2차(9/20)</td>
-              </tr>
-            </table>
-            <div class="pagenation-wrapper">
-              <ol class="pagenation__list">
-                <li class="pagenation__prev pagenation__prev--disabled"></li>
-                <li class="pagenation__number pagenation__number--active">1</li>
-                <li class="pagenation__number">2</li>
-                <li class="pagenation__number">3</li>
-                <li class="pagenation__number">4</li>
-                <li class="pagenation__number">5</li>
-                <li class="pagenation__next"></li>
-              </ol>
+          <div class="mypage__list-wrapper">
+            <h3 class="mypage__list__title">구독 이력<a class="mypage__summary__link" href=""> / 맥주 로그 보기</a></h3>
+
+            <div class="row mypage__list mypage__list--active">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2018071612345678</a></div>
+              <div class="seven columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2018년 7월 1차(7/12) - 2018년 9월 2차(9/25)</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__address.png">서울시 관악구 남부순환로 170길 29-7, 1층</span></div>
+            </div>
+            <div class="row mypage__list">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2018041241587761</a></div>
+              <div class="seven columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2018년 4월 1차(4/10) - 2018년 6월 2차(6/22)</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__address.png">서울시 관악구 남부순환로 170길 29-7, 1층</span></div>
+            </div>
+            <div class="row mypage__list">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2018011585188899</a></div>
+              <div class="seven columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2018년 1월 1차(1/9) - 2018년 3월 2차(3/26)</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__address.png">서울시 관악구 남부순환로 170길 29-7, 1층</span></div>
+            </div>
+            <div class="row mypage__list">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2017101251518888</a></div>
+              <div class="seven columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2017년 10월 1차(10/5) - 2017년 12월 2차(12/24)</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__address.png">서울시 관악구 남부순환로 170길 29-7, 1층</span></div>
+            </div>
+            <div class="row mypage__list">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2017071612345678</a></div>
+              <div class="seven columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2017년 7월 1차(7/9) - 2017년 9월 2차(9/20)</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__address.png">서울시 관악구 남부순환로 170길 29-7, 1층</span></div>
             </div>
           </div>
         </div>
@@ -173,100 +133,62 @@
 
           </div>
         </div>
-      </div>
-      <div class="mypage__point-wrapper">
+      </div> -->
+<!--       <div class="mypage__point-wrapper">
+        <div class="three columns empty"></div>
         <div class="nine columns mypage__point">
           <div class="row">
-
+            <div class="four-half columns mypage__summary__item">
+              <h4 class="mypage__summary__title">사용가능 포인트</h4>
+              <h3 class="mypage__summary__content">2,000점</h3>
+            </div>
+            <div class="four columns mypage__summary__item">
+              <h4 class="mypage__summary__title">내 추천코드</h4>
+              <h3 class="mypage__summary__content">AB123C</br><a class="mypage__summary__link" href="">Veluga.kr/AB123C</a></h3>
+            </div>
+            <div class="three columns mypage__summary__item">
+              <h4 class="mypage__summary__title">코드가 있다면?</h4>
+              <h3 class="mypage__summary__content"><div class="button button--ghost">코드 등록</div></h3>
+            </div>
           </div>
+        </div>
+        <div class="nine columns">
+          <div class="mypage__list-wrapper">
+            <h3 class="mypage__list__title">사용/적립 내역</h3>
+            <div class="row mypage__list mypage__list--sub">
+              <div class="six columns mypage__list__item"><b>결제시 사용</b><i>2018년 7월 3일</i></div>
+              <div class="six columns mypage__list__item"><strong>-500점</strong></div>
+            </div>
+            <div class="row mypage__list mypage__list--add">
+              <div class="six columns mypage__list__item"><b>구독 적립</b><i>2018년 7월 3일</i></div>
+              <div class="six columns mypage__list__item"><strong>+200점</strong></div>
+            </div>
+            <div class="row mypage__list mypage__list--add">
+              <div class="six columns mypage__list__item"><b>초대 적립</b><i>2018년 7월 2일</i></div>
+              <div class="six columns mypage__list__item"><strong>+3000점</strong></div>
+            </div>
+          </div>
+
         </div>
       </div> -->
       <div class="mypage__gift-wrapper">
         <div class="three columns empty"></div>
         <div class="nine columns mypage__gift">
-          <div class="row mypage__table-wrapper">
-            <h3 class="mypage__table__title">보낸 선물<a class="mypage__table__link" href=""> / 받은 선물 보기</a></h3>
+          <div class="mypage__list-wrapper">
+            <h3 class="mypage__list__title">보낸 선물<a class="mypage__summary__link" href=""> / 받은 선물 보기</a></h3>
             <div class="button-wrapper">
-              <div class="button button--ghost">선물 하기</div>
+              <div class="button button--ghost">선물하기</div>
               <div class="button button--ghost">선물 등록</div>
             </div>
-            <table class="mypage__table">
-              <tr>
-                <th>주문번호</th>
-                <th>구독 상품</th>
-                <th>기간</th>
-                <th>받는 사람</th>
-                <th>결제일</th>
-                <th>사용 여부</th>
-                <th></th>
-              </tr>
-              <tr class="view">
-                <td>2018071612345678</td>
-                <td>스낵, 이달의 맥주</td>
-                <td>3달</td>
-                <td>김상민</td>
-                <td>2018년 3월 2일</td>
-                <td>미사용</td>
-                <td></td>
-              </tr>
-              <tr class="fold">
-                <td colspan="7">
-                  <div class="row fold__info">
-                    <div class="seven columns fold__item">
-                      <h4 class="fold__title">메시지</h4>
-                      <h3 class="fold__content">당신 Birthday 축하. 나의 호의에 늘 감사하십시오.</h3>
-                    </div>
-                    <div class="two columns fold__item">
-                      <h4 class="fold__title">선물 유형</h4>
-                      <h3 class="fold__content">감사</h3>
-                    </div>
-                    <div class="three columns fold__item">
-                      <h4 class="fold__title">쿠폰 코드</h4>
-                      <h3 class="fold__content">
-                        F7C4Y0U
-                      </h3>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-              <tr>
-                <td colspan="7"></td>
-              </tr>
-            </table>
-            <div class="pagenation-wrapper">
-              <ol class="pagenation__list">
-                <li class="pagenation__prev pagenation__prev--disabled"></li>
-                <li class="pagenation__number pagenation__number--active">1</li>
-                <li class="pagenation__number">2</li>
-                <li class="pagenation__number">3</li>
-                <li class="pagenation__number">4</li>
-                <li class="pagenation__number">5</li>
-                <li class="pagenation__next"></li>
-              </ol>
+            <div class="row mypage__list mypage__list--used">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2018071612345678</a></div>
+              <div class="four columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__user.png">김상민</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2018년 3월 2일 결제 완료</span></div>
+              <div class="three columns mypage__list__item"><div class="mypage__list__tag">사용 완료</div></div>
+            </div>
+            <div class="row mypage__list">
+              <div class="five columns mypage__list__item"><b>스낵, 이달의 맥주 3달</b><a href=""><img class="mypage__list__icon" src="img/mypage__list__icon__order.png">2018071612345678</a></div>
+              <div class="four columns mypage__list__item"><span><img class="mypage__list__icon" src="img/mypage__list__icon__user.png">김상민</span><span><img class="mypage__list__icon" src="img/mypage__list__icon__calendar.png">2018년 3월 2일 결제 완료</span></div>
+              <div class="three columns mypage__list__item"><div class="mypage__list__tag">미사용</div></div>
             </div>
           </div>
         </div>
@@ -320,14 +242,5 @@
 
 </div>
 </body>
-
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript">
-  $(function(){
-    $(".mypage__table tr.view").on("click", function(){
-      $(this).toggleClass("open").next(".fold").toggleClass("open");
-    });
-  });
-</script>
 
 </html>

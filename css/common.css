@@ -155,7 +155,10 @@ table {
     width: 17.6666666667%; }
 
   .three-half.columns {
-    width: 26.3333333333%; } }
+    width: 26.3333333333%; }
+
+  .four-half.columns {
+    width: 35%; } }
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
@@ -1120,155 +1123,190 @@ p {
 
 .mypage {
   padding: 120px 0; }
-  .mypage__subscribe {
-    position: relative;
-    box-shadow: 0 4px 4px rgba(0, 23, 80, 0.02), 0 1px 6px rgba(0, 23, 80, 0.03), 0 8px 8px rgba(0, 23, 80, 0.024), 0 16px 16px rgba(0, 23, 80, 0.024), 8px 32px 32px rgba(0, 23, 80, 0.036), 8px 64px 64px rgba(0, 23, 80, 0.036); }
-    .mypage__subscribe:before {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
+
+.mypage__summary__item {
+  position: relative;
+  padding: 38px 0 38px 38px; }
+.mypage__summary__item ~ .mypage__summary__item:before {
+  position: absolute;
+  top: 20%;
+  left: 0px;
+  display: inline-block;
+  width: 1px;
+  height: 60%;
+  background-color: #f1f3f5;
+  content: ""; }
+.mypage__summary__title {
+  color: #adb5bd;
+  font-size: 13px;
+  font-weight: 600; }
+  .mypage__summary__title b {
+    display: inline-block;
+    margin-top: 8px;
+    color: #212529;
+    font-size: 18px;
+    font-weight: 500; }
+.mypage__summary__content {
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 1.45em; }
+.mypage__summary__link {
+  color: #bf9d5b;
+  font-weight: 500;
+  font-size: 13px; }
+
+.mypage__subscribe {
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.02), 0 1px 6px rgba(0, 23, 80, 0.03), 0 8px 8px rgba(0, 23, 80, 0.024), 0 16px 16px rgba(0, 23, 80, 0.024), 8px 32px 32px rgba(0, 23, 80, 0.036), 8px 64px 64px rgba(0, 23, 80, 0.036); }
+  .mypage__subscribe:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #bf9d5b;
+    content: ""; }
+  .mypage__subscribe__address {
+    margin-top: 20px; }
+    .mypage__subscribe__address span {
       display: inline-block;
-      width: 100%;
-      height: 2px;
-      background-color: #bf9d5b;
-      content: ""; }
-    .mypage__subscribe__item {
-      position: relative;
-      padding: 38px 0 38px 38px; }
-    .mypage__subscribe__item ~ .mypage__subscribe__item:before {
+      margin-top: 25px;
+      color: #adb5bd;
+      font-size: 14px; }
+    .mypage__subscribe__address p {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.3em; }
+  .mypage__subscribe hr {
+    margin-top: 25px;
+    border-color: #f1f3f5; }
+  .mypage__subscribe .row:nth-child(1) {
+    box-shadow: 0 4px 4px rgba(0, 23, 80, 0.005), 0 1px 6px rgba(0, 23, 80, 0.01), 0 8px 8px rgba(0, 23, 80, 0.01), 0 16px 16px rgba(0, 23, 80, 0.01), 8px 32px 32px rgba(0, 23, 80, 0.01), 8px 64px 64px rgba(0, 23, 80, 0.01); }
+  .mypage__subscribe .jsCalendar table {
+    background-color: transparent; }
+  .mypage__subscribe .auto-jsCalendar {
+    position: relative;
+    padding: 0px 20px 25px 20px; }
+    .mypage__subscribe .auto-jsCalendar:before {
       position: absolute;
-      top: 20%;
+      top: 8%;
       left: 0px;
       display: inline-block;
       width: 1px;
-      height: 60%;
+      height: 82%;
       background-color: #f1f3f5;
       content: ""; }
-    .mypage__subscribe__title {
-      color: #adb5bd;
-      font-size: 13px;
-      font-weight: 600; }
-      .mypage__subscribe__title b {
-        display: inline-block;
-        margin-top: 8px;
-        color: #212529;
-        font-size: 18px;
-        font-weight: 500; }
-    .mypage__subscribe__content {
-      margin-top: 20px;
-      font-size: 20px; }
-    .mypage__subscribe__link {
-      color: #bf9d5b;
-      font-weight: 500;
-      font-size: 13px; }
-    .mypage__subscribe__address {
-      margin-top: 20px; }
-      .mypage__subscribe__address span {
-        display: inline-block;
-        margin-top: 25px;
-        color: #adb5bd;
-        font-size: 14px; }
-      .mypage__subscribe__address p {
-        margin-top: 12px;
-        font-size: 14px;
-        line-height: 1.3em; }
-    .mypage__subscribe hr {
-      margin-top: 25px;
-      border-color: #f1f3f5; }
-    .mypage__subscribe .row:nth-child(1) {
-      box-shadow: 0 4px 4px rgba(0, 23, 80, 0.005), 0 1px 6px rgba(0, 23, 80, 0.01), 0 8px 8px rgba(0, 23, 80, 0.01), 0 16px 16px rgba(0, 23, 80, 0.01), 8px 32px 32px rgba(0, 23, 80, 0.01), 8px 64px 64px rgba(0, 23, 80, 0.01); }
-    .mypage__subscribe .jsCalendar table {
-      background-color: transparent; }
-    .mypage__subscribe .auto-jsCalendar {
-      position: relative;
-      padding: 0px 20px 25px 20px; }
-      .mypage__subscribe .auto-jsCalendar:before {
-        position: absolute;
-        top: 8%;
-        left: 0px;
-        display: inline-block;
-        width: 1px;
-        height: 82%;
-        background-color: #f1f3f5;
-        content: ""; }
 
-.mypage__table {
-  width: 100%;
-  margin-top: 20px; }
-  .mypage__table-wrapper .button-wrapper {
-    float: right;
+.mypage__list {
+  position: relative;
+  border: 1px solid #f1f3f5;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.005), 0 1px 6px rgba(0, 23, 80, 0.01), 0 8px 8px rgba(0, 23, 80, 0.01), 0 16px 16px rgba(0, 23, 80, 0.01), 8px 32px 32px rgba(0, 23, 80, 0.01), 8px 64px 64px rgba(0, 23, 80, 0.01); }
+  .mypage__list ~ .mypage__list {
+    margin-top: 10px; }
+  .mypage__list:before {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
-    margin-top: 31px; }
-    .mypage__table-wrapper .button-wrapper .button--ghost {
-      padding: 10px 14px; }
-  .mypage__table th, .mypage__table td {
-    font-size: 14px; }
-  .mypage__table th {
-    border-top: 1px solid #dee2e6;
-    border-bottom: 1px solid #dee2e6; }
-  .mypage__table td {
-    border-bottom: 1px dashed #dee2e6; }
-  .mypage__table tr:last-child {
-    border-bottom: 1px solid #dee2e6; }
-  .mypage__table .view td:last-child {
-    position: relative; }
-    .mypage__table .view td:last-child:before {
-      position: absolute;
-      top: 11px;
-      right: 55%;
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      margin-bottom: 4px;
-      border: solid #212529;
-      border-width: 0 1px 1px 0;
-      transform: rotate(45deg);
-      content: "";
-      transition: 0.2s ease-out; }
-  .mypage__table .view.open td:last-child:before {
-    top: 17px;
-    transform: rotate(225deg); }
-  .mypage__table__title {
+    width: 6px;
+    height: 100%;
+    background-color: #dee2e6;
+    content: ""; }
+  .mypage__list--active:before {
+    background-color: #bf9d5b; }
+  .mypage__list--add:before {
+    background-color: #5b844f; }
+  .mypage__list--sub:before {
+    background-color: #d23b28; }
+  .mypage__list--used:before {
+    background-color: #5b844f; }
+  .mypage__list-wrapper {
+    margin-top: 40px; }
+  .mypage__list__title {
     display: inline-block;
-    margin-top: 40px;
-    font-weight: 600; }
-  .mypage__table__link {
-    color: #bf9d5b;
-    font-weight: 500;
-    font-size: 14px; }
-  .mypage__table .view {
-    cursor: pointer; }
-  .mypage__table .fold {
-    display: none;
-    background-color: #f8f9fa; }
-    .mypage__table .fold__item {
-      position: relative;
-      padding: 20px 0 20px 20px; }
-    .mypage__table .fold__item ~ .fold__item:before {
-      position: absolute;
-      top: 20%;
-      left: 0px;
+    margin-bottom: 20px; }
+  .mypage__list__item {
+    padding: 20px 0 20px 40px;
+    font-size: 13px; }
+    .mypage__list__item b {
+      display: block;
+      font-size: 17px; }
+    .mypage__list__item i {
       display: inline-block;
-      width: 1px;
-      height: 60%;
-      background-color: #e9ecef;
-      content: ""; }
-    .mypage__table .fold__title {
-      color: #adb5bd;
-      font-size: 13px;
-      font-weight: 600; }
-    .mypage__table .fold__content {
-      margin-top: 12px;
-      font-size: 15px;
-      line-height: 1.5em; }
-  .mypage__table .open {
-    display: table-row; }
+      margin-top: 10px; }
+    .mypage__list__item a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #bf9d5b; }
+      .mypage__list__item a .mypage__list__icon {
+        margin-right: 6px; }
+    .mypage__list__item strong {
+      display: block;
+      padding-top: 7px;
+      padding-right: 40px;
+      text-align: right;
+      font-size: 24px; }
+    .mypage__list__item span {
+      display: block;
+      margin-top: 11px; }
+    .mypage__list__item span:first-child {
+      margin: 0; }
+  .mypage__list__tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: inline-block;
+    padding: 6px 8px;
+    border: 1px dashed #dee2e6;
+    background-color: #f8f9fa;
+    color: #adb5bd;
+    font-size: 13px; }
+  .mypage__list--used .mypage__list__tag {
+    border: 0;
+    background-color: #5b844f;
+    color: white; }
+  .mypage__list__icon {
+    width: 14px;
+    margin-right: 10px;
+    vertical-align: top; }
 
-.mypage__gift .mypage__table__title {
-  margin-top: 26px; }
+.mypage__point {
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 23, 80, 0.02), 0 1px 6px rgba(0, 23, 80, 0.03), 0 8px 8px rgba(0, 23, 80, 0.024), 0 16px 16px rgba(0, 23, 80, 0.024), 8px 32px 32px rgba(0, 23, 80, 0.036), 8px 64px 64px rgba(0, 23, 80, 0.036); }
+  .mypage__point:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: #bf9d5b;
+    content: ""; }
+  .mypage__point .mypage__summary__content {
+    font-size: 16px; }
+    .mypage__point .mypage__summary__content .button {
+      padding: 11px 25px 12px; }
+  .mypage__point .mypage__summary__link {
+    border-bottom: 1px solid #bf9d5b;
+    font-size: 16px; }
+  .mypage__point .mypage__summary__item:first-child .mypage__summary__content {
+    margin-top: 17px;
+    font-size: 38px; }
+
+.mypage__gift .mypage__list-wrapper {
+  margin-top: 24px; }
+.mypage__gift .mypage__list__title {
+  font-weight: 600; }
 .mypage__gift .button-wrapper {
-  margin-top: 17px; }
+  float: right;
+  display: inline-block;
+  margin-top: -12px; }
+  .mypage__gift .button-wrapper .button {
+    padding: 10px 20px 11px; }
 
 * {
   box-sizing: border-box;
@@ -1739,7 +1777,7 @@ input[type="checkbox"]:checked + label span {
     margin-top: 20px; }
 
 .pagenation-wrapper {
-  text-align: center; }
+  text-align: right; }
 .pagenation__list {
   display: inline-block;
   margin-top: 20px; }

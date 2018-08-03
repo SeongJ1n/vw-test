@@ -726,15 +726,11 @@ var jsCalendar = (function(){
         }
 
         // 테스트코드임
-        if(month.current >= 0){
-            if (this._elements.bodyCols[month.current+3].className.length > 0) {
-                this._elements.bodyCols[month.current+3].className += ' jsCalendar-veluga';
-            }
-            else {
-                this._elements.bodyCols[month.current+3].className = 'jsCalendar-veluga';
-            }
-        }
-
+        this._elements.bodyCols[month.current].innerHTML = '오늘';
+        this._elements.bodyCols[11].className = 'jsCalendar-veluga';
+        this._elements.bodyCols[11].innerHTML = '1차';
+        this._elements.bodyCols[25].className = 'jsCalendar-veluga';
+        this._elements.bodyCols[25].innerHTML = '2차';
 
         // Next month
         for (i = month.end; i < month.days.length; i++) {

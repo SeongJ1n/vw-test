@@ -105,257 +105,333 @@
   }
 }
 
-
-
-// Mypage - Subscribe
+// Mypage
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+
 .mypage {
   padding: 120px 0;
-
-  &__subscribe {
-    position: relative;
-
-    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
-                0 1px  6px  rgba(0, 23, 80, .03),
-                0 8px  8px  rgba(0, 23, 80, .024),
-                0 16px 16px rgba(0, 23, 80, .024),
-                8px 32px 32px rgba(0, 23, 80, .036),
-                8px 64px 64px rgba(0, 23, 80, .036);
-    &:before {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-
-      display: inline-block;
-      width: 100%;
-      height: 2px;
-
-      background-color: $primary;
-
-      content: "";
-    }
-    &__item {
-      position: relative;
-
-      padding: 38px 0 38px 38px;
-    }
-    &__item ~ .mypage__subscribe__item:before {
-      position: absolute;
-      top: 20%;
-      left: 0px;
-
-      display: inline-block;
-      width: 1px;
-      height: 60%;
-
-      background-color: $gray-1;
-
-      content: "";
-    }
-    &__title {
-      color: $gray-5;
-
-      font-size: 13px;
-      font-weight: 600;
-      b {
-        display: inline-block;
-        margin-top: 8px;
-
-        color: $gray-9;
-
-        font-size: 18px;
-        font-weight: 500;
-      }
-    }
-    &__content {
-      margin-top: 20px;
-
-      font-size: 20px;
-    }
-    &__link {
-      color: $primary;
-
-      font-weight: 500;
-      font-size: 13px;
-    }
-
-    &__address {
-      margin-top: 20px;
-      span {
-        display: inline-block;
-        margin-top: 25px;
-
-        color: $gray-5;
-
-        font-size: 14px;
-      }
-      p {
-        margin-top: 12px;
-
-        font-size: 14px;
-        line-height: 1.3em;
-      }
-    }
-
-    hr {
-      margin-top: 25px;
-
-      border-color: $gray-1;
-    }
-
-    .row:nth-child(1) {
-      box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
-                  0 1px  6px  rgba(0, 23, 80, .01),
-                  0 8px  8px  rgba(0, 23, 80, .01),
-                  0 16px 16px rgba(0, 23, 80, .01),
-                  8px 32px 32px rgba(0, 23, 80, .01),
-                  8px 64px 64px rgba(0, 23, 80, .01);
-    }
-    .jsCalendar table { background-color: transparent; }
-    .auto-jsCalendar {
-      position: relative;
-
-      padding: 0px 20px 25px 20px;
-
-      &:before {
-        position: absolute;
-        top: 8%;
-        left: 0px;
-
-        display: inline-block;
-        width: 1px;
-        height: 82%;
-
-        background-color: $gray-1;
-
-        content: "";
-      }
-    }
-  }
 }
 
 
-// Mypage - Table
+// Mypage - Summary
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.mypage__table {
-  width: 100%;
-  margin-top: 20px;
 
-  &-wrapper {
-    .button-wrapper {
-      float: right;
-
-      display: inline-block;
-      margin-top: 31px;
-
-      .button--ghost {
-        padding: 10px 14px;
-      }
-    }
-  }
-
-  th, td { font-size: 14px; }
-  th {
-    border-top: 1px solid $border;
-    border-bottom: 1px solid $border;
-  }
-  td {
-    border-bottom: 1px dashed $border;
-  }
-  tr:last-child {
-    border-bottom: 1px solid $border;
-  }
-
-  .view td:last-child {
+.mypage__summary {
+  &__item {
     position: relative;
 
-    &:before {
-      position: absolute;
-      top: 11px;
-      right: 55%;
+    padding: 38px 0 38px 38px;
+  }
+  &__item ~ .mypage__summary__item:before {
+    position: absolute;
+    top: 20%;
+    left: 0px;
 
+    display: inline-block;
+    width: 1px;
+    height: 60%;
+
+    background-color: $gray-1;
+
+    content: "";
+  }
+  &__title {
+    color: $gray-5;
+
+    font-size: 13px;
+    font-weight: 600;
+    b {
       display: inline-block;
-      width: 8px;
-      height: 8px;
-      margin-bottom: 4px;
-      border: solid $gray-9;
-      border-width: 0 1px 1px 0;
+      margin-top: 8px;
 
-      transform: rotate(45deg);
-      content: "";
-      transition: 0.2s ease-out;
+      color: $gray-9;
+
+      font-size: 18px;
+      font-weight: 500;
     }
   }
-  .view.open td:last-child:before {
-    top: 17px;
+  &__content {
+    margin-top: 18px;
 
-    transform: rotate(225deg);
-  }
-
-  &__title {
-    display: inline-block;
-    margin-top: 40px;
-
-    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.45em;
   }
   &__link {
     color: $primary;
 
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
   }
-  .view {
-    cursor: pointer;
-  }
-  .fold {
-    display: none;
-    background-color: $gray-0;
-    &__item {
-      position: relative;
+}
 
-      padding: 20px 0 20px 20px;
+// Mypage - Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.mypage__subscribe {
+  position: relative;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+  &:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+
+    content: "";
+  }
+
+  &__address {
+    margin-top: 20px;
+    span {
+      display: inline-block;
+      margin-top: 25px;
+
+      color: $gray-5;
+
+      font-size: 14px;
     }
-    &__item ~ .fold__item:before {
+    p {
+      margin-top: 12px;
+
+      font-size: 14px;
+      line-height: 1.3em;
+    }
+  }
+
+  hr {
+    margin-top: 25px;
+
+    border-color: $gray-1;
+  }
+
+  .row:nth-child(1) {
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
+                0 1px  6px  rgba(0, 23, 80, .01),
+                0 8px  8px  rgba(0, 23, 80, .01),
+                0 16px 16px rgba(0, 23, 80, .01),
+                8px 32px 32px rgba(0, 23, 80, .01),
+                8px 64px 64px rgba(0, 23, 80, .01);
+  }
+  .jsCalendar table { background-color: transparent; }
+  .auto-jsCalendar {
+    position: relative;
+
+    padding: 0px 20px 25px 20px;
+
+    &:before {
       position: absolute;
-      top: 20%;
+      top: 8%;
       left: 0px;
 
       display: inline-block;
       width: 1px;
-      height: 60%;
+      height: 82%;
 
-      background-color: $gray-2;
+      background-color: $gray-1;
 
       content: "";
     }
-    &__title {
-      color: $gray-5;
-
-      font-size: 13px;
-      font-weight: 600;
-    }
-    &__content{
-      margin-top: 12px;
-
-      font-size: 15px;
-      line-height: 1.5em;
-    }
-  }
-  .open {
-    display: table-row;
   }
 }
+
+
+// Mypage List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.mypage__list {
+  position: relative;
+
+  border: 1px solid $gray-1;
+  background-color: white;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
+              0 1px  6px  rgba(0, 23, 80, .01),
+              0 8px  8px  rgba(0, 23, 80, .01),
+              0 16px 16px rgba(0, 23, 80, .01),
+              8px 32px 32px rgba(0, 23, 80, .01),
+              8px 64px 64px rgba(0, 23, 80, .01);
+  & ~ .mypage__list {
+    margin-top: 10px;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 6px;
+    height: 100%;
+
+    background-color: $gray-3;
+
+    content: "";
+  }
+
+  &--active:before {
+    background-color: $primary;
+  }
+  &--add:before {
+    background-color: $positive;
+  }
+  &--sub:before {
+    background-color: $emphasis;
+  }
+  &--used:before {
+    background-color: $positive;
+  }
+
+  &-wrapper {
+    margin-top: 40px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  &__item {
+    padding: 20px 0 20px 40px;
+    font-size: 13px;
+
+    b { // 타이틀
+      display: block;
+      font-size: 17px;
+    }
+    i { // 서브타이틀
+      display: inline-block;
+      margin-top: 10px;
+    }
+    a { // 주문번호
+      display: inline-block;
+      margin-top: 10px;
+
+      color: $primary;
+
+      .mypage__list__icon {
+        margin-right: 6px;
+      }
+    }
+    strong { // 큰 글씨
+      display: block;
+      padding-top: 7px;
+      padding-right: 40px;
+
+      text-align: right;
+      font-size: 24px;
+    }
+    span { // 나머지 정보
+      display: block;
+      margin-top: 11px;
+    }
+    span:first-child {
+      margin: 0;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+
+    display: inline-block;
+    padding: 6px 8px;
+    border: 1px dashed $border;
+
+    background-color: $gray-0;
+    color: $gray-5;
+
+    font-size: 13px;
+  }
+  &--used .mypage__list__tag {
+    border: 0;
+
+    background-color: $positive;
+    color: white;
+  }
+
+  &__icon {
+    width: 14px;
+    margin-right: 10px;
+
+    vertical-align: top;
+  }
+}
+
+
+// Mypage - Point
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.mypage__point {
+  position: relative;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+  &:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+
+    content: "";
+  }
+  .mypage__summary {
+    &__content {
+      font-size: 16px;
+      .button {
+        padding: 11px 25px 12px;
+      }
+    }
+    &__link {
+      border-bottom: 1px solid $primary;
+
+      font-size: 16px;
+    }
+    &__item:first-child .mypage__summary__content {
+      margin-top: 17px;
+
+      font-size: 38px;
+    }
+  }
+}
+
 
 // Mypage - Gift
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .mypage__gift {
-  .mypage__table__title {
-    margin-top: 26px;
+  .mypage__list-wrapper {
+    margin-top: 24px;
+  }
+  .mypage__list__title {
+    font-weight: 600;
   }
   .button-wrapper {
-    margin-top: 17px;
+    float: right;
+
+    display: inline-block;
+    margin-top: -12px;
+
+    .button {
+      padding: 10px 20px 11px
+    }
   }
 }
 

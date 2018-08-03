@@ -137,9 +137,10 @@
 			line-height: 46px;
 		}
 		.jsCalendar tbody td.jsCalendar-current {
-			border: 1px dashed #bf9d5b;
-			box-sizing: border-box;
+/* 			border: 1px dashed #bf9d5b;
+			box-sizing: border-box; */
 			color: #bf9d5b;
+			font-weight: 600;
 		}
 		.jsCalendar tbody td.jsCalendar-current:hover {
 			background-color: rgba(191,157,91, 0.2);
