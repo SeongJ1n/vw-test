@@ -2,8 +2,11 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Profile
 // - Submenu
+// - Mypage - Summary
+// - Mypage - List
 // - Mypage - Subscribe
-// - Mypage - Table
+// - Mypage - Info
+// - Mypage - Point
 // - Mypage - Gift
 
 
@@ -117,6 +120,32 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .mypage__summary {
+
+  position: relative;
+
+  background-color: white;
+
+  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+              0 1px  6px  rgba(0, 23, 80, .03),
+              0 8px  8px  rgba(0, 23, 80, .024),
+              0 16px 16px rgba(0, 23, 80, .024),
+              8px 32px 32px rgba(0, 23, 80, .036),
+              8px 64px 64px rgba(0, 23, 80, .036);
+  &:before {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+
+    background-color: $primary;
+
+    content: "";
+  }
+
   &__item {
     position: relative;
 
@@ -161,42 +190,29 @@
 
     font-weight: 500;
     font-size: 13px;
+    line-height: 0;
   }
-}
-
-// Mypage - Subscribe
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-.mypage__subscribe {
-  position: relative;
-
-  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
-              0 1px  6px  rgba(0, 23, 80, .03),
-              0 8px  8px  rgba(0, 23, 80, .024),
-              0 16px 16px rgba(0, 23, 80, .024),
-              8px 32px 32px rgba(0, 23, 80, .036),
-              8px 64px 64px rgba(0, 23, 80, .036);
-  &:before {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-
+  &__icon {
     display: inline-block;
-    width: 100%;
-    height: 2px;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
 
-    background-color: $primary;
+    vertical-align: sub;
 
-    content: "";
+    &__tooltip {
+      background: url("../img/mypage__summary__icon__tooltip.png");
+      background-size: cover;
+    }
   }
 
-  &__address {
+  &__form {
     margin-top: 20px;
     span {
       display: inline-block;
       margin-top: 25px;
 
-      color: $gray-5;
+      color: $gray-6;
 
       font-size: 14px;
     }
@@ -207,43 +223,7 @@
       line-height: 1.3em;
     }
   }
-
-  hr {
-    margin-top: 25px;
-
-    border-color: $gray-1;
-  }
-
-  .row:nth-child(1) {
-    box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
-                0 1px  6px  rgba(0, 23, 80, .01),
-                0 8px  8px  rgba(0, 23, 80, .01),
-                0 16px 16px rgba(0, 23, 80, .01),
-                8px 32px 32px rgba(0, 23, 80, .01),
-                8px 64px 64px rgba(0, 23, 80, .01);
-  }
-  .jsCalendar table { background-color: transparent; }
-  .auto-jsCalendar {
-    position: relative;
-
-    padding: 0px 20px 25px 20px;
-
-    &:before {
-      position: absolute;
-      top: 8%;
-      left: 0px;
-
-      display: inline-block;
-      width: 1px;
-      height: 82%;
-
-      background-color: $gray-1;
-
-      content: "";
-    }
-  }
 }
-
 
 // Mypage List
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -365,33 +345,59 @@
   }
 }
 
+// Mypage - Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.mypage__subscribe {
+
+  .row:nth-child(1) {
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .005),
+                0 1px  6px  rgba(0, 23, 80, .01),
+                0 8px  8px  rgba(0, 23, 80, .01),
+                0 16px 16px rgba(0, 23, 80, .01),
+                8px 32px 32px rgba(0, 23, 80, .01),
+                8px 64px 64px rgba(0, 23, 80, .01);
+  }
+  .jsCalendar table { background-color: transparent; }
+  .auto-jsCalendar {
+    position: relative;
+
+    padding: 0px 20px 25px 20px;
+
+    &:before {
+      position: absolute;
+      top: 8%;
+      left: 0px;
+
+      display: inline-block;
+      width: 1px;
+      height: 82%;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+  }
+}
+
+// Mypage - Info
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.mypage__info {
+  padding: 50px 50px 60px;
+  .mypage__summary__form {
+    margin-top: 5px;
+  }
+  .mypage__summary__title b {
+    font-size: 20px;
+  }
+}
+
+
 
 // Mypage - Point
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .mypage__point {
-  position: relative;
-
-  box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
-              0 1px  6px  rgba(0, 23, 80, .03),
-              0 8px  8px  rgba(0, 23, 80, .024),
-              0 16px 16px rgba(0, 23, 80, .024),
-              8px 32px 32px rgba(0, 23, 80, .036),
-              8px 64px 64px rgba(0, 23, 80, .036);
-  &:before {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-
-    background-color: $primary;
-
-    content: "";
-  }
   .mypage__summary {
     &__content {
       font-size: 16px;
@@ -409,6 +415,67 @@
 
       font-size: 38px;
     }
+  }
+  [data-tooltip-text]:hover {
+    position: relative;
+  }
+  [data-tooltip-text]:before {
+    position: absolute;
+    left: -9999px;
+    bottom: 23px;
+    z-index: 9999;
+
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: solid $border;
+    border-width: 0 1px 1px 0;
+
+    background-color: white;
+
+    transition: 0.1s ease-out opacity;
+    opacity: 0;
+    content: "";
+    transform: rotate(45deg);
+  }
+  [data-tooltip-text]:hover:before {
+    left: 1px;
+    bottom: 23px;
+
+    opacity: 1;
+  }
+  [data-tooltip-text]:after {
+    position: absolute;
+    left: -9999px;
+    bottom: 30px;
+    z-index: 8888;
+
+    width: 205px;
+    padding: 15px 20px;
+    border: 1px solid $border;
+
+    background-color: white;
+    color: $gray-9;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.4em;
+
+    content: attr(data-tooltip-text);
+    transition: 0.25s ease-out opacity;
+    opacity: 0;
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                0 1px  6px  rgba(0, 23, 80, .03),
+                0 8px  8px  rgba(0, 23, 80, .024),
+                0 16px 16px rgba(0, 23, 80, .024),
+                8px 32px 32px rgba(0, 23, 80, .036),
+                8px 64px 64px rgba(0, 23, 80, .036);
+  }
+  [data-tooltip-text]:hover:after {
+    left: -15px;
+    bottom: 30px;
+
+    opacity: 1;
   }
 }
 
@@ -435,3 +502,33 @@
   }
 }
 
+
+// Mypage - Gift Detail
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.mypage__gift__detail {
+
+  .mypage__summary~.mypage__summary {
+    margin-top: 25px;
+
+    &:before { background-color: transparent; }
+  }
+  .twelve.columns.mypage__summary__item {
+    border-top: 1px solid $gray-1;
+  }
+
+  .mypage__summary:before {
+    background-color: $gray-4;
+  }
+  .mypage__summary--used:before {
+    background-color: $positive;
+  }
+  .mypage__summary__content {
+    line-height: 1.25em;
+  }
+  .mypage__list__icon {
+    margin-right: 6px;
+
+    vertical-align: sub;
+  }
+}

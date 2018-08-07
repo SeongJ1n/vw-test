@@ -16,13 +16,13 @@
   <div class="container">
     <div class="row">
       <div class="two columns">
-        <div class="nav__logo"></div>
+        <a class="nav__logo" href="/"></a>
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
           <a href="/vw-test/subscribe"><li class="nav__item">정기구독</li></a>
-          <a href=""><li class="nav__item">선물하기</li></a>
-          <a href="/vw-test/mypage"><li class="nav__item">케이터링</li></a>
+          <a href="/vw-test/gift"><li class="nav__item">선물하기</li></a>
+          <a href=""><li class="nav__item">케이터링</li></a>
           <a href="/vw-test/login"><li class="nav__item">로그인</li></a>
         </ul>
       </div>
@@ -302,7 +302,7 @@
     easing: "cubic-bezier(0.3, 0, 0.3, 1)"
   });
 
-$(window).load(function () {
+$(document).ready(function () {
 
   sr.reveal(".section__title", {
     distance: "60px",
@@ -340,7 +340,7 @@ $(window).load(function () {
 
   // Section Nightmeal
 
-$(window).load(function () {
+$(document).ready(function () {
   var winHeight = $(window).height();
 
   if(winHeight >= 900){
