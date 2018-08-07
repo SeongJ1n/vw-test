@@ -44,6 +44,7 @@ body {
   min-height: 100%;
   padding-bottom: 214px; /* footer height */
 }
+
 // Navigation
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .nav {
@@ -92,6 +93,65 @@ body {
     font-weight: 600;
   }
 }
+
+@media (max-width: 650px) {
+  .nav {
+    position: fixed;
+  }
+  .nav .two.columns,
+  .nav .ten.columns {
+    width: 50%;
+  }
+}
+
+.hamburger {
+  float: right;
+
+  width: 36px;
+  height: 36px;
+  margin-top: 13px;
+  border: 1px dashed $border;
+
+  line-height: 0;
+
+  li {
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    margin-top: 5px;
+    margin-left: 6px;
+
+    background-color: $gray-9;
+
+    transition: 0.35s cubic-bezier(.4,0,0,1);
+    @include border-radius(3px);
+  }
+  li:first-child {
+    width: 20px;
+    margin-top: 9px;
+  }
+  li:last-child {
+    width: 16px;
+  }
+
+  &--close {
+    li {
+      margin-left: 10px;
+
+      transform-origin: left center;
+      transform: scaleX(0);
+
+    }
+    li:first-child {
+      transform: rotate(45deg) scaleX(1);
+    }
+    li:last-child {
+      width: 20px;
+      transform: rotate(-45deg) scaleX(1);
+    }
+  }
+}
+
 
 // Footer
 // ––––––––––––––––––––––––––––––––––––––––––––––––––

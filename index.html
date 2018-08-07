@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="theme-color" content="#212529">
+  <meta name="msapplication-navbutton-color" content="#212529">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>성진이 일터</title>
   <link rel="stylesheet" type="text/css" href="css/common.css">
@@ -12,7 +14,23 @@
 <div class="wrap">
 
 <!-- Navigation -->
-<nav id="nav" class="nav">
+<nav class="nav">
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <a class="nav__logo" href="/"></a>
+      </div>
+      <div class="ten columns">
+        <ul id="hamburger" class="hamburger">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- <nav id="nav" class="nav">
   <div class="container">
     <div class="row">
       <div class="two columns">
@@ -28,7 +46,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!-- Section Cover -->
 <section id="sectionCover" class="section section__cover">
@@ -294,6 +312,27 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 <script type="text/javascript">
+
+var $hamburger = $('#hamburger');
+var $hamburgerContent = $('#hamburgerContent');
+
+$hamburger.click(function(){
+  $hamburger.toggleClass("hamburger--close");
+  $hamburgerContent.toggle();
+  // $hamburgerContent.toggle(
+  //   function(){
+  //   $hamburgerContent.animate({
+  //     height: "300px"
+  //   }, 100);
+  // },
+  //   function(){
+  //   $hamburgerContent.animate({
+  //     height: "0px"
+  //   }, 100);
+  //   });
+});
+
+
 
   window.sr = ScrollReveal({
     duration: 900,
