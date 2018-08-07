@@ -385,30 +385,36 @@ $(document).ready(function () {
   if(winHeight >= 900){
     sr.reveal(".merit__image", {
       distance: "50px",
-      delay: 1800
-    }, 400);
+      delay: 1800,
+      interval: 150
+    });
     sr.reveal(".merit__title", {
       distance: "40px",
-      delay: 2000
-    }, 400);
+      delay: 2000,
+      interval: 150
+    });
     sr.reveal(".merit__content", {
       distance: "40px",
-      delay: 2100
-    }, 400);
+      delay: 2100,
+      interval: 150
+    });
   }
   else {
     sr.reveal(".merit__image", {
       distance: "50px",
-      delay: 0
-    }, 400);
+      delay: 0,
+      interval: 150
+    });
     sr.reveal(".merit__title", {
       distance: "40px",
-      delay: 200
-    }, 400);
+      delay: 200,
+      interval: 150
+    });
     sr.reveal(".merit__content", {
       distance: "40px",
-      delay: 300
-    }, 400);
+      delay: 300,
+      interval: 150
+    });
   };
 });
 
@@ -417,7 +423,8 @@ $(document).ready(function () {
   sr.reveal(".boxitem", {
     distance: "100px",
     delay: 200,
-  }, 300);
+    interval: 100
+  });
 
 
   // Section Nightmeal
@@ -425,7 +432,7 @@ $(document).ready(function () {
     origin: "left",
     distance: "60px",
     scale: 0.99,
-    delay: 0,
+    delay: 0
   });
   sr.reveal(".nightmeal__circle", {
     origin: "left",
@@ -439,14 +446,14 @@ $(document).ready(function () {
     distance: "40px",
     scale: 0.9,
     rotate: { z: 5 },
-    delay: 400,
+    delay: 400
   });
 
   // Section Calendar
   sr.reveal(".calendar__image", {
     distance: "90px",
     scale: 0.99,
-    delay: 0,
+    delay: 0
   });
 
 
@@ -454,14 +461,15 @@ $(document).ready(function () {
   sr.reveal(".insta__item", {
     distance: "100px",
     delay: 200,
-  }, 300);
+    interval: 150
+  });
 
 
   // Section Beluga
   sr.reveal(".beluga__image", {
     distance: "90px",
     scale: 0.99,
-    delay: 0,
+    delay: 0
   });
 
 
