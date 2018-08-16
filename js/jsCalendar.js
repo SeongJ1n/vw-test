@@ -725,6 +725,11 @@ var jsCalendar = (function(){
             }
         }
 
+        // Next month
+        for (i = month.end; i < month.days.length; i++) {
+            this._elements.bodyCols[i].className = 'jsCalendar-next';
+        }
+
         // 테스트코드임
         this._elements.bodyCols[month.current].innerHTML = '오늘';
         this._elements.bodyCols[11].className = 'jsCalendar-veluga';
@@ -732,10 +737,7 @@ var jsCalendar = (function(){
         this._elements.bodyCols[25].className = 'jsCalendar-veluga';
         this._elements.bodyCols[25].innerHTML = '2차';
 
-        // Next month
-        for (i = month.end; i < month.days.length; i++) {
-            this._elements.bodyCols[i].className = 'jsCalendar-next';
-        }
+
     };
 
     // Fire all event listeners

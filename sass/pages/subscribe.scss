@@ -1,20 +1,62 @@
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
+// - Nav Subscribe
 // - Step
 // - Subscribe Item
 // - Subscribe Nightmeal
 // - Subscribe Add on
 // - Subscribe Period
-// - Subscribe Delivery
+// - Subscribe Address
+// - Subscribe Gift
 // - Subscribe Purchase
 // - Subscribe Success
+
+// Nav Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.nav.nav__subscribe {
+  height: auto;
+  border-bottom: 1px solid $border;
+
+  background-color: white;
+
+  &:after {
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+
+    background-color: $border;
+
+    content: "";
+  }
+  .nav__item {
+    margin-top: 11px;
+  }
+}
+
+// [M] Nav Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .nav.nav__subscribe {
+    &:after { top: 50px; }
+    .nav__item {
+      margin-top: 7px;
+      font-size: 12px;
+    }
+  }
+}
+
 
 
 // Step
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .step {
-  padding: 80px 0 20px;
-  border-bottom: 1px solid $border;
+  padding: 30px 0 20px;
+
+  background-color: white;
 
   &__item--complete {
     .step__circle {
@@ -64,17 +106,45 @@
   }
 }
 
+// [M] Step
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .step {
+    padding: 20px 0 15px;
+    .empty { display: none; }
+    &__item {
+      width: 25% !important;
+      -webkit-tap-highlight-color: transparent;
+    }
+    &__item:nth-child(3) { padding-left: 3%; }
+    &__item:nth-child(4) { padding-right: 3%; text-align: right; }
+    &__item:last-child { text-align: right; }
+    &__circle {
+      width: 22px;
+      height: 22px;
+      margin-left: 0;
+
+      font-size: 12px;
+      line-height: 20px;
+    }
+    &__title {
+      margin-left: 5px;
+
+      font-size: 12px;
+    }
+  }
+}
+
+
 // Subscribe Item
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .subscribe {
   position: relative;
 
-  padding: 100px 0 110px;
+  // 60 + 76 = 136 (nav) + 70 = 206
+  padding: 206px 0 100px;
 
   text-align: center;
-  &__header {
-    font-size: 27px;
-  }
 
   // 카드 UI
   &__item {
@@ -127,15 +197,11 @@
   &__title {
     display: inline-block;
 
-    // color: white;
-
     font-weight: 700;
   }
 
   &__content {
     margin-top: 10px;
-
-    // color: $gray-6;
 
     font-size: 13px;
     line-height: 1.6em;
@@ -213,22 +279,6 @@
   }
   // 체크표시 코드 끝
 
-  // 선물유형선택
-  &__type {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1em;
-  }
-  &__explain {
-    margin-top: 5px;
-    margin-left: 1px;
-
-    color: $gray-6;
-
-    line-height: 1.65em;
-  }
-  // 선물유형선택 코드 끝
-
   // 기간선택
   &__month {
     font-weight: 500;
@@ -275,6 +325,26 @@
 }
 
 
+// [M] Subscribe Item
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe {
+    // 45 + 103 (nav) = 148
+    padding: 148px 0 70px;
+    &__item {
+      width: 84%;
+      margin-left: 8%;
+      &-wrapper {
+        margin-top: 25px;
+      }
+    }
+    &__item~.subscribe__item { margin-top: 30px;}
+
+    &__tag { font-size: 12px; }
+  }
+}
+
+
 // Subscribe Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .subscribe__nightmeal {
@@ -285,7 +355,7 @@
 
     display: block;
     width: 100%;
-    height: 240px;
+    height: 366px;
 
     background-color: $gray-0;
 
@@ -298,7 +368,34 @@
     margin-top: 40px;
     .button { min-width: 160px; }
   }
+  a.subscribe__tag {
+    padding: 0 0 2px 0;
+    border-bottom: 1px solid $primary;
+
+    background-color: transparent;
+    color: $primary;
+
+    opacity: 0.6;
+    transition: 0.25s ease-out;
+    @include border-radius(0);
+    &:hover { opacity: 1; }
+  }
 }
+
+// [M] Subscribe Nightmeal
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__nightmeal {
+    .subscribe__item {
+      min-height: 300px;
+    }
+    .button-wrapper {
+      margin-top: 35px;
+      .button { min-width: 180px; }
+    }
+  }
+}
+
 
 // Subscribe Add On
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -310,7 +407,7 @@
 
     display: block;
     width: 100%;
-    height: 240px;
+    height: 366px;
 
     background-color: $gray-0;
 
@@ -327,6 +424,24 @@
   }
 }
 
+// [M] Subscribe Add
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__add-on {
+    .subscribe__item {
+      min-height: 340px;
+      background-position: 0 -10px;
+      background-repeat: no-repeat;
+      background-color: $gray-0;
+    }
+    .button-wrapper {
+      margin-top: 35px;
+      .button { min-width: 120px; }
+    }
+  }
+}
+
+
 // Subscribe Period
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .subscribe__period {
@@ -337,7 +452,7 @@
 
     display: block;
     width: 100%;
-    height: 240px;
+    height: 366px;
 
     background-color: $gray-0;
 
@@ -355,10 +470,22 @@
 }
 
 
-// Subscribe Delivery
+// [M] Subscribe Period
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.subscribe__delivery {
-  padding: 80px 0 40px;
+@media (max-width: 650px) {
+  .subscribe__period {
+    .button-wrapper {
+      margin-top: 35px;
+      .button { min-width: 180px; }
+    }
+  }
+}
+
+
+// Subscribe Address
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.subscribe__address {
+  padding: 201px 0 40px;
 
   text-align: left;
 
@@ -418,6 +545,39 @@
 
       font-weight: 600;
     }
+  }
+  .radio-wrapper {
+    .six.columns {
+      width: 48%;
+      margin-left: 0;
+    }
+    .six.columns ~ .six.columns { margin-left: 4%; }
+    .radio__label ~ .radio__label { margin-top: 10px; }
+  }
+}
+
+// [M] Subscribe Address
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__address {
+    padding: 148px 0 40px;
+    .radio-wrapper .radio__label {
+      padding: 14px;
+    }
+  }
+}
+
+// Subscribe Gift
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+.subscribe__gift {
+  padding: 181px 0 40px;
+}
+
+// [M] Subscribe Gift
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__gift {
+    padding: 128px 0 40px;
   }
 }
 
@@ -557,7 +717,41 @@
   }
 }
 
+// [M] Subscribe Purchase
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__purchase {
+    .subscribe-info__item {
+      font-size: 15px;
+      span { font-size: 13px; }
+    }
+    .purchase-info {
+      &__item {
+        margin-top: 20px;
+        .input-wrapper { margin-top: 20px; }
+      }
+      &__label {
+        font-size: 13px;
+      }
+      &__value {
+        font-size: 14px;
+      }
+      &__link {
+        float: right;
 
+        margin-top: -13px;
+      }
+      &__total {
+        .purchase-info__label {
+          font-size: 15px;
+        }
+        .purchase-info__value {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
 
 // Subscribe Success
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -708,7 +902,8 @@
       font-weight: 500;
     }
   }
-  .jsCalendar table {
+  .jsCalendar-wrapper {
+    padding: 0 15px 15px;
     box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
                 0 1px  6px  rgba(0, 23, 80, .03),
                 0 8px  8px  rgba(0, 23, 80, .024),
@@ -719,5 +914,48 @@
   .button-wrapper {
     margin-top: 20px;
     .button { width: 100%; }
+  }
+}
+
+// [M] Subscribe Success
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .subscribe__success {
+    .receipt {
+      &__title { font-size: 23px; }
+      &__subtitle {
+        margin-top: 6px;
+
+        font-size: 13px;
+        line-height: 1.6em;
+      }
+      &__content {
+        margin-top: 20px;
+
+        font-size: 13px;
+      }
+      hr { margin-top: 25px; }
+      &__list {
+        hr { margin-top: 10px; }
+      }
+      &__item {
+        padding: 6px 0;
+
+        font-size: 13px;
+        &__description {
+          font-size: 13px;
+        }
+        &--result { font-size: 15px; }
+      }
+      &__coupon {
+        font-size: 14px;
+        .button {
+          padding: 11px 25px 12px;
+        }
+      }
+    }
+    .jsCalendar-wrapper {
+      padding: 0 10px 10px;
+    }
   }
 }

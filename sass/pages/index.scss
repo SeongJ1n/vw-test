@@ -1,7 +1,6 @@
 // Table of contents
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // - Section Cover
-// - Section Progressbar
 // - Section Merit
 // - Section Boxitem
 // - Section Nightmeal
@@ -19,7 +18,7 @@
 
   padding: 0;
 
-  background: url("../img/main.jpg");
+  background: url("../img/main.jpg") right;
   background-size: cover;
 
   &:before {
@@ -63,9 +62,9 @@
 
   .progressbar {
     position: absolute;
+    left: 0;
     bottom: -40px;
 
-    overflow: hidden;
     padding: 15px 35px;
 
     background-color: white;
@@ -76,13 +75,13 @@
                 0 16px 16px rgba(0, 23, 80, .012),
                 8px 32px 32px rgba(0, 23, 80, .018),
                 8px 64px 64px rgba(0, 23, 80, .018);
-    &__number {
+    &__title {
       display: inline-block;
       margin-top: 7px;
 
       color: $gray-7;
     }
-    &__price {
+    &__percent {
       float: right;
 
       display: inline-block;
@@ -100,12 +99,11 @@
 
       background-color: $gray-1;
     }
-    &__percent {
+    &__bar {
       position: absolute;
       top: -1px;
 
       display: inline-block;
-      width: 82%;
       height: 4px;
 
       background-color: $primary;
@@ -117,10 +115,65 @@
                   8px 32px 32px rgba(0, 23, 80, .14),
                   8px 64px 64px rgba(0, 23, 80, .14);
     }
+    .icon__tooltip { vertical-align: top; }
   }
-
 }
 
+// [M] Section Cover
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__cover {
+    overflow: visible;
+
+    background: url("../img/main--mobile.jpg") bottom;
+    background-size: cover;
+
+    &:before {
+      background-color: #f1f4f7;
+    }
+
+    .cover {
+      &__content-wrapper {
+        position: relative;
+
+        padding: 100px 0 365px 2.2%;
+      }
+
+      &__subtitle {
+        margin-top: 20px;
+        margin-left: 2px;
+      }
+    }
+
+    .button-wrapper {
+      margin-top: 27px;
+    }
+
+    .progressbar {
+      left: 6%;
+      bottom: -75px;
+
+      width: 88%;
+      padding: 20px 30px;
+
+      &__title {
+        margin-top: 6px;
+      }
+      &__percent {
+        margin-top: 6px;
+
+        font-size: 15px;
+      }
+      .button {
+        margin-top: 20px;
+      }
+      [data-tooltip-text]:hover:after {
+        left: -115px;
+        bottom: 30px;
+      }
+    }
+  }
+}
 
 // Section Merit
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -149,6 +202,56 @@
   }
 }
 
+// [M] Section Merit
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__merit {
+    padding: 130px 0 0px;
+    .merit {
+      &__image-wrapper {
+        text-align: right;
+      }
+
+      &__text-wrapper {
+        margin-top: -46%;
+        padding-left: 2%;
+      }
+
+      &__image {
+        width: 75%;
+        margin-right: -13.5%;
+      }
+
+      &__title {
+        color: $gray-7;
+
+        font-weight: 600;
+      }
+
+      &__content {
+        margin-top: 12px;
+      }
+    }
+
+    .merit:first-child .merit__image {
+      content: url("../img/merit__01--mobile.png");
+    }
+
+    .merit:last-child .merit__text-wrapper {
+      margin-top: -47.5%;
+    }
+    .merit:last-child .merit__image {
+      margin-right: -20.5%;
+
+      content: url("../img/merit__02--mobile.png");
+    }
+    .merit~.merit {
+      margin-top: 0px;
+    }
+  }
+}
+
+
 
 // Section Boxitem
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -156,7 +259,6 @@
   .section__text-wrapper {
     margin-top: 55px;
   }
-  .row~.row { margin-top: 25px; }
   .boxitem {
     position: relative;
 
@@ -170,6 +272,14 @@
                 0 16px 16px rgba(0, 23, 80, .012),
                 8px 32px 32px rgba(0, 23, 80, .018),
                 8px 64px 64px rgba(0, 23, 80, .018);
+    &:nth-child(4) {
+      margin-top: 25px;
+      margin-left: 0;
+    }
+    &:nth-child(5) {
+      margin-top: 25px;
+    }
+
     &:before {
       position: absolute;
       top: 0;
@@ -201,6 +311,52 @@
   }
 }
 
+// [M] Section Boxitem
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__boxitem {
+    padding: 52px 0 62px;
+
+    #element::-webkit-scrollbar { display: none; }
+    ::-webkit-scrollbar { display: none; }
+
+    .section__text-wrapper {
+      margin-top: -35px;
+      margin-left: 3%;
+    }
+    .boxitem {
+      float: none !important;
+
+      display: inline-block;
+      max-width: 175px;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 25px;
+      }
+      &:nth-child(4) {
+        margin-top: 0;
+        margin-left: 25px;
+      }
+      &:nth-child(5) {
+        margin-top: 0;
+        margin-right: 40px;
+      }
+
+      &-wrapper {
+        width: 120%;
+        margin-left: -25px;
+        padding-bottom: 80px;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      &__content {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
 
 // Section Nightmeal
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -218,7 +374,6 @@
 
   .nightmeal__image {
     width: 100%;
-    height: 330px;
   }
   .nightmeal__circle {
     position: absolute;
@@ -254,6 +409,41 @@
   }
 }
 
+// [M] Section Nightmeal
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__nightmeal {
+    padding: 70px 0 60px;
+    .section__text-wrapper {
+      padding-left: 3%;
+      margin-top: 30px;
+    }
+
+    .nightmeal__image {
+      width: 120% !important;
+      margin-left: -10%;
+    }
+    .nightmeal__circle {
+      left: -45px;
+
+      width: 165px;
+      height: 165px;
+    }
+    .nightmeal__rectangle {
+      top: 60px;
+      right: 85px;
+    }
+    .nightmeal__rectangle:before {
+      width: 80px;
+      height: 200px;
+
+      -webkit-transform: rotate(46deg);
+      -ms-transform: rotate(46deg);
+      transform: rotate(46deg);
+    }
+  }
+}
+
 
 // Section Calendar
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -266,15 +456,41 @@
 
   .calendar__image {
     width: 100%;
-    height: 435px;
   }
 }
+
+// [M] Section Calendar
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__calendar {
+    padding: 50px 0;
+    .section__text-wrapper {
+      padding: 0;
+      margin-top: 35px;
+      margin-left: 3%;
+    }
+    .calendar__image {
+      width: 176% !important;
+      margin-left: -38%;
+
+      box-shadow: 0 4px  4px  rgba(0, 23, 80, .01),
+                  0 1px  6px  rgba(0, 23, 80, .015),
+                  0 8px  8px  rgba(0, 23, 80, .012),
+                  0 16px 16px rgba(0, 23, 80, .012),
+                  8px 32px 32px rgba(0, 23, 80, .018),
+                  8px 64px 64px rgba(0, 23, 80, .018);
+    }
+  }
+}
+
 
 // Section Insta
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__insta {
   padding: 80px 0;
   .section__title {
+    display: block;
+
     text-align: center;
   }
 
@@ -283,7 +499,6 @@
       overflow: hidden;
       margin-top: 50px;
 
-      @include border-radius(5px);
       box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
                   0 1px  6px  rgba(0, 23, 80, .03),
                   0 8px  8px  rgba(0, 23, 80, .024),
@@ -320,6 +535,45 @@
   }
 }
 
+// [M] Section Insta
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__insta {
+    padding: 65px 0 35px;
+    #element::-webkit-scrollbar { display: none; }
+    ::-webkit-scrollbar { display: none; }
+
+    .section__title { display: none; }
+
+    .insta {
+      width: 120%;
+      margin-left: -25px;
+      padding-bottom: 80px;
+      overflow-x: auto;
+      white-space: nowrap;
+      &__content {
+        padding: 25px;
+      }
+      &__item {
+        float: none !important;
+
+        display: inline-block;
+        width: 300px;
+        margin-top: 0;
+        margin-left: 20px;
+      }
+      &__item:first-child {
+        margin-left: 25px;
+      }
+      &__item:last-child {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+
+
 // Section Beluga
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__beluga {
@@ -350,6 +604,27 @@
   }
 }
 
+// [M] Section Beluga
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__beluga {
+    padding: 30px 0 115px;
+    .section__text-wrapper {
+      padding: 0;
+      margin-top: 35px;
+      margin-left: 3%;
+    }
+    .beluga__image {
+      width: 130%;
+      margin-left: -15%;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+
 // Section Outro
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .section.section__outro {
@@ -373,5 +648,17 @@
 
   .button-wrapper {
     margin-top: 32px;
+  }
+}
+
+
+// [M] Section Outro
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .section.section__outro {
+    padding: 60px 0 300px 2.2%;
+
+    background: url("../img/outro--mobile.jpg") center;
+    background-size: cover;
   }
 }

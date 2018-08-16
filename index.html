@@ -2,11 +2,17 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#212529">
-  <meta name="msapplication-navbutton-color" content="#212529">
+  <meta name="title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta name="description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
+  <meta property="og:title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta property="og:url" content="VELUGA.KR">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>성진이 일터</title>
-  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <title>Veluga</title>
+  <link rel="apple-touch-icon-precomposed" href="../img/favicon.png">
+  <link rel="shortcut icon"href="img/favicon/favicon.ico">
+  <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
@@ -14,11 +20,29 @@
 <div class="wrap">
 
 <!-- Navigation -->
-<nav class="nav">
+<nav class="nav desktop">
   <div class="container">
     <div class="row">
       <div class="two columns">
         <a class="nav__logo" href="/"></a>
+      </div>
+      <div class="ten columns">
+        <ul class="nav__menu">
+          <a href="/subscribe"><li class="nav__item">정기구독</li></a>
+          <a href="/gift"><li class="nav__item">선물하기</li></a>
+          <a href="/catering"><li class="nav__item">케이터링</li></a>
+          <a href="/mypage"><li class="nav__item">내 구독</li></a>
+          <a href="/login"><li class="nav__item">로그인</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav id="navMobile" class="nav mobile">
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <a class="nav__logo" href="/" style="margin-top: 18px;"></a>
       </div>
       <div class="ten columns">
         <ul id="hamburger" class="hamburger">
@@ -27,26 +51,17 @@
           <li></li>
         </ul>
       </div>
+      <ul id="hamburgerMenu" class="twelve columns hamburger__menu">
+        <a href="/subscribe"><li class="hamburger__item">정기구독</li></a>
+        <a href="/gift"><li class="hamburger__item">선물하기</li></a>
+        <a href="/catering"><li class="hamburger__item">케이터링</li></a>
+        <a href="/mypage"><li class="hamburger__item">내 구독</li></a>
+        <a href="/login"><li class="hamburger__item">로그인</li></a>
+        <div id="hamburgerMenuClose" class="hamburger__menu--close"></div>
+      </ul>
     </div>
   </div>
 </nav>
-<!-- <nav id="nav" class="nav">
-  <div class="container">
-    <div class="row">
-      <div class="two columns">
-        <a class="nav__logo" href="/"></a>
-      </div>
-      <div class="ten columns">
-        <ul class="nav__menu">
-          <a href="/vw-test/subscribe"><li class="nav__item">정기구독</li></a>
-          <a href="/vw-test/gift"><li class="nav__item">선물하기</li></a>
-          <a href=""><li class="nav__item">케이터링</li></a>
-          <a href="/vw-test/login"><li class="nav__item">로그인</li></a>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav> -->
 
 <!-- Section Cover -->
 <section id="sectionCover" class="section section__cover">
@@ -56,21 +71,21 @@
         <h1 class="cover__title">오늘도 수고한 나에게,</br>벨루가</h1>
         <h4 class="cover__subtitle">나에게 찾아오는 야식박스</h4>
         <div class="button-wrapper">
-          <a class="button button--ghost" href="">간보기 박스 체험</a>
-          <a class="button button--filled" href="">멤버가 되어보세요</a>
+          <!-- <a class="button button--ghost" href="/subscribe">간보기 박스 체험</a> -->
+          <a class="button button--filled" href="/subscribe">멤버가 되어보세요</a>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="progressbar twelve columns">
         <div class="nine columns">
-          <h4 class="progressbar__number">7월 2차 구독 진행중</h4>
-          <h4 class="progressbar__price">82%</h4>
+          <h4 class="progressbar__title">{8월 2차} 덩덩이 모금 <span class="icon__tooltip" data-tooltip-text="벨루가가 키우는 벨루가, 덩덩이를 WWF에서 후원하고 있어요."></span></h4>
+          <h4 class="progressbar__percent">{82%}</h4>
           <div class="progressbar__total">
-            <span class="progressbar__percent"></span>
+            <span class="progressbar__bar" style="width: 82%"></span>
           </div>
         </div>
-        <a class="button button--ghost three columns" href="">3일밖에 안남았어요</a>
+        <a class="button button--ghost three columns" href="/subscribe">{3일}밖에 안남았어요</a>
       </div>
     </div>
   </div>
@@ -82,7 +97,7 @@
     <div class="row">
       <div class="six columns merit">
         <div class="row">
-          <div class="six columns">
+          <div class="six columns merit__image-wrapper">
             <img class="merit__image" src="img/merit__01.png">
           </div>
           <div class="six columns merit__text-wrapper">
@@ -93,12 +108,12 @@
       </div>
       <div class="six columns merit">
         <div class="row">
-          <div class="six columns">
+          <div class="six columns merit__image-wrapper">
             <img class="merit__image" src="img/merit__02.png">
           </div>
           <div class="six columns merit__text-wrapper">
             <h3 class="merit__title">지친 나를 위한 선물</h3>
-            <p class="merit__content">지칠 때에는 누가 나를 위로해주지?</br>이제 집에서 편안하게 즐기세요.</p>
+            <p class="merit__content">지칠 때 누가 나를 위로해주지?</br>이제 집에서 편안하게 즐기세요.</p>
           </div>
         </div>
       </div>
@@ -110,12 +125,12 @@
 <section class="section section__boxitem">
   <div class="container">
     <div class="row">
-      <div class="four columns section__text-wrapper">
+      <div class="four columns section__text-wrapper desktop">
         <h2 class="section__title">구성품에 대해</br>자세히 알려줘요!</h2>
         <p class="section__content">옵션을 모두 선택하면 야식, 사이드스낵,</br>크래프트 맥주, 맥주도감, 위생용품이</br>벨루가 야식박스 안에 들어있어요.</p>
       </div>
       <div class="eight columns">
-        <div class="row">
+        <div class="row boxitem-wrapper">
           <div class="four columns boxitem">
             <img class="boxitem__image" src="img/boxitem__gourmet.png">
             <h4 class="boxitem__title">고메 야식</h4>
@@ -131,8 +146,6 @@
             <h4 class="boxitem__title">크래프트 맥주</h4>
             <p class="boxitem__content">매번 새로운 맥주를</br>경험할 수 있어요</p>
           </div>
-        </div>
-        <div class="row">
           <div class="four columns boxitem">
             <img class="boxitem__image" src="img/boxitem__card.png">
             <h4 class="boxitem__title">맥주도감</h4>
@@ -144,6 +157,10 @@
             <p class="boxitem__content">작지만 꼭 필요한</br>위생용품과 코스터</p>
           </div>
         </div>
+      </div>
+      <div class="four columns section__text-wrapper mobile">
+        <h2 class="section__title">구성품에 대해</br>자세히 알려줘요!</h2>
+        <p class="section__content">옵션을 모두 선택하면 야식, 사이드스낵,</br>크래프트 맥주, 맥주도감, 위생용품이</br>벨루가 야식박스 안에 들어있어요.</p>
       </div>
     </div>
   </div>
@@ -170,12 +187,16 @@
 <section class="section section__calendar">
   <div class="container">
     <div class="row">
-      <div class="four columns section__text-wrapper">
+      <div class="four columns section__text-wrapper desktop">
         <h2 class="section__title">정기 구독은</br>언제 배달되나요?</h2>
         <p class="section__content">매달 둘째 주, 넷째 주 목요일마다</br>집으로 야식 박스가 찾아갑니다.</p>
       </div>
       <div class="eight columns">
        <img class="calendar__image" src="img/calendar.png">
+      </div>
+      <div class="four columns section__text-wrapper mobile">
+        <h2 class="section__title">정기 구독은</br>언제 배달되나요?</h2>
+        <p class="section__content">매달 둘째 주, 넷째 주 목요일마다 집으로 </br>야식 박스가 찾아갑니다.</p>
       </div>
     </div>
   </div>
@@ -184,8 +205,8 @@
 <!-- Section Insta -->
 <section class="section section__insta">
   <div class="container">
-    <h2 class="section__title">받아보니깐 어땠어요?</h2>
-    <div class="row">
+    <h2 class="section__title desktop">받아보니깐 어땠어요?</h2>
+    <div class="row insta">
       <div class="four columns insta__item">
         <img class="insta__pic" src="img/insta__01.jpg" width="100%" height="auto">
         <div class="insta__content">
@@ -272,18 +293,18 @@
            <b class="footer__bold">통신판매업신고번호</b> 제 2018-서울마포-0034호</br>
            <b class="footer__bold">전화번호</b> 070-4190-0750</br>
            <b class="footer__bold">대표</b> 김상민&nbsp;&nbsp;&#65074;&nbsp;&nbsp;<b class="footer__bold">개인정보관리책임자</b> 김현종</br>
-           Copyright © 2018 VELUGA All Rights Reserved.</p>
+           © 2018 Veluga Brewery Inc. All Rights Reserved.</p>
       </div>
       <div class="seven columns">
         <div class="row">
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">정책 및 약관</h5>
               <a href=""><li class="footer__item">이용약관</li></a>
               <a href=""><li class="footer__item">개인정보 활용</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">벨루가브루어리</h5>
               <a href=""><li class="footer__item">카카오톡</li></a>
@@ -291,7 +312,7 @@
               <a href=""><li class="footer__item">인스타그램</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">연락하기</h5>
               <a href=""><li class="footer__item"><b class="footer__bold">고객센터</b> help@veluga.kr</li></a>
@@ -308,40 +329,68 @@
 </div>
 
 </body>
+
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
 
-<script type="text/javascript">
-
-var $hamburger = $('#hamburger');
-var $hamburgerContent = $('#hamburgerContent');
-
-$hamburger.click(function(){
-  $hamburger.toggleClass("hamburger--close");
-  $hamburgerContent.toggle();
-  // $hamburgerContent.toggle(
-  //   function(){
-  //   $hamburgerContent.animate({
-  //     height: "300px"
-  //   }, 100);
-  // },
-  //   function(){
-  //   $hamburgerContent.animate({
-  //     height: "0px"
-  //   }, 100);
-  //   });
+<script>
+$(document).ready(function () {
+  headroom();
+  hamburger();
+  scrollreveal();
 });
 
+function headroom() {
+  var winWidth = $(window).width();
+  var $navMobile = $('#navMobile');
+  if (winWidth <= 650) {
+    $navMobile.headroom();
+  }
+};
 
+function hamburger() {
+  var $hamburger = $('#hamburger');
+  var $hamburgerMenu = $('#hamburgerMenu');
+  var $hamburgerMenuClose = $('#hamburgerMenuClose');
+
+  $hamburger.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburger.hasClass("hamburger--close") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburger.hasClass("hamburger--close") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+  $hamburgerMenuClose.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburgerMenu.hasClass("hamburger__menu--view") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburgerMenu.hasClass("hamburger__menu--view") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+};
+
+function scrollreveal() {
+
+var winHeight = $(window).height();
 
   window.sr = ScrollReveal({
     duration: 900,
     scale: 1,
     useDelay: "onload",
-    easing: "cubic-bezier(0.3, 0, 0.3, 1)"
+    easing: "cubic-bezier(0.3, 0, 0.3, 1)",
   });
-
-$(document).ready(function () {
 
   sr.reveal(".section__title", {
     distance: "60px",
@@ -373,15 +422,8 @@ $(document).ready(function () {
     delay: 1300,
     easing: "cubic-bezier(0.2, 1.5, 0.5, 1)"
   });
-});
-
-
 
   // Section Nightmeal
-
-$(document).ready(function () {
-  var winHeight = $(window).height();
-
   if(winHeight >= 900){
     sr.reveal(".merit__image", {
       distance: "50px",
@@ -416,16 +458,14 @@ $(document).ready(function () {
       interval: 150
     });
   };
-});
-
 
   // Section Boxitem
   sr.reveal(".boxitem", {
     distance: "100px",
     delay: 200,
-    interval: 100
+    interval: 100,
+    mobile: false
   });
-
 
   // Section Nightmeal
   sr.reveal(".nightmeal__image", {
@@ -456,14 +496,13 @@ $(document).ready(function () {
     delay: 0
   });
 
-
   // Section Insta
   sr.reveal(".insta__item", {
     distance: "100px",
     delay: 200,
-    interval: 150
+    interval: 150,
+    mobile: false
   });
-
 
   // Section Beluga
   sr.reveal(".beluga__image", {
@@ -471,7 +510,6 @@ $(document).ready(function () {
     scale: 0.99,
     delay: 0
   });
-
 
   // Section Outro
   sr.reveal(".outro__title", {
@@ -486,7 +524,7 @@ $(document).ready(function () {
     distance: "40px",
     delay: 1000
   });
-
+};
 </script>
 
 </html>

@@ -2,8 +2,16 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta name="description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
+  <meta property="og:title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta property="og:url" content="VELUGA.KR">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>성진이 일터</title>
+  <title>Veluga</title>
+  <link rel="apple-touch-icon-precomposed" href="../img/favicon.png">
+  <link rel="shortcut icon"href="img/favicon/favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
 
@@ -11,7 +19,7 @@
 <div id="loginWrap" class="wrap">
 
 <!-- Navigation -->
-<nav id="nav" class="nav">
+<nav class="nav desktop">
   <div class="container">
     <div class="row">
       <div class="two columns">
@@ -19,18 +27,43 @@
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
-          <a href="/vw-test/subscribe"><li class="nav__item">정기구독</li></a>
-          <a href="/vw-test/gift"><li class="nav__item">선물하기</li></a>
-          <a href=""><li class="nav__item">케이터링</li></a>
-          <a href="/vw-test/login"><li class="nav__item">로그인</li></a>
+          <a href="/subscribe"><li class="nav__item">정기구독</li></a>
+          <a href="/gift"><li class="nav__item">선물하기</li></a>
+          <a href="/catering"><li class="nav__item">케이터링</li></a>
+          <a href="/mypage"><li class="nav__item">내 구독</li></a>
+          <a href="/login"><li class="nav__item">로그인</li></a>
         </ul>
       </div>
     </div>
   </div>
 </nav>
+<nav id="navMobile" class="nav mobile">
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <a class="nav__logo" href="/" style="margin-top: 18px;"></a>
+      </div>
+      <div class="ten columns">
+        <ul id="hamburger" class="hamburger">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <ul id="hamburgerMenu" class="twelve columns hamburger__menu">
+        <a href="/subscribe"><li class="hamburger__item">정기구독</li></a>
+        <a href="/gift"><li class="hamburger__item">선물하기</li></a>
+        <a href="/catering"><li class="hamburger__item">케이터링</li></a>
+        <a href="/mypage"><li class="hamburger__item">내 구독</li></a>
+        <a href="/login"><li class="hamburger__item">로그인</li></a>
+        <div id="hamburgerMenuClose" class="hamburger__menu--close"></div>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- Login -->
-<!-- <section>
+<section>
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -68,7 +101,7 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--facebook six columns" href="">페이스북 로그인</a>
+          <a class="button button__facebook six columns" href="">페이스북 로그인</a>
           <a class="button button--filled six columns" href="">로그인</a>
         </div>
         <div class="login__hr">이럴수가 회원이 아니세요?</div>
@@ -78,10 +111,10 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- Adult verify -->
-<!-- <section>
+<section>
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -91,7 +124,7 @@
         <div class="button-wrapper row">
           <a class="button button--filled twelve columns" href="">만 19세 이상 성인 인증</a>
         </div>
-        <div class="description">
+        <div class="description desktop">
           <ul>
             <li class="description__item">개인정보 수집 및 이용 동의 약관에 동의한 것으로 간주합니다.</li>
           </ul>
@@ -99,7 +132,7 @@
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- Sign up -->
 <section>
@@ -129,12 +162,12 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--facebook facebook--connected twelve columns" href="">페이스북 연결 완료</a>
+          <a class="button button__facebook button__facebook--connected twelve columns" href="">페이스북 연결 완료</a>
         </div>
         <div class="row">
           <div class="twelve columns">
             <div class="input-wrapper">
-              <input class="input" type="text" placeholder="비밀번호 규칙은 뭐가 될까용" required>
+              <input class="input" type="text" placeholder="안들키게 잘 입력하세요" required>
               <label class="input__label">비밀번호</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
@@ -145,7 +178,7 @@
         <div class="row">
           <div class="twelve columns">
             <div class="input-wrapper">
-              <input class="input" type="text" required>
+              <input class="input" type="text" placeholder="한 번만 더 입력하세요" required>
               <label class="input__label">비밀번호 확인</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
@@ -154,13 +187,12 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--filled twelve columns" href="">다 적었어요</a>
+          <a class="button button--filled twelve columns" href="">다 입력했어요</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Footer -->
 <footer class="footer">
@@ -172,18 +204,18 @@
            <b class="footer__bold">통신판매업신고번호</b> 제 2018-서울마포-0034호</br>
            <b class="footer__bold">전화번호</b> 070-4190-0750</br>
            <b class="footer__bold">대표</b> 김상민&nbsp;&nbsp;&#65074;&nbsp;&nbsp;<b class="footer__bold">개인정보관리책임자</b> 김현종</br>
-           Copyright © 2018 VELUGA All Rights Reserved.</p>
+           © 2018 Veluga Brewery Inc. All Rights Reserved.</p>
       </div>
       <div class="seven columns">
         <div class="row">
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">정책 및 약관</h5>
               <a href=""><li class="footer__item">이용약관</li></a>
               <a href=""><li class="footer__item">개인정보 활용</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">벨루가브루어리</h5>
               <a href=""><li class="footer__item">카카오톡</li></a>
@@ -191,7 +223,7 @@
               <a href=""><li class="footer__item">인스타그램</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">연락하기</h5>
               <a href=""><li class="footer__item"><b class="footer__bold">고객센터</b> help@veluga.kr</li></a>
@@ -209,35 +241,78 @@
 </body>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript">
+<script src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
 
-/* login wrap 높이 조절 */
+<script>
 $(document).ready(function () {
-  var winWidth = $(window).width();
-  var winHeight = $(window).height();
-  var $loginWrap = $('#loginWrap');
-  $loginWrap.css(
-    'padding-top', winHeight/5.5);
-  $loginWrap.css(
-    'padding-bottom', winHeight/5.5+214);
-
-  if(winWidth <= 768){
-  }
+  headroom();
+  hamburger();
+  loginWrap();
 });
 
-$(window).on('resize', function () {
+function headroom() {
   var winWidth = $(window).width();
-  var winHeight = $(window).height();
-  var $loginWrap = $('#loginWrap');
-  $loginWrap.css(
-    'padding-top', winHeight/5.5);
-  $loginWrap.css(
-    'padding-bottom', winHeight/5.5+214);
-
-  if(winWidth <= 768){
+  var $navMobile = $('#navMobile');
+  if (winWidth <= 650) {
+    $navMobile.headroom();
   }
-});
+};
 
+function hamburger() {
+  var $hamburger = $('#hamburger');
+  var $hamburgerMenu = $('#hamburgerMenu');
+  var $hamburgerMenuClose = $('#hamburgerMenuClose');
+
+  $hamburger.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburger.hasClass("hamburger--close") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburger.hasClass("hamburger--close") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+  $hamburgerMenuClose.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburgerMenu.hasClass("hamburger__menu--view") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburgerMenu.hasClass("hamburger__menu--view") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+};
+
+function loginWrap(){
+  /* login wrap 높이 조절 */
+  $(document).ready(function () {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    var $loginWrap = $('#loginWrap');
+    $loginWrap.css(
+      'padding-top', winHeight/5.8);
+    $loginWrap.css(
+      'padding-bottom', winHeight/5.8+214);
+
+  });
+
+  $(window).on('resize', function () {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    var $loginWrap = $('#loginWrap');
+    $loginWrap.css(
+      'padding-top', winHeight/5.8);
+    $loginWrap.css(
+      'padding-bottom', winHeight/5.8+214);
+  });
+}
 </script>
 
 </html>

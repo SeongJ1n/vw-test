@@ -217,34 +217,27 @@ p {
 @media (max-width: 650px) {
   h1 {
     font-size: 30px;
-    line-height: 1.45em;
-    letter-spacing: -.03em;
   }
 
   h2 {
   font-size: 23px;
-  letter-spacing: -.03em;
   }
 
   h3 {
     font-size: 19px;
-    letter-spacing: -.02em;
   }
 
   h4 {
-    font-weight: 400;
     font-size: 15px;
   }
 
   h5 {
     // Caption으로 사용
-    font-weight: 600;
     font-size: 12px;
   }
 
   p {
     font-size: 14px;
-    line-height: 1.8em;
   }
 }
 

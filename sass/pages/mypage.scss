@@ -26,6 +26,34 @@
   }
 }
 
+// [M] Profile
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+// @media (max-width: 650px) {
+//   .profile {
+//     padding-top: 0;
+//     overflow: hidden;
+
+//     &__title {
+//       display: inline-block;
+//       margin-top: 5px;
+
+//       vertical-align: top;
+
+//       font-size: 30px;
+//     }
+//     &__subtitle {
+//       float: right;
+
+//       display: inline-block;
+//       margin-top: 0;
+//       padding-right: 20px;
+
+//       color: $gray-5;
+//       line-height: 1.6em;
+//     }
+//   }
+// }
+
 
 // Submenu
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -108,11 +136,98 @@
   }
 }
 
+// [M] Submenu
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .submenu {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    margin-top: 0px;
+
+    background-color: white;
+
+    vertical-align: bottom;
+    text-align: center;
+
+    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
+                0 1px  6px  rgba(0, 23, 80, .03),
+                0 8px  8px  rgba(0, 23, 80, .024),
+                0 16px 16px rgba(0, 23, 80, .024),
+                8px 32px 32px rgba(0, 23, 80, .036),
+                8px 64px 64px rgba(0, 23, 80, .036);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+
+    &__item {
+      position: relative;
+      float: left;
+
+      width: 25%;
+      padding: 21px 0 13px;
+      &:before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: $gray-2;
+
+        content: "";
+        transition: 0.25s ease-out;
+      }
+      // item hover
+      &:hover:before { background-color: $gray-4; }
+      &:hover a { color: $gray-6; }
+
+      // item--active hover
+      &--active:hover:before { background-color: $gray-9; }
+      &--active:hover a { color: $gray-9; }
+
+      &--active:before {
+        background-color: $gray-9;
+      }
+    }
+    &__item a {
+      margin-left: 0px;
+
+      font-size: 13px;
+    }
+    &__icon { display: none; }
+  }
+}
+
+
 // Mypage
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .mypage {
   padding: 120px 0;
+}
+
+
+// [M] Mypage
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage {
+    padding: 70px 0 80px;
+
+    .empty { height: 0; }
+  }
 }
 
 
@@ -225,6 +340,65 @@
   }
 }
 
+// [M] Mypage - Summary
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__summary {
+    &:before {
+      background-color: transparent;
+    }
+    &__item {
+      padding: 28px 0 27px 26px;
+    }
+    &__item ~ .mypage__summary__item:before {
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+    }
+    &__title {
+      font-size: 12px;
+      b {
+        font-size: 16px;
+      }
+    }
+    &__content {
+      margin-top: 10px;
+
+      font-weight: 500;
+      font-size: 16px;
+    }
+    &__link {
+      font-size: 12px;
+    }
+    &__icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-left: 2px;
+
+      vertical-align: sub;
+    }
+
+    &__form {
+      margin-top: 20px;
+      span {
+        margin-top: 28px;
+
+        font-size: 13px;
+      }
+      p {
+        margin-top: 10px;
+
+        font-size: 13px;
+        line-height: 1.3em;
+      }
+    }
+  }
+}
+
+
 // Mypage List
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .mypage__list {
@@ -248,7 +422,7 @@
     left: 0;
 
     display: inline-block;
-    width: 6px;
+    width: 4px;
     height: 100%;
 
     background-color: $gray-3;
@@ -278,12 +452,12 @@
     margin-bottom: 20px;
   }
   &__item {
-    padding: 20px 0 20px 40px;
+    padding: 22px 0 20px 38px;
     font-size: 13px;
 
     b { // 타이틀
       display: block;
-      font-size: 17px;
+      font-size: 16px;
     }
     i { // 서브타이틀
       display: inline-block;
@@ -345,6 +519,65 @@
   }
 }
 
+
+// [M] Mypage List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__list {
+    &:before { width: 3px; }
+
+    &-wrapper { margin-top: 35px; }
+
+    &__title {
+      margin-bottom: 20px;
+
+      font-size: 18px;
+    }
+    &__item {
+      padding: 24px 0 24px 26px;
+      font-size: 12px;
+
+      b { // 타이틀
+        font-size: 15px;
+      }
+      i { // 서브타이틀
+      }
+      a { // 주문번호
+        .mypage__list__icon {
+          margin-right: 8px;
+        }
+      }
+      strong { // 큰 글씨
+        padding-top: 18px;
+        padding-right: 30px;
+
+        font-size: 20px;
+      }
+      span { // 나머지 정보
+        // margin-top: 11px;
+      }
+      span:first-child {
+        // margin: 0;
+      }
+    }
+    &__item~.mypage__list__item {
+      padding-top: 5px;
+    }
+
+    &__tag {
+      top: 22px;
+      right: 18px;
+
+      padding: 6px 8px;
+
+      font-size: 12px;
+    }
+
+    &__icon { width: 13px; }
+  }
+}
+
+
 // Mypage - Subscribe
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 .mypage__subscribe {
@@ -379,6 +612,37 @@
   }
 }
 
+// [M] Mypage - Subscribe
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__subscribe {
+    .three-half.columns { width: 50%; }
+    .three-half.columns~.three-half.columns:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+    .mypage__summary__form {
+      margin-top: 10px;
+      .six.columns { width: 50%; }
+    }
+    .auto-jsCalendar {
+      padding: 0 12px 12px 12px;
+      border-top: 1px solid $gray-1;
+    }
+    .jsCalendar thead .jsCalendar-title { padding-top: 20px; }
+  }
+}
+
+
 // Mypage - Info
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -393,6 +657,36 @@
 }
 
 
+// [M] Mypage - Info
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__info {
+    padding: 0;
+    .mypage__summary__form {
+      margin-top: 8px;
+      li:first-child,
+      li:nth-child(2) {
+        width: 50%;
+      }
+    }
+    .mypage__summary__title b {
+      margin-top: 0;
+
+      font-size: 18px;
+    }
+
+    .mypage__account {
+      padding: 32px 28px;
+      .mypage__summary__form li:first-child { width: 40%; }
+      .mypage__summary__form li:nth-child(2) { width: 60%; }
+    }
+    .mypage__address {
+      padding: 32px 28px;
+      border-top: 1px solid $gray-1;
+    }
+  }
+}
+
 
 // Mypage - Point
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -402,7 +696,7 @@
     &__content {
       font-size: 16px;
       .button {
-        padding: 11px 25px 12px;
+        padding: 10px 25px 11px;
       }
     }
     &__link {
@@ -413,72 +707,56 @@
     &__item:first-child .mypage__summary__content {
       margin-top: 17px;
 
-      font-size: 38px;
+      font-size: 35px;
     }
-  }
-  [data-tooltip-text]:hover {
-    position: relative;
-  }
-  [data-tooltip-text]:before {
-    position: absolute;
-    left: -9999px;
-    bottom: 23px;
-    z-index: 9999;
-
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    border: solid $border;
-    border-width: 0 1px 1px 0;
-
-    background-color: white;
-
-    transition: 0.1s ease-out opacity;
-    opacity: 0;
-    content: "";
-    transform: rotate(45deg);
-  }
-  [data-tooltip-text]:hover:before {
-    left: 1px;
-    bottom: 23px;
-
-    opacity: 1;
-  }
-  [data-tooltip-text]:after {
-    position: absolute;
-    left: -9999px;
-    bottom: 30px;
-    z-index: 8888;
-
-    width: 205px;
-    padding: 15px 20px;
-    border: 1px solid $border;
-
-    background-color: white;
-    color: $gray-9;
-
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.4em;
-
-    content: attr(data-tooltip-text);
-    transition: 0.25s ease-out opacity;
-    opacity: 0;
-    box-shadow: 0 4px  4px  rgba(0, 23, 80, .02),
-                0 1px  6px  rgba(0, 23, 80, .03),
-                0 8px  8px  rgba(0, 23, 80, .024),
-                0 16px 16px rgba(0, 23, 80, .024),
-                8px 32px 32px rgba(0, 23, 80, .036),
-                8px 64px 64px rgba(0, 23, 80, .036);
-  }
-  [data-tooltip-text]:hover:after {
-    left: -15px;
-    bottom: 30px;
-
-    opacity: 1;
   }
 }
 
+// [M] Mypage - Point
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__point {
+    .four.columns,
+    .three.columns { width: 50%; }
+    .four.columns~.three.columns:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+
+    .mypage__summary {
+      &__content {
+        font-size: 15px;
+        .button {
+          margin-top: 2px;
+          padding: 10px 25px 11px;
+        }
+      }
+      &__link { font-size: 13px; }
+      &__item:first-child .mypage__summary__content {
+        margin-top: 7px;
+
+        font-size: 28px;
+        line-height: 1.2em;
+      }
+    }
+  }
+  .mypage__list--add,
+  .mypage__list--sub {
+    .six.columns { width: 50%; }
+  }
+  .mypage__list__title {
+    font-size: 17px;
+  }
+}
 
 // Mypage - Gift
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -497,7 +775,18 @@
     margin-top: -12px;
 
     .button {
-      padding: 10px 20px 11px
+      padding: 9px 20px 10px;
+    }
+  }
+}
+
+
+// Mypage - Gift
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__gift {
+    .mypage__list-wrapper {
+      margin-top: 48px;
     }
   }
 }
@@ -505,7 +794,6 @@
 
 // Mypage - Gift Detail
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-
 .mypage__gift__detail {
 
   .mypage__summary~.mypage__summary {
@@ -530,5 +818,37 @@
     margin-right: 6px;
 
     vertical-align: sub;
+  }
+}
+
+
+// [M] Mypage - Gift Detail
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (max-width: 650px) {
+  .mypage__gift__detail {
+    .three-half.columns { width: 50%; }
+    .three-half.columns~.three-half.columns:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+
+      background-color: $gray-1;
+
+      content: "";
+    }
+    .mypage__summary:before,
+    .mypage__summary--used:before {
+      background-color: transparent;
+    }
+    .twelve.columns.mypage__summary__item { border-top: 0; }
+    .mypage__summary .mypage__summary__item:last-child { padding: 28px 27px 26px }
+    .mypage__summary .mypage__summary__item:last-child .mypage__summary__content {
+      font-size: 15px;
+      line-height: 1.6em;
+    }
   }
 }

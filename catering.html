@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta name="description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
+  <meta property="og:title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta property="og:url" content="VELUGA.KR">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Veluga</title>
+  <link rel="apple-touch-icon-precomposed" href="../img/favicon.png">
+  <link rel="shortcut icon"href="img/favicon/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+
+<body>
+<div id="cateringWrap" class="wrap">
+
+<!-- Navigation -->
+<nav class="nav desktop">
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <a class="nav__logo" href="/"></a>
+      </div>
+      <div class="ten columns">
+        <ul class="nav__menu">
+          <a href="/subscribe"><li class="nav__item">정기구독</li></a>
+          <a href="/gift"><li class="nav__item">선물하기</li></a>
+          <a href="/catering"><li class="nav__item">케이터링</li></a>
+          <a href="/mypage"><li class="nav__item">내 구독</li></a>
+          <a href="/login"><li class="nav__item">로그인</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<nav id="navMobile" class="nav mobile">
+  <div class="container">
+    <div class="row">
+      <div class="two columns">
+        <a class="nav__logo" href="/" style="margin-top: 18px;"></a>
+      </div>
+      <div class="ten columns">
+        <ul id="hamburger" class="hamburger">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <ul id="hamburgerMenu" class="twelve columns hamburger__menu">
+        <a href="/subscribe"><li class="hamburger__item">정기구독</li></a>
+        <a href="/gift"><li class="hamburger__item">선물하기</li></a>
+        <a href="/catering"><li class="hamburger__item">케이터링</li></a>
+        <a href="/mypage"><li class="hamburger__item">내 구독</li></a>
+        <a href="/login"><li class="hamburger__item">로그인</li></a>
+        <div id="hamburgerMenuClose" class="hamburger__menu--close"></div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="three-half columns empty"></div>
+      <div class="five columns catering__form">
+        <div class="catering__option">
+          <h2 class="catering__option__title">케이터링 옵션</h2>
+          <p class="catering__option__description">필요한 케이터링 옵션을 다중 선택해주세요.</p>
+          <div class="row">
+            <div class="four columns option-wrapper">
+              <input id="beer" class="option" type="checkbox">
+              <label for="beer" class="option__label">맥주</label>
+            </div>
+            <div class="four columns option-wrapper">
+              <input id="food" class="option" type="checkbox">
+              <label for="food" class="option__label">푸드 페어링</label>
+            </div>
+            <div class="four columns option-wrapper">
+              <input id="chilling" class="option" type="checkbox">
+              <label for="chilling" class="option__label">아이스/쿨링</label>
+            </div>
+            <div class="four columns option-wrapper">
+              <input id="table" class="option" type="checkbox">
+              <label for="table" class="option__label">테이블 세팅</label>
+            </div>
+            <div class="four columns option-wrapper">
+              <input id="tableware" class="option" type="checkbox">
+              <label for="tableware" class="option__label">식기용품</label>
+            </div>
+            <div class="four columns option-wrapper">
+              <input id="etc" class="option" type="checkbox">
+              <label for="etc" class="option__label">그 외 주종</label>
+            </div>
+          </div>
+        </div>
+        <div class="catering__info">
+          <div class="row">
+            <div class="six columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" required>
+                <label class="input__label">문의자/단체명</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">문의자/단체명을 입력해주세요.</span>
+            </div>
+            <div class="six columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" required>
+                <label class="input__label">연락처</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">연락처를 입력해주세요.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <input class="input" type="text" required>
+                <label class="input__label">수령할 주소</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">주소를 입력해주세요.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <div class="input-wrapper">
+                <textarea class="textarea" required></textarea>
+                <label class="input__label">문의 내용</label>
+                <span class="input__bar__horizontal"></span>
+                <span class="input__bar__vertical"></span>
+              </div>
+              <span class="input__alert">문의 내용을 입력해주세요.</span>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <div class="button button--filled">문의하기</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="five columns">
+        <p class="footer__content"><b class="footer__bold">주소</b> 서울특별시 마포구 신촌로 198 B01</br>
+           <b class="footer__bold">사업자 등록번호</b> 688-86-00750</br>
+           <b class="footer__bold">통신판매업신고번호</b> 제 2018-서울마포-0034호</br>
+           <b class="footer__bold">전화번호</b> 070-4190-0750</br>
+           <b class="footer__bold">대표</b> 김상민&nbsp;&nbsp;&#65074;&nbsp;&nbsp;<b class="footer__bold">개인정보관리책임자</b> 김현종</br>
+           © 2018 Veluga Brewery Inc. All Rights Reserved.</p>
+      </div>
+      <div class="seven columns">
+        <div class="row">
+          <div class="four columns desktop">
+            <ul class="footer__list">
+              <h5 class="footer__list__title">정책 및 약관</h5>
+              <a href=""><li class="footer__item">이용약관</li></a>
+              <a href=""><li class="footer__item">개인정보 활용</li></a>
+            </ul>
+          </div>
+          <div class="four columns desktop">
+            <ul class="footer__list">
+              <h5 class="footer__list__title">벨루가브루어리</h5>
+              <a href=""><li class="footer__item">카카오톡</li></a>
+              <a href=""><li class="footer__item">페이스북</li></a>
+              <a href=""><li class="footer__item">인스타그램</li></a>
+            </ul>
+          </div>
+          <div class="four columns desktop">
+            <ul class="footer__list">
+              <h5 class="footer__list__title">연락하기</h5>
+              <a href=""><li class="footer__item"><b class="footer__bold">고객센터</b> help@veluga.kr</li></a>
+              <a href=""><li class="footer__item"><b class="footer__bold">케이터링</b> catering@veluga.kr</li></a>
+              <a href=""><li class="footer__item"><b class="footer__bold">제휴문의</b> partner@veluga.kr</li></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  headroom();
+  hamburger();
+  cateringWrap();
+});
+
+function headroom() {
+  var winWidth = $(window).width();
+  var $navMobile = $('#navMobile');
+  if (winWidth <= 650) {
+    $navMobile.headroom();
+  }
+};
+
+function hamburger() {
+  var $hamburger = $('#hamburger');
+  var $hamburgerMenu = $('#hamburgerMenu');
+  var $hamburgerMenuClose = $('#hamburgerMenuClose');
+
+  $hamburger.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburger.hasClass("hamburger--close") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburger.hasClass("hamburger--close") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+  $hamburgerMenuClose.click(function(){
+    $hamburger.toggleClass("hamburger--close");
+    $hamburgerMenu.toggleClass("hamburger__menu--view");
+
+    // 바깥 영역 클릭시 닫히게
+    if ($hamburgerMenu.hasClass("hamburger__menu--view") == true) {
+      $hamburgerMenuClose.css("width", "150%");
+    }
+    else if($hamburgerMenu.hasClass("hamburger__menu--view") != true) {
+      $hamburgerMenuClose.css("width", "0%");
+    }
+  });
+};
+
+function cateringWrap(){
+  /* catering wrap 높이 조절 */
+  $(document).ready(function () {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    var $cateringWrap = $('#cateringWrap');
+    $cateringWrap.css(
+      'padding-top', winHeight/5.8);
+    $cateringWrap.css(
+      'padding-bottom', winHeight/5.8+214);
+  });
+
+  $(window).on('resize', function () {
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
+    var $cateringWrap = $('#cateringWrap');
+    $cateringWrap.css(
+      'padding-top', winHeight/5.8);
+    $cateringWrap.css(
+      'padding-bottom', winHeight/5.8+214);
+  });
+}
+</script>
+
+</html>

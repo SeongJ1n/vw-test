@@ -2,11 +2,19 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta name="description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
+  <meta property="og:title" content="벨루가 - 나에게 찾아오는 셰프의 야식 :: Veluga">
+  <meta property="og:url" content="VELUGA.KR">
+  <meta property="og:image" content="img/og.png">
+  <meta property="og:description" content="한 달에 두번씩 목요일마다 찾아오는 야식 박스와 페어링 맥주">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>성진이 일터</title>
-  <link rel="stylesheet" type="text/css" href="css/common.css">
-  <link rel="stylesheet" type="text/css" href="css/jsCalendar.css">
-  <script type="text/javascript" src="js/jsCalendar.js"></script>
+  <title>Veluga</title>
+  <link rel="apple-touch-icon-precomposed" href="../img/favicon.png">
+  <link rel="shortcut icon"href="img/favicon/favicon.ico">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/jsCalendar.css">
+  <script src="js/jsCalendar.js"></script>
 </head>
 
 <body>
@@ -14,7 +22,7 @@
 <div class="wrap">
 
 <!-- Navigation -->
-<nav id="nav" class="nav" style="border-bottom: 1px solid #dee2e6">
+<nav id="navMobile" class="nav nav__subscribe">
   <div class="container">
     <div class="row">
       <div class="two columns">
@@ -22,80 +30,41 @@
       </div>
       <div class="ten columns">
         <ul class="nav__menu">
-          <a href="https://pf.kakao.com/_xlLHTd"><li class="nav__item">도움이 필요해요</li></a>
+          <a href="https://pf.kakao.com/_xlLHTd"><li class="nav__item" style="padding-right: 0;">도움이 필요해요</li></a>
         </ul>
       </div>
+    </div>
+    <!-- Step -->
+    <div class="row step">
+      <div class="two columns empty"></div>
+      <a class="two columns step__item step__item--complete" href="">
+        <!-- 클릭했을 때, Step으로 이동함 -->
+        <div class="step__circle">1</div>
+        <h4 class="step__title desktop">야식선택</h4>
+        <h4 class="step__title mobile">야식</h4>
+      </a>
+      <a class="two columns step__item step__item--complete" href="">
+        <div class="step__circle">2</div>
+        <h4 class="step__title desktop">옵션추가</h4>
+        <h4 class="step__title mobile">옵션</h4>
+      </a>
+      <a class="two columns step__item step__item--complete" href="">
+        <div class="step__circle">3</div>
+        <h4 class="step__title desktop">기간선택</h4>
+        <h4 class="step__title mobile">기간</h4>
+      </a>
+      <a class="two columns step__item step__item--active" href="">
+        <div class="step__circle">4</div>
+        <h4 class="step__title desktop">결제하기</h4>
+        <h4 class="step__title mobile">결제</h4>
+      </a>
     </div>
   </div>
 </nav>
 
-<!-- Step -->
-<div class="step">
-  <div class="container">
-    <div class="row">
-      <div class="two columns empty"></div>
-      <div class="two columns step__item step__item--complete">
-        <!-- 클릭했을 때, Step으로 이동함 -->
-        <a href="">
-          <div class="step__circle">1</div>
-          <h4 class="step__title">야식선택</h4>
-        </a>
-      </div>
-      <div class="two columns step__item step__item--complete">
-        <a href="">
-            <div class="step__circle">2</div>
-            <h4 class="step__title">옵션추가</h4>
-          </a>
-      </div>
-      <div class="two columns step__item step__item--complete">
-        <a href="">
-            <div class="step__circle">3</div>
-            <h4 class="step__title">기간선택</h4>
-          </a>
-      </div>
-      <div class="two columns step__item step__item--complete">
-        <a href="">
-            <div class="step__circle">4</div>
-            <h4 class="step__title">결제하기</h4>
-          </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Subscribe Gift -->
-<!-- <section class="subscribe subscribe__gift">
-  <div class="container">
-    <h2 class="subscribe__header">선물 유형을 선택하세요</h2>
-    <div class="row subscribe__item-wrapper">
-      <div class="one-half columns empty"></div>
-      <div class="three columns subscribe__item subscribe__item--selected">
-        <span class="subscribe__circle"></span>
-        <h1 class="subscribe__type">생일</h1>
-        <hr class="subscribe__hr">
-        <p class="subscribe__explain">내 생일은 3월 6일 기억해</br>내년에 선물주세요</p>
-      </div>
-      <div class="three columns subscribe__item">
-        <span class="subscribe__circle"></span>
-        <h1 class="subscribe__type">감사</h1>
-        <hr class="subscribe__hr">
-        <p class="subscribe__explain">감사 감삼 감이 감일</br>감오 감육 감칠맛</p>
-      </div>
-      <div class="three columns subscribe__item">
-        <span class="subscribe__circle"></span>
-        <h1 class="subscribe__type">기타</h1>
-        <hr class="subscribe__hr">
-        <p class="subscribe__explain">기타는 역시 일렉이지</br>알렉스트라자 아님</p>
-      </div>
-    </div>
-    <div class="button-wrapper">
-      <a class="button button--filled" href="">다음 단계로</a>
-    </div>
-  </div>
-</section> -->
 
 <!-- Subscribe Nightmeal -->
-<!-- <section class="subscribe subscribe__nightmeal">
+<section class="subscribe subscribe__nightmeal">
   <div class="container">
     <h2 class="subscribe__header">야식을 선택하세요</h2>
     <div class="row subscribe__item-wrapper">
@@ -110,6 +79,7 @@
       </div>
       <div class="four columns subscribe__item" style="background-image: url('img/subscribe__item__combo.png');">
         <span class="subscribe__circle"></span>
+        <a class="subscribe__tag" href="https://docs.google.com/presentation/d/e/2PACX-1vQiPWaZkLE6gunIt0nihOGo_NLzTakB2oHH1_dOZYbxW7Ort5Hskj8M3gb7Dfee6Wyoys3pL0dfw1E2/pub?start=false&loop=false&delayms=3000" target="_blank">원산지 정보</a>
         <div class="subscribe__text-wrapper">
           <h4 class="subscribe__title">콤보</h4>
           <p class="subscribe__content">페어링 스낵과 야식 플래터</br>( 포만도 🍚🍚🍚🍚)</p>
@@ -120,10 +90,10 @@
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- Subscribe Add On -->
-<!-- <section class="subscribe subscribe__add-on">
+<section class="subscribe subscribe__add-on">
   <div class="container">
     <h2 class="subscribe__header">옵션을 추가하세요</h2>
     <div class="row subscribe__item-wrapper">
@@ -150,13 +120,13 @@
     </div>
   </div>
 </section>
- -->
+
 <!-- Subscribe Period -->
-<!-- <section class="subscribe subscribe__period">
+<section class="subscribe subscribe__period">
   <div class="container">
     <h2 class="subscribe__header">기간을 선택하세요</h2>
     <div class="row subscribe__item-wrapper">
-      <div class="one-half columns empty"></div>
+      <div class="three columns empty"></div>
       <div class="three columns subscribe__item">
         <span class="subscribe__circle"></span>
         <h1 class="subscribe__month">1달</h1>
@@ -165,7 +135,7 @@
         <h4 class="subscribe__price subscribe__price--none">&nbsp</h4>
         <h2 class="subscribe__sale-price">￦55,000</h2>
       </div>
-      <div class="three columns subscribe__item">
+      <div class="three columns subscribe__item subscribe__item--selected">
         <span class="subscribe__circle"></span>
         <h1 class="subscribe__month">2달</h1>
         <p class="subscribe__times">4회 배달</p>
@@ -173,23 +143,15 @@
         <h4 class="subscribe__price">￦110,000</h4><span class="subscribe__discount">￦5,000 할인</span>
         <h2 class="subscribe__sale-price">￦105,000</h2>
       </div>
-      <div class="three columns subscribe__item subscribe__item--selected">
-        <span class="subscribe__circle"></span>
-        <h1 class="subscribe__month">3달</h1>
-        <p class="subscribe__times">6회 배달</p>
-        <hr class="subscribe__hr">
-        <h4 class="subscribe__price">￦165,000</h4><span class="subscribe__discount">￦10,000 할인</span>
-        <h2 class="subscribe__sale-price">￦155,000</h2>
-      </div>
     </div>
     <div class="button-wrapper">
       <a class="button button--filled" href="">다음 단계로</a>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- Subscribe Purchase -->
-<!-- <section class="subscribe subscribe__delivery">
+<section class="subscribe subscribe__address">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -223,7 +185,7 @@
 
           <div class="six columns">
             <div class="input-wrapper">
-              <input class="input" type="text" placeholder="- 없이 입력하세요" required>
+              <input class="input" type="text" value="01056537331" placeholder="- 없이 입력하세요" required>
               <label class="input__label">휴대폰 번호*</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
@@ -240,6 +202,7 @@
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
             </div>
+
             <span class="input__alert input__alert--show">주소를 입력해주세요.</span>
           </div>
         </div>
@@ -254,7 +217,6 @@
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="twelve columns">
             <div class="checkbox-wrapper">
@@ -265,25 +227,28 @@
         </div>
 
         <div class="row">
-          <div class="twelve columns radio-wrapper--text">
+          <div class="twelve columns radio-wrapper radio-wrapper--pc">
             <h4 class="radio__header">새벽 배달 필수 정보</h4>
             <input class="radio" id="door-check--yes" name="door-check" type="radio" checked>
-            <label for="door-check--yes" class="radio__label">
+            <label for="door-check--yes" class="six columns radio__label">
               <span class="radio__icon"></span>공동현관 출입
             </label>
             <input class="radio" id="door-check--no" name="door-check" type="radio">
-            <label for="door-check--no" class="radio__label">
+            <label for="door-check--no" class="six columns radio__label">
               <span class="radio__icon"></span>출입 제한 없음
             </label>
-
+          </div>
+        </div>
+        <div class="row">
+          <div class="twelve columns">
             <div class="input-wrapper">
               <input class="input" type="text" placeholder="열쇠 버튼 + 1234 + * 버튼" required>
+              <label class="input__label">공동현관 출입 방법</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="twelve columns">
             <div class="input-wrapper">
@@ -294,12 +259,15 @@
             </div>
           </div>
         </div>
-
-        <div class="description">
+        <div class="description desktop">
           <ul>
             <li class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요.</li>
             <li class="description__item">특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</li>
           </ul>
+        </div>
+        <div id="description" class="description mobile">
+          <h4 id="descriptionTitle" class="description__title">새벽 배달 주의사항</h4>
+          <p id="descriptionItem" class="description__item">새벽 배달(00:00 - 07:00 배달)이기 때문에 특이사항을 상세히 기재해주세요. 특이사항을 미기재로 인한 오배달/분실은 벨루가가 보상/부담하지 않습니다.</p>
         </div>
       </div>
     </div>
@@ -363,119 +331,7 @@
       </div>
     </div>
   </div>
-</section> -->
-
-<!-- Subscribe Purchase Gift -->
-<!-- <section class="subscribe subscribe__delivery">
-  <div class="container">
-    <div class="row">
-      <div class="three-half columns empty"></div>
-      <div class="five columns">
-        <div class="row">
-          <div class="twelve columns">
-            <div class="input-wrapper">
-              <input class="input" type="text" placeholder="전달할 메세지(최대 30자)" required>
-              <label class="input__label">메세지 입력</label>
-              <span class="input__bar__horizontal"></span>
-              <span class="input__bar__vertical"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="twelve columns">
-            <div class="checkbox-wrapper">
-              <input id="nomessage" class="checkbox" type="checkbox">
-              <label for="nomessage" class="checkbox__label"><span class="checkbox__icon"></span>메세지 없이 그냥 보낼래요</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="twelve columns radio-wrapper--gc">
-            <h4 class="radio__header">선물 유형</h4>
-            <input class="radio" id="gift-type--default" name="gift-type" type="radio" checked>
-            <label for="gift-type--default" class="twelve columns radio__label">
-              <span class="radio__icon"></span>기본 패키지
-            </label>
-            <input class="radio" id="gift-type--birthday" name="gift-type" type="radio">
-            <label for="gift-type--birthday" class="twelve columns radio__label">
-              <span class="radio__icon"></span>생일 패키지
-            </label>
-            <input class="radio" id="gift-type--thankyou" name="gift-type" type="radio">
-            <label for="gift-type--thankyou" class="twelve columns radio__label">
-              <span class="radio__icon"></span>감사 패키지
-            </label>
-          </div>
-        </div>
-
-        <div class="description">
-          <ul>
-            <li class="description__item">환불은 결제일 기준 3일 이내 고객센터를 통해서만 가능합니다.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
-<section class="subscribe subscribe__purchase">
-  <div class="container">
-    <div class="row">
-      <div class="three-half columns empty"></div>
-      <div class="five columns">
-        <div class="subscribe-info row">
-          <div class="twelve columns subscribe-info__item">스낵 야식과 이달의 맥주 3달(총 6회)
-          </div>
-        </div>
-        <div class="purchase">
-          <ul class="purchase-info">
-            <li class="purchase-info__item">
-              <span class="purchase-info__label">선물 금액</span>
-              <span class="purchase-info__value">₩155,000</span>
-            </li>
-            <li class="purchase-info__item">
-              <div class="six columns">
-                <div class="twelve columns">
-                  <span class="purchase-info__label">적립금 사용</span>
-                </div>
-                <a class="purchase-info__link" href="">쿠폰 등록</a>
-              </div>
-              <div class="input-wrapper six columns">
-                <input class="input" type="text" placeholder="₩5,000 사용가능" required>
-                <span class="input__bar__horizontal"></span>
-                <span class="input__bar__vertical"></span>
-              </div>
-            </li>
-            <li class="purchase-info__item purchase-info__total">
-              <span class="purchase-info__label">결제 금액</span>
-              <span class="purchase-info__value">₩150,000</span>
-            </li>
-            <li class="purchase-info__item">
-              <div class="select-wrapper">
-                <select name="option" class="select">
-                  <option value="card">신용/체크카드</option>
-                  <option value="trans">실시간 계좌이체</option>
-                </select>
-              </div>
-            </li>
-          </ul>
-          <div class="row">
-            <div class="twelve columns">
-              <div class="checkbox-wrapper">
-                <input id="ftp" class="checkbox" type="checkbox" checked>
-                <label for="ftp" class="checkbox__label"><span class="checkbox__icon"></span>전자금융거래 약관 동의</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="button-wrapper">
-            <a class="button button--filled" href="">결제 진행</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <!-- Subscribe Success -->
 <section class="subscribe subscribe__success">
@@ -505,7 +361,7 @@
           <div class="receipt__pattern"></div>
         </div>
         <div class="row">
-          <div class="twelve columns">
+          <div class="twelve columns jsCalendar-wrapper">
             <div class="auto-jsCalendar" data-month-format="YYYY년 month"></div>
           </div>
         </div>
@@ -518,7 +374,7 @@
 </section>
 
 <!-- Subscribe Success Virtual Account -->
-<!-- <section class="subscribe subscribe__success">
+<section class="subscribe subscribe__success">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -530,7 +386,7 @@
               결제 완료시 첫 배달일은 6월 28일 목요일입니다.
             </h4>
             <p class="receipt__content">
-              입금계좌 ⃓ 농협은행 79004159423232</br>예금주 ⃓ 벨루가브루어리 주식회사</br>24시간 이내에 입금해주셔야 결제 완료됩니다.
+              입금계좌 : 농협은행 79004159423232</br>예금주 : 벨루가브루어리 주식회사</br>24시간 이내에 입금해주셔야 결제 완료됩니다.
             </p>
             <hr>
             <ul class="receipt__list">
@@ -545,7 +401,7 @@
           <div class="receipt__pattern"></div>
         </div>
         <div class="row">
-          <div class="twelve columns">
+          <div class="twelve columns jsCalendar-wrapper">
             <div class="auto-jsCalendar" data-month-format="YYYY년 month"></div>
           </div>
         </div>
@@ -555,47 +411,10 @@
       </div>
     </div>
   </div>
-</section> -->
-
-
-<!-- Subscribe Success Gift -->
-<!-- <section class="subscribe subscribe__success">
-  <div class="container">
-    <div class="row">
-      <div class="three-half columns empty"></div>
-      <div class="five columns">
-        <div class="row">
-          <div class="twelve columns receipt">
-            <h2 class="receipt__title">선물 구매 완료!</h2>
-            <h4 class="receipt__subtitle">
-              받는 분도 정말 좋아할거에요.
-            </h4>
-            <p class="receipt__content">
-              {장성진}님이 작성한 메세지를 한 번 더 확인해주세요.</br>
-              "당신 Birthday 축하. 나의 호의에 늘 감사하십시오."
-            </p>
-            <hr>
-            <ul class="receipt__list">
-              <li class="receipt__item"><span class="receipt__price">₩155,000</span>선물 금액<br><span class="receipt__item__description">스낵 야식과 이달의 맥주 3달(총 6회)</span></li>
-              <li class="receipt__item">적립금 사용<span class="receipt__price">-₩5,000</span></li>
-              <hr>
-              <li class="receipt__item receipt__item--result">결제 금액<span class="receipt__price">₩150,000</span></li>
-            </ul>
-          </div>
-        </div>
-        <div class="receipt__coupon">
-          <span class="receipt__couponcode">F7C4YOU</span>쿠폰 코드<br>
-          <a class="receipt__couponlink" href="bit.ly/velugacoupon">bit.ly/velugacoupon</a>
-          <a class="button button--filled" href="">선물 받을 사람한테 전해주기</a>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
- -->
 
 <!-- Login -->
-<!-- <section class="subscribe">
+<section class="subscribe">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -633,7 +452,7 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--facebook six columns" href="">페이스북 로그인</a>
+          <a class="button button__facebook six columns" href="">페이스북 로그인</a>
           <a class="button button--filled six columns" href="">로그인</a>
         </div>
         <div class="login__hr">이럴수가 회원이 아니세요?</div>
@@ -644,10 +463,9 @@
     </div>
   </div>
 </section>
- -->
 
 <!-- Adult verify -->
-<!-- <section class="subscribe">
+<section class="subscribe">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -657,7 +475,7 @@
         <div class="button-wrapper row">
           <a class="button button--filled twelve columns" href="">만 19세 이상 성인 인증</a>
         </div>
-        <div class="description">
+        <div class="description desktop">
           <ul>
             <li class="description__item">개인정보 수집 및 이용 동의 약관에 동의한 것으로 간주합니다.</li>
           </ul>
@@ -666,10 +484,9 @@
     </div>
   </div>
 </section>
- -->
 
 <!-- Sign up -->
-<!-- <section class="subscribe">
+<section class="subscribe">
   <div class="container">
     <div class="row">
       <div class="three-half columns empty"></div>
@@ -696,12 +513,12 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--facebook facebook--connected twelve columns" href="">페이스북 연결 완료</a>
+          <a class="button button__facebook button__facebook--connected twelve columns" href="">페이스북 연결 완료</a>
         </div>
         <div class="row">
           <div class="twelve columns">
             <div class="input-wrapper">
-              <input class="input" type="text" placeholder="비밀번호 규칙은 뭐가 될까용" required>
+              <input class="input" type="text" placeholder="안들키게 잘 입력하세요" required>
               <label class="input__label">비밀번호</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
@@ -712,7 +529,7 @@
         <div class="row">
           <div class="twelve columns">
             <div class="input-wrapper">
-              <input class="input" type="text" required>
+              <input class="input" type="text" placeholder="한 번만 더 입력하세요" required>
               <label class="input__label">비밀번호 확인</label>
               <span class="input__bar__horizontal"></span>
               <span class="input__bar__vertical"></span>
@@ -721,12 +538,12 @@
           </div>
         </div>
         <div class="button-wrapper row">
-          <a class="button button--filled twelve columns" href="">다 적었어요</a>
+          <a class="button button--filled twelve columns" href="">다 입력했어요</a>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 <!-- Footer -->
@@ -739,19 +556,18 @@
            <b class="footer__bold">통신판매업신고번호</b> 제 2018-서울마포-0034호</br>
            <b class="footer__bold">전화번호</b> 070-4190-0750</br>
            <b class="footer__bold">대표</b> 김상민&nbsp;&nbsp;&#65074;&nbsp;&nbsp;<b class="footer__bold">개인정보관리책임자</b> 김현종</br>
-           Copyright © 2018 VELUGA All Rights Reserved.
-         </p>
+           © 2018 Veluga Brewery Inc. All Rights Reserved.</p>
       </div>
       <div class="seven columns">
         <div class="row">
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">정책 및 약관</h5>
               <a href=""><li class="footer__item">이용약관</li></a>
               <a href=""><li class="footer__item">개인정보 활용</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">벨루가브루어리</h5>
               <a href=""><li class="footer__item">카카오톡</li></a>
@@ -759,7 +575,7 @@
               <a href=""><li class="footer__item">인스타그램</li></a>
             </ul>
           </div>
-          <div class="four columns">
+          <div class="four columns desktop">
             <ul class="footer__list">
               <h5 class="footer__list__title">연락하기</h5>
               <a href=""><li class="footer__item"><b class="footer__bold">고객센터</b> help@veluga.kr</li></a>
@@ -796,5 +612,35 @@
 </div> -->
 
 </body>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.4/dist/headroom.min.js"></script>
+<script src="https://npmcdn.com/headroom.js@0.9.3/dist/jQuery.headroom.min.js"></script>
+
+<script>
+$(document).ready(function () {
+  headroom();
+  description();
+});
+
+function headroom() {
+  var winWidth = $(window).width();
+  var $navMobile = $('#navMobile');
+  if (winWidth <= 650) {
+    $navMobile.headroom();
+  }
+};
+
+function description() {
+  var $description = $('#description');
+  var $descriptionTitle = $('#descriptionTitle');
+  var $descriptionItem = $('#descriptionItem');
+
+  $description.click(function(){
+    $descriptionTitle.toggleClass("open");
+    $descriptionItem.toggle();
+  });
+};
+</script>
 
 </html>
